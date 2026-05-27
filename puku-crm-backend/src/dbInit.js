@@ -50,7 +50,7 @@ const initDB = async (providedConnection = null) => {
         source VARCHAR(100),
         propertyType VARCHAR(100),
         specificProperty VARCHAR(255),
-        budget DECIMAL(15,2),
+        budget VARCHAR(100),
         preferredState VARCHAR(100),
         preferredCity VARCHAR(100),
         assignedTo VARCHAR(255),

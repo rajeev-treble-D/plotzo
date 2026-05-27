@@ -84,25 +84,6 @@ const Leads = () => {
         fetchCities(formData.preferredState);
     }, [formData.preferredState]);
 
-    useEffect(() => {
-        if (!cities.length || !formData.preferredCity) return;
-        const cityExists = cities.some(city => String(city.id) === String(formData.preferredCity));
-        if (cityExists) return;
-
-        const matchingCity = cities.find(city => city.city_name === formData.preferredCity);
-        if (matchingCity) {
-            setFormData(prev => ({ ...prev, preferredCity: matchingCity.id }));
-        }
-    }, [cities, formData.preferredCity]);
-
-    // const selectedStateName = useMemo(() => {
-    //     return states.find(state => String(state.id) === String(formData.preferredState))?.state_name || formData.preferredState;
-    // }, [states, formData.preferredState]);
-
-    // const selectedCityName = useMemo(() => {
-    //     return cities.find(city => String(city.id) === String(formData.preferredCity))?.city_name || formData.preferredCity;
-    // }, [cities, formData.preferredCity]);
-
     const filteredProperties = useMemo(() => {
         if (!formData.propertyType) return properties;
         return properties.filter(property => property.property_type === formData.propertyType);
@@ -185,12 +166,6 @@ const Leads = () => {
         e.preventDefault();
         setSubmitting(true);
         setError('');
-
-        // const payload = {
-        //     ...formData,
-        //     preferredState: selectedStateName,
-        //     preferredCity: selectedCityName
-        // };
 
         try {
             if (selectedLead) {
@@ -389,7 +364,7 @@ const Leads = () => {
                                             {t('leads.modal.source_label')} <span className="text-red-500">*</span>
                                             <select required className={`${selectClass} mt-1.5`} value={formData.source} onChange={(e) => handleChange('source', e.target.value)}>
                                                 <option value="">{t('leads.modal.source_select')}</option>
-                                                {sourceOptions.map(source => <option key={source} value={source.id}>{source}</option>)}
+                                                {sourceOptions.map(source => <option key={source} value={source}>{source}</option>)}
                                             </select>
                                         </label>
                                         <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">
