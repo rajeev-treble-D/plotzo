@@ -1,0 +1,865 @@
+{
+  "common": {
+    "cancel": "取消",
+    "create": "创建",
+    "update": "更新",
+    "delete": "删除",
+    "save": "保存",
+    "edit": "编辑",
+    "view": "查看",
+    "add": "添加",
+    "loading": "加载中...",
+    "actions": "操作",
+    "status": "状态",
+    "search": "搜索",
+    "no_results": "未找到结果",
+    "in_progress": "进行中",
+    "completed": "已完成",
+    "status_options": {
+      "pending": "待处理",
+      "completed": "完成",
+      "cancelled": "取消"
+    },
+    "na": "不适用",
+    "or": "or",
+    "change": "Change"
+  },
+  "sidebar": {
+    "dashboard": "仪表板",
+    "customers": "客户",
+    "sales": "销售额",
+    "expenses": "费用",
+    "stock": "库存",
+    "projects": "项目",
+    "reports": "智能报告",
+    "leads": "线索",
+    "tasks": "待办事项",
+    "users": "用户",
+    "user_list": "用户列表",
+    "manage_roles": "管理角色",
+    "role_assignment": "角色分配",
+    "settings": "设置",
+    "activity": "活动日志",
+    "profile": "我的资料",
+    "emails": "电子邮件",
+    "properties": "房产"
+  },
+  "topbar": {
+    "search_placeholder": "搜索客户...",
+    "customer_results": "客户搜索结果",
+    "no_results": "未找到相关结果",
+    "signed_in_as": "登录身份为",
+    "account_settings": "账户设置",
+    "logout": "登出",
+    "switch_theme": "切换到{{theme}}模式"
+  },
+  "dashboard": {
+    "overview": "仪表板概览",
+    "welcome": "欢迎回来！这是今天的活动概况。",
+    "total_customers": "客户总数",
+    "all_time_customers": "所有时间客户",
+    "total_sales": "总销售额",
+    "sales_today": "今日: {{amount}}",
+    "total_expenses": "总费用",
+    "expenses_today": "今日: {{amount}}",
+    "active_leads": "活跃线索",
+    "excluding_won_lost": "不包括成交/丢失",
+    "stock_inventory": "库存盘点",
+    "stock_value": "价值: {{amount}}",
+    "active_projects": "活跃项目",
+    "in_progress": "当前正在进行中",
+    "pending_tasks": "待处理任务",
+    "tasks_to_complete": "待完成任务",
+    "net_earnings": "净收益",
+    "sales_minus_expenses": "销售额 - 费用",
+    "income_vs_expense": "收入与支出对比",
+    "last_30_days": "最近30天",
+    "recent_activity": "近期活动",
+    "no_activity": "暂无近期活动",
+    "view_all_activity": "查看所有活动",
+    "project_status_overview": "项目状态概览",
+    "task_workload_user": "按用户划分的任务工作量"
+  },
+  "customers": {
+    "title": "客户",
+    "subtitle": "管理您的客户数据库和关系。",
+    "add_new": "添加新客户",
+    "search_placeholder": "搜索客户...",
+    "table": {
+      "customer": "客户",
+      "company": "公司",
+      "contact": "联系方式",
+      "status": "状态",
+      "added_on": "添加于 {{date}}"
+    },
+    "modal": {
+      "add_title": "添加新客户",
+      "edit_title": "编辑客户",
+      "full_name": "全名",
+      "email_address": "电子邮件地址",
+      "phone": "电话号码",
+      "company": "公司",
+      "status": "状态",
+      "location_details": "位置详情",
+      "address": "街道地址",
+      "city": "城市",
+      "country": "国家",
+      "create_btn": "创建客户",
+      "update_btn": "更新客户"
+    },
+    "delete": {
+      "title": "删除客户？",
+      "confirm_text": "您确定要删除 <1>{{name}}</1> 吗？此操作将永久删除所有相关数据。",
+      "delete_now": "现在删除"
+    },
+    "status": {
+      "active": "启用",
+      "pending": "审核中",
+      "inactive": "停用"
+    },
+    "add_success": "客户创建成功！",
+    "update_success": "客户更新成功！",
+    "delete_success": "客户删除成功！",
+    "loading_error": "加载客户失败",
+    "delete_error": "删除客户失败"
+  },
+  "sales": {
+    "title": "销售与收入",
+    "subtitle": "跟踪付款并管理客户交易。",
+    "record_new": "记录新销售",
+    "total_revenue": "总收入",
+    "pending_payments": "待付款",
+    "avg_sale_size": "平均销售额",
+    "search_placeholder": "按客户或状态搜索...",
+    "table": {
+      "transaction_details": "交易详情",
+      "customer": "客户",
+      "date": "日期",
+      "amount": "金额",
+      "method": "方式",
+      "status": "状态",
+      "agent": "经办人: {{name}}",
+      "no_description": "无描述"
+    },
+    "modal": {
+      "add_title": "记录新销售",
+      "edit_title": "更新交易",
+      "customer_select": "选择客户",
+      "amount_label": "金额",
+      "payment_method": "付款方式",
+      "description": "描述",
+      "description_placeholder": "输入交易详情或备注...",
+      "save_btn": "保存交易",
+      "update_btn": "更新交易"
+    },
+    "delete": {
+      "title": "删除交易？",
+      "confirm_text": "您确定要删除此记录吗？这将影响您的收入报告。",
+      "delete_btn": "删除记录"
+    },
+    "invoice": {
+      "title": "发票",
+      "id": "发票 ID",
+      "date": "交易日期",
+      "bill_to": "账单寄至:",
+      "cust_name": "客户姓名",
+      "company": "公司",
+      "total": "总金额",
+      "footer": "感谢您的惠顾！"
+    },
+    "methods": {
+      "bank_transfer": "银行转账",
+      "credit_card": "信用卡",
+      "paypal": "贝宝",
+      "cash": "现金"
+    },
+    "add_success": "新销售已记录！",
+    "update_success": "销售更新成功！",
+    "delete_success": "销售记录已删除",
+    "loading_error": "加载销售数据失败",
+    "save_error": "保存销售失败",
+    "delete_error": "删除销售失败"
+  },
+  "expenses": {
+    "title": "费用管理",
+    "subtitle": "跟踪业务开支并管理类别。",
+    "categories_btn": "类别",
+    "add_expense": "添加费用",
+    "total_expense_month": "{{month}} 总计费用",
+    "this_month": "本月",
+    "no_data": "暂无数据信息",
+    "recent_expenses": "近期费用",
+    "search_placeholder": "搜索费用...",
+    "table": {
+      "details": "费用详情",
+      "category": "类别",
+      "date": "日期",
+      "amount": "金额",
+      "general_expense": "一般费用"
+    },
+    "modal": {
+      "add_title": "记录费用",
+      "edit_title": "更新费用",
+      "description_label": "描述 / 标题",
+      "description_placeholder": "例如：办公室租金、AWS 托管",
+      "category_label": "类别",
+      "amount_label": "金额",
+      "date_label": "日期",
+      "payment_method": "付款方式",
+      "save_btn": "保存费用",
+      "update_btn": "更新记录"
+    },
+    "categories_modal": {
+      "title": "费用类别",
+      "subtitle": "管理您的支出领域。",
+      "add_category": "添加类别",
+      "category_name": "名称",
+      "category_placeholder": "类别名称...",
+      "color_theme": "颜色主题",
+      "create_btn": "创建类别",
+      "active_categories": "活跃类别",
+      "created_on": "创建于 {{date}}",
+      "edit_category": "编辑类别",
+      "update_btn": "更新类别",
+      "add_category_success": "类别已添加！",
+      "add_category_error": "添加类别失败",
+      "delete_category_success": "类别删除成功！",
+      "delete_category_error": "删除类别失败"
+    },
+    "delete": {
+      "title": "删除费用？",
+      "confirm_text": "您确定要移除此记录吗？这将永久影响您的财务报告。",
+      "delete_btn": "删除费用"
+    },
+    "delete_category": {
+      "title": "删除类别？",
+      "confirm_text": "您确定吗？这将删除与此类别相关的所有费用。",
+      "delete_btn": "删除类别"
+    },
+    "methods": {
+      "credit_card": "信用卡",
+      "bank_transfer": "银行转账",
+      "paypal": "PayPal",
+      "cash": "现金"
+    },
+    "add_success": "费用已记录！",
+    "update_success": "费用更新成功！",
+    "delete_success": "费用已删除",
+    "loading_error": "加载费用数据失败",
+    "save_error": "保存费用失败",
+    "delete_error": "删除费用失败"
+  },
+  "stock": {
+    "title": "库存与物料",
+    "subtitle": "管理产品数量和库存估值。",
+    "categories_btn": "类别",
+    "add_item": "添加新项",
+    "total_units": "总库存量",
+    "low_stock_alerts": "低库存警报",
+    "inventory_value": "库存价值",
+    "requires_restock": "需要立即补货",
+    "asset_valuation": "资产总值估算",
+    "search_placeholder": "通过名称、SKU或类别搜索...",
+    "loading": "库存加载中...",
+    "no_items": "库存中未找到物料。",
+    "table": {
+      "item_details": "物料详情",
+      "category": "类别",
+      "quantity": "数量",
+      "unit_price": "单价",
+      "total_value": "总价值",
+      "status": "状态",
+      "actions": "操作"
+    },
+    "status": {
+      "out_of_stock": "缺货",
+      "low_stock": "库存不足",
+      "in_stock": "有货"
+    },
+    "modal": {
+      "add_title": "添加新物料",
+      "edit_title": "编辑库存物料",
+      "product_name": "产品名称",
+      "category": "类别",
+      "sku_code": "SKU 代码",
+      "quantity": "数量",
+      "unit_price": "单价",
+      "description": "描述",
+      "description_placeholder": "添加更多关于产品的详细信息...",
+      "create_btn": "创建物料",
+      "update_btn": "更新物料"
+    },
+    "delete": {
+      "title": "删除物料？",
+      "confirm_text": "您确定要从库存中移除 <1>{{name}}</1> 吗？此操作不可撤销。",
+      "delete_now": "现在删除",
+      "delete_btn": "Delete Now"
+    },
+    "category_modal": {
+      "title": "库存类别管理",
+      "add_new_category": "添加新类别",
+      "edit_category": "编辑类别",
+      "category_name": "类别名称",
+      "description": "描述（可选）",
+      "color_tag": "颜色标记:",
+      "add_btn": "添加",
+      "update_btn": "更新",
+      "existing_categories": "现有类别",
+      "no_categories": "未找到类别。",
+      "add_category_success": "类别已创建！",
+      "edit_category_success": "类别已更新！",
+      "deleted_success": "类别删除成功！",
+      "add_category_error": "创建类别失败",
+      "delete_category_error": "删除类别失败"
+    },
+    "add_success": "物品已添加到库存！",
+    "update_success": "物品更新成功！",
+    "delete_success": "物品已从库存中移除",
+    "loading_error": "加载库存失败",
+    "delete_error": "删除物品失败"
+  },
+  "projects": {
+    "title": "项目管理",
+    "subtitle": "跟踪项目进度和预算。",
+    "create_new": "创建新项目",
+    "stats": {
+      "in_progress": "进行中",
+      "on_hold": "暂停",
+      "completed": "已完成",
+      "total": "总计"
+    },
+    "search_placeholder": "搜索项目或客户...",
+    "filter": {
+      "all": "全部",
+      "planning": "规划中",
+      "in_progress": "进行中",
+      "on_hold": "暂停",
+      "completed": "已完成"
+    },
+    "status": {
+      "planning": "规划中",
+      "in_progress": "进行中",
+      "on_hold": "暂停",
+      "completed": "完成",
+      "cancelled": "取消"
+    },
+    "table": {
+      "details": "项目详情",
+      "client": "客户",
+      "budget": "预算",
+      "status": "状态",
+      "timeline": "时间线"
+    },
+    "modal": {
+      "add_title": "创建新项目",
+      "edit_title": "更新项目",
+      "name_label": "项目名称",
+      "name_placeholder": "例如：网站改版 2026",
+      "client_label": "分配客户",
+      "client_select": "选择一名客户",
+      "start_date": "开始日期",
+      "deadline": "截止日期",
+      "budget_label": "预算",
+      "status_label": "初始状态",
+      "scope_label": "项目范围",
+      "scope_placeholder": "添加项目描述、要求或备注...",
+      "create_btn": "启动项目",
+      "save_changes": "保存更改"
+    },
+    "delete": {
+      "title": "删除项目？",
+      "confirm_text": "您确定要删除此项目吗？这将永久删除所有相关数据。",
+      "delete_btn": "删除项目"
+    },
+    "add_success": "项目创建成功！",
+    "update_success": "项目更新成功！",
+    "delete_success": "项目删除成功！",
+    "loading_error": "加载项目失败",
+    "save_error": "保存项目失败",
+    "delete_error": "删除项目失败"
+  },
+  "leads": {
+    "title": "销售线索",
+    "subtitle": "跟踪您的潜在客户机会。",
+    "add_new": "添加新线索",
+    "funnel": {
+      "leads": "线索",
+      "New": "新",
+      "Contacted": "已联系",
+      "Qualified": "已符合条件",
+      "Proposal": "方案中",
+      "Negotiation": "洽谈中",
+      "Won": "已成交",
+      "Lost": "已丢失"
+    },
+    "search_placeholder": "搜索线索...",
+    "table": {
+      "client": "客户",
+      "enquiry": "咨询",
+      "location": "位置",
+      "assigned_to": "分配给",
+      "opportunity": "机会",
+      "contact": "联系方式",
+      "valuation": "估值",
+      "stage": "阶段",
+      "temperature": "热度"
+    },
+    "temperature": {
+      "Cold": "冷",
+      "Warm": "温",
+      "Hot": "热"
+    },
+    "modal": {
+      "add_title": "添加新线索",
+      "edit_title": "编辑线索",
+      "client_name_label": "客户名称",
+      "client_name_placeholder": "输入全名",
+      "email_label": "电子邮箱",
+      "email_placeholder": "email@company.com",
+      "phone_label": "电话号码",
+      "phone_Placeholder": "输入电话号码",
+      "source_label": "来源",
+      "source_select": "选择来源",
+      "property_type_label": "房产类型",
+      "property_type_select": "选择类型",
+      "specific_property_label": "具体房产",
+      "specific_property_select": "选择房产",
+      "budget": "预算范围",
+      "preferred_state_label": "首选州",
+      "preferred_state_select": "选择州",
+      "preferred_state_first_select": "请先选择州",
+      "preferred_city_label": "首选城市 / 区域",
+      "preferred_city_select": "选择城市",
+      "assign_to_label": "分配给",
+      "assign_to_select": "选择用户",
+      "stage_label": "销售阶段",
+      "temp_label": "热度",
+      "notes_label": "描述 / 备注",
+      "notes_placeholder": "输入其他详细信息...",
+      "create_btn": "创建线索",
+      "update_btn": "更新线索"
+    },
+    "delete": {
+      "title": "删除线索？",
+      "confirm_text": "您确定要删除 <1>{{opportunity}}</1> 吗？",
+      "delete_now": "现在删除",
+      "delete_btn": "Delete Now"
+    },
+    "add_success": "潜在客户创建成功！",
+    "update_success": "潜在客户更新成功！",
+    "delete_success": "潜在客户已删除",
+    "loading_error": "加载潜在客户失败",
+    "save_error": "保存潜在客户失败",
+    "delete_error": "删除潜在客户失败"
+  },
+  "tasks": {
+    "title": "待办清单",
+    "subtitle": "管理您的日常行动和优先级。",
+    "new_task": "新建任务",
+    "filter": {
+      "all": "全部",
+      "pending": "待处理",
+      "in_progress": "进行中",
+      "completed": "已完成"
+    },
+    "search_placeholder": "搜索任务...",
+    "no_date": "无日期",
+    "assigned_to": "负责人",
+    "new_item": "新任务项",
+    "priority": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低"
+    },
+    "modal": {
+      "add_title": "新建任务",
+      "edit_title": "更新任务",
+      "title_label": "任务标题",
+      "title_placeholder": "需要做什么？",
+      "priority_label": "优先级",
+      "due_date": "截止日期",
+      "assign_label": "分配给",
+      "assign_select": "选择承办人...",
+      "desc_label": "描述（可选）",
+      "desc_placeholder": "添加备注、子任务或链接...",
+      "create_btn": "创建任务",
+      "update_btn": "更新任务"
+    },
+    "delete": {
+      "title": "删除任务？",
+      "confirm_text": "您确定要删除任务吗？",
+      "delete_btn": "删除任务"
+    },
+    "add_success": "任务已创建！",
+    "update_success": "任务更新成功！",
+    "delete_success": "任务删除成功！",
+    "loading_error": "加载任务失败",
+    "save_error": "保存任务失败",
+    "delete_error": "删除任务失败",
+    "status_update_success": "任务已标记为 {{status}}",
+    "status_update_error": "更新状态失败"
+  },
+  "users": {
+    "title": "用户管理",
+    "subtitle": "管理团队成员、角色和权限。",
+    "add_new": "添加新用户",
+    "stats": {
+      "total": "总用户数",
+      "admins": "管理员",
+      "active": "当前在线"
+    },
+    "search_placeholder": "通过姓名或电子邮件搜索用户...",
+    "filter": {
+      "role_all": "角色：全部",
+      "status_active": "状态：启用"
+    },
+    "table": {
+      "user": "用户",
+      "role": "角色",
+      "status": "状态",
+      "last_login": "最后登录",
+      "never": "从未登录"
+    },
+    "status": {
+      "Active": "启用",
+      "Inactive": "停用",
+      "Pending": "审核中"
+    },
+    "modal": {
+      "add_title": "添加新用户",
+      "edit_title": "编辑用户信息",
+      "full_name": "全名",
+      "name_placeholder": "输入全名",
+      "email_label": "电子邮件地址",
+      "email_placeholder": "email@company.com",
+      "password_label": "密码",
+      "password_placeholder": "密码",
+      "role_label": "用户角色",
+      "status_label": "状态",
+      "create_btn": "创建用户",
+      "save_changes": "保存更改"
+    },
+    "delete": {
+      "title": "删除用户？",
+      "confirm_text": "您确定要删除 <1>{{name}}</1> 吗？",
+      "delete_btn": "删除"
+    }
+  },
+  "roles": {
+    "title": "角色管理",
+    "subtitle": "为每个角色配置权限和分配的模块。",
+    "create_new": "创建新角色",
+    "defined_roles": "定义好的角色",
+    "search_placeholder": "搜索角色...",
+    "table": {
+      "role_name": "角色名称",
+      "members": "成员数",
+      "assigned_modules": "分配的模块",
+      "users_count": "{{count}} 用户",
+      "all_access": "全模块权限",
+      "no_modules": "未分配模块"
+    },
+    "modal": {
+      "create_title": "创建新角色",
+      "edit_title": "编辑角色",
+      "role_name": "角色名称",
+      "role_placeholder": "例如：销售负责人",
+      "desc_label": "描述",
+      "desc_placeholder": "描述该角色的职能...",
+      "module_access": "模块权限",
+      "full_admin": "全局管理员权限",
+      "admin_desc": "管理员始终拥有所有模块的访问权限。",
+      "create_btn": "创建角色",
+      "save_changes": "保存更改"
+    },
+    "delete": {
+      "title": "删除角色？",
+      "confirm_text": "您确定吗？这将永久移除 <1>{{name}}</1> 角色。",
+      "delete_btn": "删除"
+    },
+    "modules": {
+      "dashboard": "仪表板",
+      "customers": "客户",
+      "leads": "线索",
+      "sales": "销售额",
+      "expenses": "费用",
+      "projects": "项目",
+      "stock": "库存",
+      "tasks": "任务",
+      "support": "支持",
+      "users": "用户",
+      "reports": "智能报告",
+      "activity": "活动日志",
+      "settings": "设置",
+      "emails": "电子邮件"
+    }
+  },
+  "assign_role": {
+    "title": "角色分配",
+    "subtitle": "将团队成员重新分配至不同的权限级别。",
+    "denied_title": "拒绝访问",
+    "denied_msg": "只有管理员可以进入角色分配面板。",
+    "step1": "1. 选择一名用户",
+    "search_user": "搜索用户...",
+    "step2": "2. 选择新角色",
+    "select_user_first": "请先从左侧面板选择一名用户。",
+    "promoting": "正在职级晋升 {{name}}",
+    "update_btn": "更新角色",
+    "recent_changes": "近期变动记录",
+    "table": {
+      "user": "用户",
+      "change": "属性变动",
+      "date": "日期",
+      "assigned_by": "指派人",
+      "no_changes": "未发现近期改动 record",
+      "previous": "原先为",
+      "assigned": "已指派为",
+      "system_user": "系统账户",
+      "admin": "管理员"
+    }
+  },
+  "profile": {
+    "title": "账户设置",
+    "subtitle": "管理您的个人信息和安全首选项。",
+    "full_name": "全名",
+    "email_address": "电子邮件地址",
+    "change_password": "修改密码",
+    "new_password": "新密码",
+    "confirm_password": "确认新密码",
+    "password_placeholder": "留空则保持不变",
+    "confirm_placeholder": "确认输入您的新密码",
+    "security_tip": "更改密码将提高安全性。请确保至少包含6个字符。",
+    "save_btn": "保存个人资料更改",
+    "passwords_mismatch": "两次输入的密码不匹配",
+    "update_success": "资料已成功更新！",
+    "update_error": "资料更新失败"
+  },
+  "report": {
+    "title": "智能报告",
+    "subtitle": "个性化 AI 分析。",
+    "reset_btn": "重置",
+    "history_cleared": "对话历史已清除。还有什么我能帮您的吗？",
+    "welcome_msg": "您好！我是您的报告助手。我拥有访问您所有 CRM 数据的权限。您今天想分析什么？",
+    "error_msg": "抱歉，连接 Gemini API 时出错。请检查设置中的 API Key。",
+    "analyzing": "AI 正在分析您的数据...",
+    "input_placeholder": "询问 AI：'二月的总销售额是多少？', '分析我的销售线索', '建议如何降低成本'...",
+    "suggested_queries": "建议查询",
+    "suggestions": {
+      "sales": "本月总销售额？",
+      "expenses": "按类别分析我的支出",
+      "customers": "谁是我的前5名客户？",
+      "leads": "汇总待处理的线索",
+      "performance": "与上月业绩对比",
+      "stock": "哪些物料库存充足/不足？",
+      "projects": "哪些项目最赚钱？",
+      "tasks": "列出我的高优先级任务",
+      "profit": "年度净利润分析"
+    }
+  },
+  "support": {
+    "title": "消息中心",
+    "search_chats": "搜索对话...",
+    "active_now": "当前在线",
+    "today": "今天",
+    "type_message": "在此输入消息...",
+    "read": "已读",
+    "online": "在线",
+    "offline": "离线",
+    "busy": "忙碌",
+    "yesterday": "昨天"
+  },
+  "activity": {
+    "title": "活动日志",
+    "subtitle": "CRM 中所有操作的审计追踪。",
+    "search_placeholder": "搜索日志...",
+    "fetching": "正在获取审计追踪...",
+    "no_logs": "未找到日志",
+    "activity_appear": "一旦用户与应用交互，活动将显示在此处。",
+    "performed_a": "执行了一个",
+    "on": "在",
+    "no_details": "未记录额外详情。",
+    "fetch_error": "获取活动日志失败",
+    "entities": {
+      "Project": "项目",
+      "Task": "任务",
+      "Customer": "客户",
+      "Lead": "线索",
+      "Sale": "销售",
+      "Expense": "费用",
+      "ExpenseCategory": "开支类别",
+      "StockItem": "库存项",
+      "User": "用户",
+      "All": "全部"
+    },
+    "actions": {
+      "CREATED": "已创建",
+      "UPDATED": "已更新",
+      "DELETED": "已删除",
+      "STATUS_TOGGLE": "状态切换"
+    }
+  },
+  "login": {
+    "welcome": "欢迎回来！",
+    "subtitle": "请登录您的账户。",
+    "email_label": "电子邮件地址",
+    "email_placeholder": "name@company.com",
+    "password_label": "密码",
+    "remember_me": "记住我",
+    "forgot_password": "忘记密码？",
+    "sign_in_btn": "登录",
+    "signing_in": "正在登录...",
+    "no_account": "没有账户？",
+    "contact_admin": "联系管理员",
+    "error_msg": "登录失败。请检查您的凭据。"
+  },
+  "settings": {
+    "title": "设置",
+    "subtitle": "配置您的 CRM 和个人首选项。",
+    "save_btn": "保存更改",
+    "saving": "保存中...",
+    "tabs": {
+      "General": "常规",
+      "AI Settings": "AI 设置",
+      "System": "系统"
+    },
+    "general": {
+      "title": "常规配置",
+      "company_name": "公司名称",
+      "support_email": "支持电子邮箱",
+      "default_currency": "默认货币",
+      "timezone": "时区 (IANA)",
+      "show_clock": "在顶栏显示时钟",
+      "appearance": "外观默认",
+      "light_mode": "浅色模式",
+      "dark_mode": "深色模式"
+    },
+    "ai": {
+      "title": "AI 配置",
+      "subtitle": "通过 Google Gemini 增强您的报告功能。",
+      "api_key": "Google Gemini API Key",
+      "api_key_placeholder": "输入您的 Gemini API Key",
+      "get_key": "点击此处获取免费 API key"
+    },
+    "system": {
+      "title": "系统管理",
+      "subtitle": "维护和优化您的 CRM 系统。",
+      "danger_zone": "危险区域",
+      "danger_desc": "以下操作不可撤销。请谨慎操作。",
+      "clear_logs": "清除所有活动日志",
+      "clear_logs_desc": "永久删除所有系统及用户活动记录。",
+      "clear_btn": "清除日志",
+      "clear_success": "所有活动日志已成功删除。",
+      "clear_error": "清除日志时出错"
+    },
+    "modals": {
+      "updated_title": "设置已更新！",
+      "updated_msg": "您的配置已成功保存并应用到整个 CRM。",
+      "failed_title": "更新失败",
+      "failed_msg": "保存更改时出现问题",
+      "confirm_title": "您确定吗？",
+      "confirm_msg": "这将从数据库中永久删除所有活动日志。此操作无法撤销。",
+      "logs_cleared_title": "日志已清除！",
+      "logs_cleared_msg": "所有活动日志已成功删除。",
+      "continue": "继续",
+      "confirm_btn": "确认删除"
+    }
+  },
+  "emails": {
+    "title": "发送电子邮件",
+    "subtitle": "撰写并向您的客户发送个性化电子邮件。",
+    "tips": {
+      "title": "专业技巧",
+      "tip1": "个性化主题行以提高打开率。",
+      "tip2": "发送前仔细检查收件人的电子邮件。",
+      "tip3": "在邮件中使用清晰简洁的语言。"
+    },
+    "warning": {
+      "title": "反垃圾邮件政策",
+      "text": "请确保您有权向这些联系人发送电子邮件。"
+    },
+    "form": {
+      "to": "收件人",
+      "search_placeholder": "搜索客户...",
+      "direct_placeholder": "或直接输入电子邮件地址",
+      "subject": "主题",
+      "subject_placeholder": "输入邮件主题",
+      "message": "正文",
+      "message_placeholder": "在此处编写您的邮件...",
+      "send": "发送电子邮件",
+      "sending": "发送中...",
+      "fill_fields": "请填写所有必填字段",
+      "send_success": "电子邮件发送成功！",
+      "send_error": "发送电子邮件失败"
+    }
+  },
+  "properties": {
+    "title": "房产",
+    "record_new": "添加新房产",
+    "subtitle": "管理地块、公寓、租赁和合资项目",
+    "search_placeholder": "搜索房产...",
+    "loading_error": "获取房产失败",
+    "delete_success": "房产删除成功",
+    "delete_error": "删除房产失败",
+    "filter": {
+      "all": "全部",
+      "plot": "地块",
+      "apartment": "公寓",
+      "joint_venture": "合资项目",
+      "rental": "租赁"
+    },
+    "stats": {
+      "rented": "已出租",
+      "under_construction": "建设中",
+      "available": "可用",
+      "sold": "已售出",
+      "total": "总计"
+    },
+    "table": {
+      "property": "房产",
+      "project": "项目",
+      "type": "类型",
+      "location": "位置",
+      "status": "状态"
+    },
+    "delete": {
+      "title": "删除房产？",
+      "confirm_text": "您确定要删除吗",
+      "delete_btn": "删除"
+    },
+    "modal": {
+      "edit_title": "编辑房产",
+      "add_title": "添加房产",
+      "name_placeholder": "输入房产名称",
+      "project_label": "项目名称",
+      "project_placeholder": "可选项目名称",
+      "type_label": "房产类型",
+      "status_label": "状态",
+      "state_label": "州",
+      "state_select": "选择州",
+      "city_label": "城市",
+      "city_select": "选择城市",
+      "details_title": "房产详情",
+      "save_changes": "保存更改",
+      "create_btn": "创建房产",
+      "bhk_type": "户型",
+      "area_sqft": "面积（平方英尺）",
+      "floor": "楼层",
+      "tower_block": "塔楼 / 区块",
+      "amenities": "设施",
+      "total_price": "总价格",
+      "monthly_rent": "月租",
+      "security_deposit": "押金",
+      "lease_period": "租赁期限",
+      "tenant_name": "租户名称",
+      "partner_name": "合作伙伴名称",
+      "profit_sharing_ratio": "利润分成",
+      "land_area": "土地面积",
+      "project_status": "项目状态",
+      "total_project_value": "项目总价值",
+      "area_sq_yard": "面积（平方码）",
+      "dimensions": "尺寸",
+      "facing": "朝向",
+      "price_per_sq_yard": "每平方码价格"
+    }
+  }
+}

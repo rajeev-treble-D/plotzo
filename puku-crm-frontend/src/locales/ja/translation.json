@@ -1,0 +1,862 @@
+{
+  "common": {
+    "cancel": "キャンセル",
+    "create": "作成",
+    "update": "更新",
+    "delete": "削除",
+    "save": "保存",
+    "edit": "編集",
+    "view": "表示",
+    "add": "追加",
+    "loading": "読み込み中...",
+    "actions": "操作",
+    "status": "ステータス",
+    "search": "検索",
+    "no_results": "結果が見つかりません",
+    "in_progress": "進行中",
+    "completed": "完了",
+    "status_options": {
+      "pending": "保留中",
+      "completed": "完了",
+      "cancelled": "キャンセル済"
+    },
+    "or": "or",
+    "change": "Change"
+  },
+  "sidebar": {
+    "dashboard": "ダッシュボード",
+    "customers": "顧客",
+    "sales": "販売",
+    "expenses": "経費",
+    "stock": "在庫",
+    "projects": "プロジェクト",
+    "reports": "スマートレポート",
+    "leads": "見込み客",
+    "tasks": "タスク",
+    "users": "ユーザー",
+    "user_list": "ユーザーリスト",
+    "manage_roles": "ロール管理",
+    "role_assignment": "ロール割り当て",
+    "settings": "設定",
+    "activity": "アクティビティログ",
+    "profile": "マイプロフィール",
+    "emails": "メール",
+    "properties": "物件"
+  },
+  "topbar": {
+    "search_placeholder": "顧客を検索...",
+    "customer_results": "顧客の検索結果",
+    "no_results": "の検索結果が見つかりませんでした",
+    "signed_in_as": "ログイン名:",
+    "account_settings": "アカウント設定",
+    "logout": "ログアウト",
+    "switch_theme": "{{theme}}モードに切り替え"
+  },
+  "dashboard": {
+    "overview": "ダッシュボードの概要",
+    "welcome": "おかえりなさい！今日の状況はこちらです。",
+    "total_customers": "総顧客数",
+    "all_time_customers": "全期間の顧客",
+    "total_sales": "総売上",
+    "sales_today": "今日: {{amount}}",
+    "total_expenses": "総経費",
+    "expenses_today": "今日: {{amount}}",
+    "active_leads": "有効なリード",
+    "excluding_won_lost": "成約/失注を除く",
+    "stock_inventory": "在庫",
+    "stock_value": "価値: {{amount}}",
+    "active_projects": "進行中のプロジェクト",
+    "in_progress": "現在進行中",
+    "pending_tasks": "保留中のタスク",
+    "tasks_to_complete": "完了すべきタスク",
+    "net_earnings": "純利益",
+    "sales_minus_expenses": "売上 - 経費",
+    "income_vs_expense": "収入と支出の比較",
+    "last_30_days": "過去30日間",
+    "recent_activity": "最近のアクティビティ",
+    "no_activity": "最近のアクティビティはありません",
+    "view_all_activity": "すべてのアクティビティを表示",
+    "project_status_overview": "プロジェクト状況の概要",
+    "task_workload_user": "ユーザー別のタスク負荷"
+  },
+  "customers": {
+    "title": "顧客",
+    "subtitle": "顧客データベースと関係を管理します。",
+    "add_new": "新規顧客追加",
+    "search_placeholder": "顧客を検索...",
+    "table": {
+      "customer": "顧客",
+      "company": "会社",
+      "contact": "連絡先",
+      "status": "ステータス",
+      "added_on": "{{date}} に追加"
+    },
+    "modal": {
+      "add_title": "新規顧客追加",
+      "edit_title": "顧客の編集",
+      "full_name": "氏名",
+      "email_address": "メールアドレス",
+      "phone": "電話番号",
+      "company": "会社",
+      "status": "ステータス",
+      "location_details": "住所詳細",
+      "address": "番地・アパート名",
+      "city": "市区町村",
+      "country": "国",
+      "create_btn": "顧客を作成",
+      "update_btn": "顧客を更新"
+    },
+    "delete": {
+      "title": "顧客を削除しますか？",
+      "confirm_text": "<1>{{name}}</1> を削除してもよろしいですか？この操作により、関連するすべてのデータが完全に削除されます。",
+      "delete_now": "今すぐ削除"
+    },
+    "status": {
+      "active": "アクティブ",
+      "pending": "保留中",
+      "inactive": "非アクティブ"
+    },
+    "add_success": "顧客を正常に作成しました！",
+    "update_success": "顧客を正常に更新しました！",
+    "delete_success": "顧客を正常に削除しました！",
+    "loading_error": "顧客の読み込みに失敗しました",
+    "delete_error": "顧客の削除に失敗しました"
+  },
+  "sales": {
+    "title": "売上と収益",
+    "subtitle": "支払いを追跡し、顧客の取引を管理します。",
+    "record_new": "新規売上記録",
+    "total_revenue": "総収益",
+    "pending_payments": "保留中の支払い",
+    "avg_sale_size": "平均売上規模",
+    "search_placeholder": "顧客またはステータスで検索...",
+    "table": {
+      "transaction_details": "取引詳細",
+      "customer": "顧客",
+      "date": "日付",
+      "amount": "金額",
+      "method": "支払い方法",
+      "status": "ステータス",
+      "agent": "担当者: {{name}}",
+      "no_description": "説明なし"
+    },
+    "modal": {
+      "add_title": "新規売上記録",
+      "edit_title": "取引の更新",
+      "customer_select": "顧客を選択してください",
+      "amount_label": "金額",
+      "payment_method": "支払い方法",
+      "description": "説明",
+      "description_placeholder": "取引の詳細やメモを入力してください...",
+      "save_btn": "取引を保存",
+      "update_btn": "取引を更新"
+    },
+    "delete": {
+      "title": "取引を削除しますか？",
+      "confirm_text": "この記録を削除してもよろしいですか？収益レポートに影響し、元に戻すことはできません。",
+      "delete_btn": "記録を削除"
+    },
+    "invoice": {
+      "title": "請求書",
+      "id": "請求書ID",
+      "date": "取引日",
+      "bill_to": "請求先:",
+      "cust_name": "顧客名",
+      "company": "会社",
+      "total": "合計金額",
+      "footer": "ご利用ありがとうございました！"
+    },
+    "methods": {
+      "bank_transfer": "銀行振込",
+      "credit_card": "クレジットカード",
+      "paypal": "ペイパル",
+      "cash": "現金"
+    },
+    "add_success": "新規販売を記録しました！",
+    "update_success": "販売情報を更新しました！",
+    "delete_success": "販売記録を削除しました",
+    "loading_error": "販売データの読み込みに失敗しました",
+    "save_error": "販売の保存に失敗しました",
+    "delete_error": "販売の削除に失敗しました"
+  },
+  "expenses": {
+    "title": "経費管理",
+    "subtitle": "ビジネスの支出を追跡し、カテゴリーを管理します。",
+    "categories_btn": "カテゴリー",
+    "add_expense": "経費追加",
+    "total_expense_month": "{{month}} の総経費",
+    "this_month": "今月",
+    "no_data": "データなし",
+    "recent_expenses": "最近の経費",
+    "search_placeholder": "経費を検索...",
+    "table": {
+      "details": "経費詳細",
+      "category": "カテゴリー",
+      "date": "日付",
+      "amount": "金額",
+      "general_expense": "一般経費"
+    },
+    "modal": {
+      "add_title": "経費記録",
+      "edit_title": "経費の更新",
+      "description_label": "説明 / タイトル",
+      "description_placeholder": "例: オフィス賃料、サーバー費用",
+      "category_label": "カテゴリー",
+      "amount_label": "金額",
+      "date_label": "日付",
+      "payment_method": "支払い方法",
+      "save_btn": "経費を保存",
+      "update_btn": "記録を更新"
+    },
+    "categories_modal": {
+      "title": "経費カテゴリー",
+      "subtitle": "支出バケットを管理します。",
+      "add_category": "カテゴリー追加",
+      "category_name": "名前",
+      "category_placeholder": "カテゴリー名...",
+      "color_theme": "カラーテーマ",
+      "create_btn": "カテゴリー作成",
+      "active_categories": "有効なカテゴリー",
+      "created_on": "{{date}} に作成",
+      "edit_category": "カテゴリーを編集",
+      "update_btn": "カテゴリーを更新",
+      "add_category_success": "カテゴリーを追加しました！",
+      "add_category_error": "カテゴリーの追加に失敗しました",
+      "delete_category_success": "カテゴリーを削除しました！",
+      "delete_category_error": "カテゴリーの削除に失敗しました"
+    },
+    "delete": {
+      "title": "経費を削除しますか？",
+      "confirm_text": "この記録を削除してもよろしいですか？この操作は財務レポートに永久に影響します。",
+      "delete_btn": "経費を削除"
+    },
+    "delete_category": {
+      "title": "カテゴリーを削除しますか？",
+      "confirm_text": "よろしいですか？このカテゴリーのすべての経費も削除されます。この操作は取り消せません。",
+      "delete_btn": "カテゴリーを削除"
+    },
+    "methods": {
+      "bank_transfer": "銀行振込",
+      "credit_card": "クレジットカード",
+      "paypal": "ペイパル",
+      "cash": "現金"
+    },
+    "add_success": "支出を記録しました！",
+    "update_success": "支出を更新しました！",
+    "delete_success": "支出を削除しました",
+    "loading_error": "支出データの読み込みに失敗しました",
+    "save_error": "支出の保存に失敗しました",
+    "delete_error": "支出の削除に失敗しました"
+  },
+  "stock": {
+    "title": "在庫管理",
+    "subtitle": "製品の数量と在庫評価を管理します。",
+    "categories_btn": "カテゴリー",
+    "add_item": "新規アイテム追加",
+    "total_units": "総単位数",
+    "low_stock_alerts": "低在庫アラート",
+    "inventory_value": "在庫価値",
+    "requires_restock": "即時の補充が必要",
+    "asset_valuation": "総資産評価",
+    "search_placeholder": "名前、SKU、またはカテゴリーで検索...",
+    "loading": "在庫を読み込み中...",
+    "no_items": "在庫にアイテムが見つかりませんでした。",
+    "table": {
+      "item_details": "アイテム詳細",
+      "category": "カテゴリー",
+      "quantity": "数量",
+      "unit_price": "単価",
+      "total_value": "合計金額",
+      "status": "ステータス"
+    },
+    "status": {
+      "out_of_stock": "在庫切れ",
+      "low_stock": "低在庫",
+      "in_stock": "在庫あり"
+    },
+    "modal": {
+      "add_title": "新規アイテム追加",
+      "edit_title": "在庫アイテムの編集",
+      "product_name": "製品名",
+      "category": "カテゴリー",
+      "sku_code": "SKUコード",
+      "quantity": "数量",
+      "unit_price": "単価 (¥)",
+      "description": "説明",
+      "description_placeholder": "製品の詳細を追加...",
+      "create_btn": "アイテムを作成",
+      "update_btn": "アイテムを更新"
+    },
+    "delete": {
+      "title": "アイテムを削除しますか？",
+      "confirm_text": "在庫から <1>{{name}}</1> を削除してもよろしいですか？この操作は取り消せません。",
+      "delete_btn": "今すぐ削除"
+    },
+    "category_modal": {
+      "title": "在庫カテゴリーの管理",
+      "add_new_category": "新規カテゴリー追加",
+      "edit_category": "カテゴリーの編集",
+      "category_name": "カテゴリー名",
+      "description": "説明 (任意)",
+      "color_tag": "カラータグ:",
+      "add_btn": "追加",
+      "update_btn": "更新",
+      "existing_categories": "既存のカテゴリー",
+      "no_categories": "カテゴリーが見つかりませんでした。",
+      "add_category_success": "カテゴリーを作成しました！",
+      "edit_category_success": "カテゴリーを更新しました！",
+      "deleted_success": "カテゴリーを削除しました！",
+      "add_category_error": "カテゴリーの作成に失敗しました",
+      "delete_category_error": "カテゴリーの削除に失敗しました"
+    },
+    "add_success": "アイテムを在庫に追加しました！",
+    "update_success": "アイテムを更新しました！",
+    "delete_success": "アイテムを在庫から削除しました",
+    "loading_error": "在庫の読み込みに失敗しました",
+    "delete_error": "アイテムの削除に失敗しました"
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "subtitle": "プロジェクトの進捗と予算を追跡します。",
+    "create_new": "新規プロジェクト作成",
+    "stats": {
+      "in_progress": "進行中",
+      "on_hold": "保留中",
+      "completed": "完了",
+      "total": "合計"
+    },
+    "search_placeholder": "プロジェクトまたはクライアントを検索...",
+    "filter": {
+      "all": "すべて",
+      "planning": "計画中",
+      "in_progress": "進行中",
+      "on_hold": "保留中",
+      "completed": "完了"
+    },
+    "status": {
+      "planning": "計画中",
+      "in_progress": "進行中",
+      "on_hold": "保留中",
+      "completed": "完了",
+      "cancelled": "キャンセル済"
+    },
+    "table": {
+      "details": "プロジェクト詳細",
+      "client": "クライアント",
+      "budget": "予算",
+      "status": "ステータス",
+      "timeline": "タイムライン"
+    },
+    "modal": {
+      "add_title": "新規プロジェクト作成",
+      "edit_title": "プロジェクトの更新",
+      "name_label": "プロジェクト名",
+      "name_placeholder": "例: Webサイトリニューアル 2026",
+      "client_label": "担当クライアント",
+      "client_select": "顧客を選択してください",
+      "start_date": "開始日",
+      "deadline": "期限",
+      "budget_label": "予算",
+      "status_label": "初期ステータス",
+      "scope_label": "プロジェクトの範囲",
+      "scope_placeholder": "プロジェクトの詳細、初期要件、メモなどを追加...",
+      "create_btn": "プロジェクトを開始",
+      "save_changes": "変更を保存"
+    },
+    "delete": {
+      "title": "プロジェクトを削除しますか？",
+      "confirm_text": "このプロジェクトを削除してもよろしいですか？関連するすべてのデータが完全に削除されます。",
+      "delete_btn": "プロジェクトを削除"
+    },
+    "add_success": "プロジェクトを作成しました！",
+    "update_success": "プロジェクトを更新しました！",
+    "delete_success": "プロジェクトを削除しました！",
+    "loading_error": "プロジェクトの読み込みに失敗しました",
+    "save_error": "プロジェクトの保存に失敗しました",
+    "delete_error": "プロジェクトの削除に失敗しました"
+  },
+  "leads": {
+    "title": "見込み客 (リード)",
+    "subtitle": "潜在的な顧客を育成し追跡します。",
+    "add_new": "新規リード追加",
+    "funnel": {
+      "leads": "リード",
+      "New": "新規",
+      "Contacted": "連絡済み",
+      "Qualified": "適格",
+      "Proposal": "提案中",
+      "Negotiation": "交渉中",
+      "Won": "成約",
+      "Lost": "失注"
+    },
+    "search_placeholder": "リードを検索...",
+    "table": {
+      "client": "顧客",
+      "enquiry": "問い合わせ",
+      "location": "場所",
+      "assigned_to": "担当者",
+      "opportunity": "商談",
+      "contact": "連絡先",
+      "valuation": "評価額",
+      "stage": "段階",
+      "temperature": "温度"
+    },
+    "temperature": {
+      "Cold": "低い",
+      "Warm": "普通",
+      "Hot": "高い"
+    },
+    "modal": {
+      "add_title": "新しいリードを追加",
+      "edit_title": "リードを編集",
+      "client_name_label": "顧客名",
+      "client_name_placeholder": "氏名を入力",
+      "email_label": "メールアドレス",
+      "email_placeholder": "email@company.com",
+      "phone_label": "電話番号",
+      "phone_Placeholder": "電話番号を入力",
+      "source_label": "ソース",
+      "source_select": "ソースを選択",
+      "property_type_label": "物件タイプ",
+      "property_type_select": "タイプを選択",
+      "specific_property_label": "特定の物件",
+      "specific_property_select": "物件を選択",
+      "budget": "予算範囲",
+      "preferred_state_label": "希望都道府県",
+      "preferred_state_select": "都道府県を選択",
+      "preferred_state_first_select": "先に都道府県を選択",
+      "preferred_city_label": "希望都市 / エリア",
+      "preferred_city_select": "都市を選択",
+      "assign_to_label": "担当者",
+      "assign_to_select": "ユーザーを選択",
+      "stage_label": "営業ステージ",
+      "temp_label": "温度",
+      "notes_label": "説明 / メモ",
+      "notes_placeholder": "追加の詳細を入力...",
+      "create_btn": "リードを作成",
+      "update_btn": "リードを更新"
+    },
+    "delete": {
+      "title": "リードを削除しますか？",
+      "confirm_text": "<1>{{opportunity}}</1> を削除してもよろしいですか？この操作は取り消せません。",
+      "delete_now": "今すぐ削除",
+      "delete_btn": "Delete Now"
+    },
+    "add_success": "リードを作成しました！",
+    "update_success": "リードを更新しました！",
+    "delete_success": "リードを削除しました",
+    "loading_error": "リードの読み込みに失敗しました",
+    "save_error": "リードの保存に失敗しました",
+    "delete_error": "リードの削除に失敗しました"
+  },
+  "tasks": {
+    "title": "タスクリスト",
+    "subtitle": "日々のタスクと優先順位を管理します。",
+    "new_task": "新規タスク",
+    "filter": {
+      "all": "すべて",
+      "pending": "保留中",
+      "in_progress": "進行中",
+      "completed": "完了"
+    },
+    "search_placeholder": "タスクを検索...",
+    "no_date": "日付なし",
+    "assigned_to": "担当者",
+    "new_item": "新規タスク項目",
+    "priority": {
+      "High": "高",
+      "Medium": "中",
+      "Low": "低"
+    },
+    "modal": {
+      "add_title": "新規タスク",
+      "edit_title": "タスクの更新",
+      "title_label": "タスク名",
+      "title_placeholder": "何をする必要がありますか？",
+      "priority_label": "優先度",
+      "due_date": "期限",
+      "assign_label": "担当者",
+      "assign_select": "エージェントを選択...",
+      "desc_label": "説明 (任意)",
+      "desc_placeholder": "メモ、サブタスク、リンクなどを追加...",
+      "create_btn": "タスクを作成",
+      "update_btn": "タスクを更新"
+    },
+    "delete": {
+      "title": "タスクを削除しますか？",
+      "confirm_text": "このタスクを削除してもよろしいですか？取り消しはできません。",
+      "delete_btn": "タスクを削除"
+    },
+    "add_success": "タスクを作成しました！",
+    "update_success": "タスクを更新しました！",
+    "delete_success": "タスクを削除しました！",
+    "loading_error": "タスクの読み込みに失敗しました",
+    "save_error": "タスクの保存に失敗しました",
+    "delete_error": "タスクの削除に失敗しました",
+    "status_update_success": "タスクを {{status}} に変更しました",
+    "status_update_error": "ステータスの更新に失敗しました"
+  },
+  "users": {
+    "title": "ユーザー管理",
+    "subtitle": "チームメンバー、ロール、権限を管理します。",
+    "add_new": "新規ユーザー追加",
+    "stats": {
+      "total": "総ユーザー数",
+      "admins": "管理者",
+      "active": "現在アクティブ"
+    },
+    "search_placeholder": "名前またはメールアドレスで検索...",
+    "filter": {
+      "role_all": "すべてのロール",
+      "status_active": "アクティブ"
+    },
+    "table": {
+      "user": "ユーザー",
+      "role": "ロール",
+      "status": "ステータス",
+      "last_login": "最終ログイン",
+      "never": "ログイン履歴なし"
+    },
+    "status": {
+      "Active": "アクティブ",
+      "Inactive": "非アクティブ",
+      "Pending": "保留中"
+    },
+    "modal": {
+      "add_title": "新規ユーザー追加",
+      "edit_title": "ユーザーの編集",
+      "full_name": "氏名",
+      "name_placeholder": "フルネームを入力",
+      "email_label": "メールアドレス",
+      "email_placeholder": "email@company.com",
+      "password_label": "パスワード",
+      "password_placeholder": "パスワード",
+      "role_label": "ユーザーロール",
+      "status_label": "ステータス",
+      "create_btn": "ユーザーを作成",
+      "save_changes": "変更を保存"
+    },
+    "delete": {
+      "title": "ユーザーを削除しますか？",
+      "confirm_text": "<1>{{name}}</1> を削除してもよろしいですか？この操作は取り消せません。",
+      "delete_btn": "削除"
+    }
+  },
+  "roles": {
+    "title": "ロール管理",
+    "subtitle": "各ロールの権限と割り当てられたモジュールを設定します。",
+    "create_new": "新規ロール作成",
+    "defined_roles": "定義済みロール",
+    "search_placeholder": "ロールを探す...",
+    "table": {
+      "role_name": "ロール名",
+      "members": "メンバー",
+      "assigned_modules": "割り当てられたモジュール",
+      "users_count": "{{count}} ユーザー",
+      "all_access": "全モジュールへのアクセス権",
+      "no_modules": "割り当てられたモジュールなし"
+    },
+    "modal": {
+      "create_title": "新規ロール作成",
+      "edit_title": "ロールの編集",
+      "role_name": "ロール名",
+      "role_placeholder": "例: 営業エグゼクティブ",
+      "desc_label": "説明",
+      "desc_placeholder": "このロールの役割を説明...",
+      "module_access": "モジュールへのアクセス",
+      "full_admin": "フル管理権限",
+      "admin_desc": "管理者は常にすべてのモジュールにアクセスできます。",
+      "create_btn": "ロールを作成",
+      "save_changes": "変更を保存"
+    },
+    "delete": {
+      "title": "ロールを削除しますか？",
+      "confirm_text": "よろしいですか？<1>{{name}}</1> ロールを完全に削除します。",
+      "delete_btn": "削除"
+    },
+    "modules": {
+      "dashboard": "ダッシュボード",
+      "customers": "顧客",
+      "leads": "見込み客",
+      "sales": "販売",
+      "expenses": "経費",
+      "projects": "プロジェクト",
+      "stock": "在庫",
+      "tasks": "タスク",
+      "support": "サポート",
+      "users": "ユーザー",
+      "reports": "スマートレポート",
+      "activity": "アクティビティログ",
+      "settings": "設定",
+      "emails": "メール"
+    }
+  },
+  "assign_role": {
+    "title": "ロールの割り当て",
+    "subtitle": "チームメンバーのアクセスレベルを再設定します。",
+    "denied_title": "アクセス拒否",
+    "denied_msg": "管理者のみがロール割り当てパネルにアクセスできます。誤りと思われる場合はマネージャーに連絡してください。",
+    "step1": "1. ユーザーを選択",
+    "search_user": "ユーザーを検索...",
+    "step2": "2. 新しいロールを選択",
+    "select_user_first": "まず左側のパネルからユーザーを選択してください。",
+    "promoting": "{{name}} を以下に昇格中:",
+    "update_btn": "ロールを更新",
+    "recent_changes": "最近の変更",
+    "table": {
+      "user": "ユーザー",
+      "change": "変更",
+      "date": "日付",
+      "assigned_by": "割り当て者",
+      "no_changes": "最近の変更は見つかりませんでした",
+      "previous": "以前",
+      "assigned": "割り当て済み",
+      "system_user": "システムユーザー",
+      "admin": "管理者"
+    }
+  },
+  "profile": {
+    "title": "アカウント設定",
+    "subtitle": "個人情報とセキュリティ設定を管理します。",
+    "full_name": "氏名",
+    "email_address": "メールアドレス",
+    "change_password": "パスワード変更",
+    "new_password": "新しいパスワード",
+    "confirm_password": "パスワードの確認",
+    "password_placeholder": "現在のままにする場合は空白",
+    "confirm_placeholder": "新しいパスワードを再入力",
+    "security_tip": "パスワードを変更するとセキュリティが向上します。6文字以上にしてください。",
+    "save_btn": "個人情報を保存",
+    "passwords_mismatch": "パスワードが一致しません",
+    "update_success": "プロフィールを更新しました！",
+    "update_error": "プロフィールの更新に失敗しました"
+  },
+  "report": {
+    "title": "スマートレポート",
+    "subtitle": "パーソナライズされたAI分析。",
+    "reset_btn": "リセット",
+    "history_cleared": "チャット履歴を消去しました。他にお手伝いできることはありますか？",
+    "welcome_msg": "こんにちは！レポートエージェントです。CRMのすべてのデータにアクセスできます。今日は何を分析しましょうか？",
+    "error_msg": "申し訳ありません、Gemini APIへの接続中にエラーが発生しました。設定でAPIキーを確認してください。",
+    "analyzing": "AIがデータを分析中です...",
+    "input_placeholder": "AIに質問: 「2月の総売上は？」、「リードを分析して」、「コスト削減案を提案して」...",
+    "suggested_queries": "推奨クエリ",
+    "suggestions": {
+      "sales": "今月の総売上は？",
+      "expenses": "カテゴリー別の経費を分析して",
+      "customers": "上位5人の顧客は？",
+      "leads": "保留中のリードを要約して",
+      "performance": "先月とのパフォーマンス比較",
+      "stock": "どのアイテムの在庫が少ない？",
+      "projects": "最も収益性の高いプロジェクトは？",
+      "tasks": "優先度の高いタスクをリストアップ",
+      "profit": "年間純利益の分析"
+    }
+  },
+  "support": {
+    "title": "メッセージ",
+    "search_chats": "チャットを検索...",
+    "active_now": "現在アクティブ",
+    "today": "本日",
+    "type_message": "メッセージを入力...",
+    "read": "既読",
+    "online": "オンライン",
+    "offline": "オフライン",
+    "busy": "取り込み中",
+    "yesterday": "昨日"
+  },
+  "activity": {
+    "title": "アクティビティログ",
+    "subtitle": "CRM全体のすべてのアクションの監査証跡。",
+    "search_placeholder": "ログを検索...",
+    "fetching": "監査証跡を取得中...",
+    "no_logs": "ログが見つかりませんでした",
+    "activity_appear": "ユーザーがアプリを使用すると、ここにアクティビティが表示されます。",
+    "performed_a": "が",
+    "on": "に対して",
+    "no_details": "追加詳細は記録されていません。",
+    "fetch_error": "アクティビティログの取得に失敗しました",
+    "entities": {
+      "Project": "プロジェクト",
+      "Task": "タスク",
+      "Customer": "顧客",
+      "Lead": "リード",
+      "Sale": "売上",
+      "Expense": "経費",
+      "ExpenseCategory": "カテゴリー",
+      "StockItem": "在庫アイテム",
+      "User": "ユーザー",
+      "All": "すべて"
+    },
+    "actions": {
+      "CREATED": "作成",
+      "UPDATED": "更新",
+      "DELETED": "削除",
+      "STATUS_TOGGLE": "ステータスの切り替え"
+    }
+  },
+  "login": {
+    "welcome": "おかえりなさい！",
+    "subtitle": "アカウントにログインしてください。",
+    "email_label": "メールアドレス",
+    "email_placeholder": "name@company.com",
+    "password_label": "パスワード",
+    "remember_me": "ログイン状態を保持",
+    "forgot_password": "パスワードをお忘れですか？",
+    "sign_in_btn": "サインイン",
+    "signing_in": "サインイン中...",
+    "no_account": "アカウントをお持ちでない場合",
+    "contact_admin": "管理者に連絡してください",
+    "error_msg": "ログインに失敗しました。資格情報を確認してください。"
+  },
+  "settings": {
+    "title": "設定",
+    "subtitle": "CRMと個人の設定を構成します。",
+    "save_btn": "変更を保存",
+    "saving": "保存中...",
+    "tabs": {
+      "General": "一般",
+      "AI Settings": "AI設定",
+      "System": "システム"
+    },
+    "general": {
+      "title": "一般設定",
+      "company_name": "会社名",
+      "support_email": "サポートメール",
+      "default_currency": "デフォルト通貨",
+      "timezone": "タイムゾーン (IANA)",
+      "show_clock": "トップバーに時計を表示",
+      "appearance": "外観のデフォルト",
+      "light_mode": "ライトモード",
+      "dark_mode": "ダークモード"
+    },
+    "ai": {
+      "title": "AI設定",
+      "subtitle": "Google Geminiでレポートを強化します。",
+      "api_key": "Google Gemini APIキー",
+      "api_key_placeholder": "Gemini APIキーを入力してください",
+      "get_key": "無料のAPIキーを取得:"
+    },
+    "system": {
+      "title": "システム管理",
+      "subtitle": "CRMシステムを保守および最適化します。",
+      "danger_zone": "危険ゾーン",
+      "danger_desc": "以下のアクションは取り消せません。注意して進めてください。",
+      "clear_logs": "すべてのアクティビティログを消去",
+      "clear_logs_desc": "すべてのシステムおよびユーザーアクティビティ記録を永久に削除します。",
+      "clear_btn": "ログを消去",
+      "clear_success": "すべてのアクティビティログが正常に削除されました。",
+      "clear_error": "ログのクリア中にエラーが発生しました"
+    },
+    "modals": {
+      "updated_title": "設定を更新しました！",
+      "updated_msg": "設定が正常に保存され、CRM全体に適用されました。",
+      "failed_title": "更新失敗",
+      "failed_msg": "変更の保存中にエラーが発生しました",
+      "confirm_title": "本当によろしいですか？",
+      "confirm_msg": "これにより、データベースからすべてのアクティビティログが永久に削除されます。この操作は取り消せません。",
+      "logs_cleared_title": "ログを消去しました！",
+      "logs_cleared_msg": "すべてのアクティビティログが正常に削除されました。",
+      "continue": "続行",
+      "confirm_btn": "削除を確定"
+    }
+  },
+  "emails": {
+    "title": "メール送信",
+    "subtitle": "顧客にパーソナライズされたメールを作成して送信します。",
+    "tips": {
+      "title": "プロのヒント",
+      "tip1": "開封率を高めるために件名をパーソナライズしましょう。",
+      "tip2": "送信前に受信者のメールアドレスを再確認してください。",
+      "tip3": "メッセージには明確で簡潔な言葉を使用してください。"
+    },
+    "warning": {
+      "title": "アンチスパムポリシー",
+      "text": "これらの連絡先にメールを送る許可があることを確認してください。"
+    },
+    "form": {
+      "to": "受信者",
+      "search_placeholder": "顧客を検索...",
+      "direct_placeholder": "またはメールアドレスを直接入力",
+      "subject": "件名",
+      "subject_placeholder": "メールの件名を入力",
+      "message": "メッセージ本文",
+      "message_placeholder": "ここにメッセージを記入してください...",
+      "send": "メールを送信",
+      "sending": "送信中...",
+      "fill_fields": "すべての必須項目を入力してください",
+      "send_success": "メールを正常に送信しました！",
+      "send_error": "メールの送信に失敗しました"
+    }
+  },
+  "properties": {
+    "title": "物件",
+    "record_new": "新しい物件を追加",
+    "subtitle": "区画、アパート、賃貸物件、共同事業を管理",
+    "search_placeholder": "物件を検索...",
+    "loading_error": "物件の取得に失敗しました",
+    "delete_success": "物件が正常に削除されました",
+    "delete_error": "物件の削除に失敗しました",
+    "filter": {
+      "all": "すべて",
+      "plot": "区画",
+      "apartment": "アパート",
+      "joint_venture": "共同事業",
+      "rental": "賃貸"
+    },
+    "stats": {
+      "rented": "賃貸中",
+      "under_construction": "建設中",
+      "available": "利用可能",
+      "sold": "販売済み",
+      "total": "合計"
+    },
+    "table": {
+      "property": "物件",
+      "project": "プロジェクト",
+      "type": "タイプ",
+      "location": "場所",
+      "status": "状態"
+    },
+    "delete": {
+      "title": "物件を削除しますか？",
+      "confirm_text": "本当に削除しますか",
+      "delete_btn": "削除"
+    },
+    "modal": {
+      "edit_title": "物件を編集",
+      "add_title": "物件を追加",
+      "name_placeholder": "物件名を入力",
+      "project_label": "プロジェクト名",
+      "project_placeholder": "任意のプロジェクト名",
+      "type_label": "物件タイプ",
+      "status_label": "状態",
+      "state_label": "都道府県",
+      "state_select": "都道府県を選択",
+      "city_label": "市区町村",
+      "city_select": "市区町村を選択",
+      "details_title": "物件詳細",
+      "save_changes": "変更を保存",
+      "create_btn": "物件を作成",
+      "bhk_type": "BHKタイプ",
+      "area_sqft": "面積（平方フィート）",
+      "floor": "階",
+      "tower_block": "タワー / ブロック",
+      "amenities": "設備",
+      "total_price": "総価格",
+      "monthly_rent": "月額賃料",
+      "security_deposit": "保証金",
+      "lease_period": "契約期間",
+      "tenant_name": "借主名",
+      "partner_name": "パートナー名",
+      "profit_sharing_ratio": "利益分配",
+      "land_area": "土地面積",
+      "project_status": "プロジェクト状況",
+      "total_project_value": "プロジェクト総額",
+      "area_sq_yard": "面積（平方ヤード）",
+      "dimensions": "寸法",
+      "facing": "向き",
+      "price_per_sq_yard": "平方ヤード単価"
+    }
+  }
+}

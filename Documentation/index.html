@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puku CRM Documentation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .module-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.1), 0 8px 10px -6px rgba(59, 130, 246, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900 selection:bg-blue-100 selection:text-blue-700">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">P
+                    </div>
+                    <span class="text-xl font-bold tracking-tight">Puku <span class="text-blue-600">CRM</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">About</a>
+                    <a href="#installation"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Installation</a>
+                    <a href="#modules"
+                        class="text-sm font-medium text-slate-600 hover:text-blue-600 transition-colors">Modules</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <!-- Hero Section -->
+        <section id="about" class="mb-24 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Next-Gen <span class="gradient-text">CRM Solutions</span>
+            </h1>
+            <p class="text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed">
+                Puku CRM is a modern, high-performance Customer Relationship Management system designed to empower
+                businesses with seamless management of leads, customers, projects, and finances.
+            </p>
+        </section>
+
+        <!-- About Section -->
+        <div class="grid md:grid-cols-2 gap-12 items-center mb-24">
+            <div class="space-y-6">
+                <h2 class="text-3xl font-bold">Why Puku CRM?</h2>
+                <p class="text-slate-600">
+                    Built with React and Node.js, Puku CRM offers a lightning-fast interface with real-time updates and
+                    robust data security. Whether you are tracking sales performance, managing complex projects, or
+                    monitoring expenses, Puku provides the tools necessary for operational excellence.
+                </p>
+                <ul class="space-y-3">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">Unified dashboard for real-time insights</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">Dynamic installer and database setup</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                        <span class="text-slate-700">Comprehensive module suite (Sales, Stock, Projects)</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative">
+                <div class="absolute -inset-4 bg-blue-500/10 rounded-3xl blur-2xl"></div>
+                <div class="relative bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                    <pre class="bg-slate-900 text-blue-400 p-4 rounded-lg overflow-x-auto text-sm"><code>{
+  "system": "Puku CRM",
+  "version": "1.0.0",
+  "stack": ["React", "Node.js", "MySQL"],
+  "status": "Production Ready"
+}</code></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- Installation Section -->
+        <section id="installation" class="mb-24 scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-8">Installation Guide</h2>
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="p-8 space-y-8">
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 flex items-center space-x-2">
+                            <span
+                                class="w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center text-xs">1</span>
+                            <span>Prerequisites</span>
+                        </h3>
+                        <p class="text-slate-600 mb-4 pl-8">Ensure you have Node.js (v18+) and a MySQL server (like
+                            XAMPP or MariaDB) running.</p>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 flex items-center space-x-2">
+                            <span
+                                class="w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center text-xs">2</span>
+                            <span>Deployment</span>
+                        </h3>
+                        <div class="pl-8 space-y-4">
+                            <div class="bg-slate-50 p-4 rounded-lg">
+                                <p class="text-sm font-mono text-slate-700"># Start Backend Server</p>
+                                <p class="text-sm font-mono text-blue-600">cd puku-crm-backend && npm start</p>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-lg">
+                                <p class="text-sm font-mono text-slate-700"># Start Frontend Panel</p>
+                                <p class="text-sm font-mono text-blue-600">cd puku-crm-frontend && npm run dev</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="font-semibold text-lg mb-4 flex items-center space-x-2">
+                            <span
+                                class="w-6 h-6 bg-slate-100 rounded-full flex items-center justify-center text-xs">3</span>
+                            <span>Auto-Setup</span>
+                        </h3>
+                        <p class="text-slate-600 pl-8">
+                            Navigate to <code>http://localhost:3000</code>. The system will automatically redirect you
+                            to the <strong>Installer</strong>. Follow the on-screen steps to configure your database
+                            credentials and create your admin account.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modules Section -->
+        <section id="modules" class="scroll-mt-24">
+            <h2 class="text-3xl font-bold mb-4">Core Modules</h2>
+            <p class="text-slate-600 mb-12">Puku CRM is built with a modular architecture, allowing each component to
+                handle specific business logic elegantly.</p>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Dashboard -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Dashboard</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Centralized hub providing visual summaries of
+                        sales, recent activity, and key performance indicators (KPIs).</p>
+                </div>
+
+                <!-- Customers -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Customers</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Manage your complete client database with detailed
+                        profiles, contact history, and relationship status.</p>
+                </div>
+
+                <!-- Sales -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Sales</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Track every transaction from pending to completed.
+                        Generate PDF invoices and monitor revenue trends.</p>
+                </div>
+
+                <!-- Expenses -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Expenses</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Categorize and log business spending. View monthly
+                        summaries to maintain financial health.</p>
+                </div>
+
+                <!-- Projects -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01m-.01 4h.01">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Projects</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">End-to-end project tracking. Assign clients,
+                        manage budgets, and monitor deadlines effortlessly.</p>
+                </div>
+
+                <!-- Leads -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Leads</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Capture and nurture potential opportunities. Move
+                        leads through stages from "New" to "Won".</p>
+                </div>
+
+                <!-- Tasks -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Tasks</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Action-oriented task management with priorities
+                        and due dates. Assigned directly to team members.</p>
+                </div>
+
+                <!-- Stock -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Inventory (Stock)</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Real-time inventory tracking. Monitor stock
+                        levels, SKU management, and unit pricing per category.</p>
+                </div>
+
+                <!-- Report -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Reports</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Data-driven reports on finance and operations.
+                        AI-powered summaries for strategic decision-making.</p>
+                </div>
+
+                <!-- Support -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Support</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Integrated ticketing system for customer queries.
+                        Track resolution times and agent performance.</p>
+                </div>
+
+                <!-- Users -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Users & Roles</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Granular permissions management. Define roles
+                        (Admin, Agent, Manager) and control system access.</p>
+                </div>
+
+                <!-- Activity Logs -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Activity Logs</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Track every change across the system. Audit who
+                        did what and when for maximum accountability.</p>
+                </div>
+
+                <!-- Settings -->
+                <div
+                    class="module-card bg-white p-6 rounded-2xl border border-slate-200 shadow-sm transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                            </path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">Settings</h3>
+                    <p class="text-sm text-slate-500 leading-relaxed">Full system customization. Configure appearance,
+                        API keys, and business defaults from a single panel.</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p class="text-slate-500 text-sm">© 2026 Puku CRM. Built for modern business excellence.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

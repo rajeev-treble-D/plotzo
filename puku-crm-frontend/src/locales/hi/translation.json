@@ -1,0 +1,863 @@
+{
+  "common": {
+    "cancel": "रद्द करें",
+    "create": "बनाएं",
+    "update": "अपडेट करें",
+    "delete": "हटाएं",
+    "save": "सहेजें",
+    "edit": "संपादित करें",
+    "view": "देखें",
+    "add": "जोड़ें",
+    "loading": "लोड हो रहा है...",
+    "actions": "कार्रवाई",
+    "status": "स्थिति",
+    "search": "खोजें",
+    "no_results": "कोई परिणाम नहीं मिला",
+    "in_progress": "प्रगति पर",
+    "completed": "पूरा हुआ",
+    "status_options": {
+      "pending": "लंबित",
+      "completed": "पूर्ण",
+      "cancelled": "रद्द"
+    },
+    "na": "लागू नहीं",
+    "or": "or",
+    "change": "Change"
+  },
+  "sidebar": {
+    "dashboard": "डैशबोर्ड",
+    "customers": "ग्राहक",
+    "sales": "बिक्री",
+    "expenses": "खर्च",
+    "stock": "स्टॉक",
+    "projects": "प्रोजेक्ट्स",
+    "reports": "स्मार्ट रिपोर्ट",
+    "leads": "लीड्स",
+    "tasks": "कार्य",
+    "users": "उपयोगकर्ता",
+    "user_list": "उपयोगकर्ता सूची",
+    "manage_roles": "भूमिकाएं प्रबंधित करें",
+    "role_assignment": "भूमिका असाइनमेंट",
+    "settings": "सेटिंग्स",
+    "activity": "गतिविधि लॉग",
+    "profile": "मेरी प्रोफाइल",
+    "emails": "ईमेल",
+    "properties": "संपत्तियाँ"
+  },
+  "topbar": {
+    "search_placeholder": "ग्राहक खोजें...",
+    "customer_results": "ग्राहक परिणाम",
+    "no_results": "के लिए कोई परिणाम नहीं मिला",
+    "signed_in_as": "के रूप में साइन इन हैं",
+    "account_settings": "अकाउंट सेटिंग्स",
+    "logout": "लॉगआउट",
+    "switch_theme": "{{theme}} मोड पर स्विच करें"
+  },
+  "dashboard": {
+    "overview": "डैशबोर्ड अवलोकन",
+    "welcome": "वापसी पर स्वागत है! यहाँ आज का अपडेट है।",
+    "total_customers": "कुल ग्राहक",
+    "all_time_customers": "कुल समय के ग्राहक",
+    "total_sales": "कुल बिक्री",
+    "sales_today": "आज: {{amount}}",
+    "total_expenses": "कुल खर्च",
+    "expenses_today": "आज: {{amount}}",
+    "active_leads": "सक्रिय लीड्स",
+    "excluding_won_lost": "Won/Lost को छोड़कर",
+    "stock_inventory": "स्टॉक इन्वेंट्री",
+    "stock_value": "मूल्य: {{amount}}",
+    "active_projects": "सक्रिय प्रोजेक्ट्स",
+    "in_progress": "वर्तमान में प्रगति पर",
+    "pending_tasks": "लंबित कार्य",
+    "tasks_to_complete": "पूरे किए जाने वाले कार्य",
+    "net_earnings": "शुद्ध कमाई",
+    "sales_minus_expenses": "बिक्री - खर्च",
+    "income_vs_expense": "आय बनाम व्यय तुलना",
+    "last_30_days": "पिछले 30 दिन",
+    "recent_activity": "हाल की गतिविधि",
+    "no_activity": "कोई हाल की गतिविधि नहीं",
+    "view_all_activity": "सभी गतिविधि देखें",
+    "project_status_overview": "प्रोजेक्ट स्थिति अवलोकन",
+    "task_workload_user": "उपयोगकर्ता द्वारा कार्यभार"
+  },
+  "customers": {
+    "title": "ग्राहक",
+    "subtitle": "अपने ग्राहक डेटाबेस और संबंधों का प्रबंधन करें।",
+    "add_new": "नया ग्राहक जोड़ें",
+    "search_placeholder": "ग्राहक खोजें...",
+    "table": {
+      "customer": "ग्राहक",
+      "company": "कंपनी",
+      "contact": "संपर्क",
+      "status": "स्थिति",
+      "added_on": "{{date}} को जोड़ा गया"
+    },
+    "modal": {
+      "add_title": "नया ग्राहक जोड़ें",
+      "edit_title": "ग्राहक संपादित करें",
+      "full_name": "पूरा नाम",
+      "email_address": "ईमेल पता",
+      "phone": "फोन नंबर",
+      "company": "कंपनी",
+      "status": "स्थिति",
+      "location_details": "स्थान विवरण",
+      "address": "गली का पता",
+      "city": "शहर",
+      "country": "देश",
+      "create_btn": "ग्राहक बनाएं",
+      "update_btn": "ग्राहक अपडेट करें"
+    },
+    "delete": {
+      "title": "ग्राहक हटाएं?",
+      "confirm_text": "क्या आप वाकई <1>{{name}}</1> को हटाना चाहते हैं? यह कार्रवाई सभी संबंधित डेटा को स्थायी रूप से हटा देगी।",
+      "delete_now": "अभी हटाएं"
+    },
+    "status": {
+      "active": "सक्रिय",
+      "pending": "लंबित",
+      "inactive": "निष्क्रिय"
+    },
+    "add_success": "ग्राहक सफलतापूर्वक बनाया गया!",
+    "update_success": "ग्राहक सफलतापूर्वक अपडेट किया गया!",
+    "delete_success": "ग्राहक सफलतापूर्वक हटा दिया गया!",
+    "loading_error": "ग्राहक लोड करने में विफल",
+    "delete_error": "ग्राहक हटाने में विफल"
+  },
+  "sales": {
+    "title": "बिक्री और राजस्व",
+    "subtitle": "भुगतान ट्रैक करें और ग्राहक लेनदेन का प्रबंधन करें।",
+    "record_new": "नई बिक्री रिकॉर्ड करें",
+    "total_revenue": "कुल राजस्व",
+    "pending_payments": "लंबित भुगतान",
+    "avg_sale_size": "औसत बिक्री आकार",
+    "search_placeholder": "ग्राहक या स्थिति द्वारा खोजें...",
+    "table": {
+      "transaction_details": "लेनदेन विवरण",
+      "customer": "ग्राहक",
+      "date": "दिनांक",
+      "amount": "रकम",
+      "method": "तरीका",
+      "status": "स्थिति",
+      "agent": "एजेंट: {{name}}",
+      "no_description": "कोई विवरण नहीं"
+    },
+    "modal": {
+      "add_title": "नई बिक्री रिकॉर्ड करें",
+      "edit_title": "लेनदेन अपडेट करें",
+      "customer_select": "एक ग्राहक चुनें",
+      "amount_label": "रकम",
+      "payment_method": "भुगतान का तरीका",
+      "description": "विवरण",
+      "description_placeholder": "सौदा विवरण या लेनदेन नोट्स लिखें...",
+      "save_btn": "लेनदेन सहेजें",
+      "update_btn": "लेनदेन अपडेट करें"
+    },
+    "delete": {
+      "title": "लेनदेन हटाएं?",
+      "confirm_text": "क्या आप वाकई इस रिकॉर्ड को हटाना चाहते हैं? यह आपके राजस्व रिपोर्ट को प्रभावित करेगा।",
+      "delete_btn": "रिकॉर्ड हटाएं"
+    },
+    "invoice": {
+      "title": "बीजक (INVOICE)",
+      "id": "बीजक आईडी",
+      "date": "लेनदेन की तारीख",
+      "bill_to": "बिल प्राप्तकर्ता:",
+      "cust_name": "ग्राहक का नाम",
+      "company": "कंपनी",
+      "total": "कुल रकम",
+      "footer": "हमारे साथ व्यापार करने के लिए धन्यवाद!"
+    },
+    "methods": {
+      "bank_transfer": "बैंक हस्तांतरण",
+      "credit_card": "क्रेडिट कार्ड",
+      "paypal": "पेपाल",
+      "cash": "नकद"
+    },
+    "add_success": "नई बिक्री दर्ज की गई!",
+    "update_success": "बिक्री सफलतापूर्वक अपडेट की गई!",
+    "delete_success": "बिक्री रिकॉर्ड हटा दिया गया",
+    "loading_error": "बिक्री डेटा लोड करने में विफल",
+    "save_error": "बिक्री सहेजने में विफल",
+    "delete_error": "बिक्री हटाने में विफल"
+  },
+  "expenses": {
+    "title": "व्यय प्रबंधन",
+    "subtitle": "व्यावसायिक खर्चों को ट्रैक करें और श्रेणियों का प्रबंधन करें।",
+    "categories_btn": "श्रेणियां",
+    "add_expense": "खर्च जोड़ें",
+    "total_expense_month": "{{month}} का कुल खर्च",
+    "this_month": "इस महीने",
+    "no_data": "कोई डेटा नहीं",
+    "recent_expenses": "हाल के खर्च",
+    "search_placeholder": "खर्च खोजें...",
+    "table": {
+      "details": "व्यय विवरण",
+      "category": "श्रेणी",
+      "date": "तारीख",
+      "amount": "रकम",
+      "general_expense": "सामान्य खर्च"
+    },
+    "modal": {
+      "add_title": "खर्च रिकॉर्ड करें",
+      "edit_title": "खर्च अपडेट करें",
+      "description_label": "विवरण / शीर्षक",
+      "description_placeholder": "जैसे: ऑफिस किराया, AWS होस्टिंग",
+      "category_label": "श्रेणी",
+      "amount_label": "रकम",
+      "date_label": "तारीख",
+      "payment_method": "भुगतान का तरीका",
+      "save_btn": "खर्च सहेजें",
+      "update_btn": "रिकॉर्ड अपडेट करें"
+    },
+    "categories_modal": {
+      "title": "खर्च की श्रेणियां",
+      "subtitle": "खर्च के क्षेत्रों को प्रबंधित करें।",
+      "add_category": "श्रेणी जोड़ें",
+      "category_name": "नाम",
+      "category_placeholder": "श्रेणी का नाम...",
+      "color_theme": "कलर थीम",
+      "create_btn": "श्रेणी बनाएं",
+      "active_categories": "सक्रिय श्रेणियां",
+      "created_on": "{{date}} को बनाई गई",
+      "edit_category": "श्रेणी संपादित करें",
+      "update_btn": "श्रेणी अपडेट करें",
+      "add_category_success": "श्रेणी जोड़ी गई!",
+      "add_category_error": "श्रेणी जोड़ने में विफल",
+      "delete_category_success": "श्रेणी सफलतापूर्वक हटा दी गई!",
+      "delete_category_error": "श्रेणी हटाने में विफल"
+    },
+    "delete": {
+      "title": "खर्च हटाएं?",
+      "confirm_text": "क्या आप वाकई इस रिकॉर्ड को हटाना चाहते हैं? यह स्थायी रूप से आपकी वित्तीय रिपोर्ट को प्रभावित करेगा।",
+      "delete_btn": "खर्च हटाएं"
+    },
+    "delete_category": {
+      "title": "श्रेणी हटाएं?",
+      "confirm_text": "क्या आप वाकई? यह इस श्रेणी के सभी खर्चों को हटा देगा।",
+      "delete_btn": "श्रेणी हटाएं"
+    },
+    "methods": {
+      "credit_card": "क्रेडिट कार्ड",
+      "bank_transfer": "बैंक ट्रांसफर",
+      "paypal": "पेपैल",
+      "cash": "नकद"
+    },
+    "add_success": "खर्च दर्ज किया गया!",
+    "update_success": "खर्च सफलतापूर्वक अपडेट किया गया!",
+    "delete_success": "खर्च हटा दिया गया",
+    "loading_error": "खर्च डेटा लोड करने में विफल",
+    "save_error": "खर्च सहेजने में विफल",
+    "delete_error": "खर्च हटाने में विफल"
+  },
+  "stock": {
+    "title": "इन्वेंटरी और स्टॉक",
+    "subtitle": "उत्पाद की मात्रा और इन्वेंट्री मूल्यांकन का प्रबंधन करें।",
+    "categories_btn": "श्रेणियां",
+    "add_item": "नया आइटम जोड़ें",
+    "total_units": "कुल इकाइयाँ",
+    "low_stock_alerts": "कम स्टॉक अलर्ट",
+    "inventory_value": "इन्वेंटरी मूल्य",
+    "requires_restock": "तत्काल स्टॉक भरने की आवश्यकता",
+    "asset_valuation": "कुल संपत्ति मूल्यांकन",
+    "search_placeholder": "नाम, SKU या श्रेणी द्वारा खोजें...",
+    "loading": "इन्वेंटरी लोड हो रही है...",
+    "no_items": "इन्वेंटरी में कोई आइटम नहीं मिला।",
+    "table": {
+      "item_details": "आइटम विवरण",
+      "category": "श्रेणी",
+      "quantity": "मात्रा",
+      "unit_price": "इकाई मूल्य",
+      "total_value": "कुल मूल्य",
+      "status": "स्थिति",
+      "actions": "कार्रवाई"
+    },
+    "status": {
+      "out_of_stock": "स्टॉक खत्म",
+      "low_stock": "कम स्टॉक",
+      "in_stock": "स्टॉक में"
+    },
+    "modal": {
+      "add_title": "नया आइटम जोड़ें",
+      "edit_title": "इन्वेंटरी आइटम संपादित करें",
+      "product_name": "उत्पाद का नाम",
+      "category": "श्रेणी",
+      "sku_code": "SKU कोड",
+      "quantity": "मात्रा",
+      "unit_price": "इकाई मूल्य (₹)",
+      "description": "विवरण",
+      "description_placeholder": "उत्पाद के बारे में अधिक विवरण जोड़ें...",
+      "create_btn": "आइटम बनाएं",
+      "update_btn": "आइटम अपडेट करें"
+    },
+    "delete": {
+      "title": "आइटम हटाएं?",
+      "confirm_text": "क्या आप वाकई इन्वेंट्री से <1>{{name}}</1> को हटाना चाहते हैं? यह कार्रवाई पूर्ववत नहीं की जा सकती।",
+      "delete_btn": "अभी हटाएं"
+    },
+    "category_modal": {
+      "title": "स्टॉक श्रेणियों का प्रबंधन",
+      "add_new_category": "नई श्रेणी जोड़ें",
+      "edit_category": "श्रेणी संपादित करें",
+      "category_name": "श्रेणी का नाम",
+      "description": "विवरण (वैकल्पिक)",
+      "color_tag": "कलर टैग:",
+      "add_btn": "जोड़ें",
+      "update_btn": "अपडेट",
+      "existing_categories": "मौजूदा श्रेणियां",
+      "no_categories": "कोई श्रेणी नहीं मिली।",
+      "add_category_success": "श्रेणी बनाई गई!",
+      "edit_category_success": "श्रेणी अपडेट की गई!",
+      "deleted_success": "श्रेणी सफलतापूर्वक हटा दी गई!",
+      "add_category_error": "श्रेणी बनाने में विफल",
+      "delete_category_error": "श्रेणी हटाने में विफल"
+    },
+    "add_success": "वस्तु इन्वेंट्री में जोड़ी गई!",
+    "update_success": "वस्तु सफलतापूर्वक अपडेट की गई!",
+    "delete_success": "वस्तु इन्वेंट्री से हटा दी गई",
+    "loading_error": "इन्वेंट्री लोड करने में विफल",
+    "delete_error": "वस्तु हटाने में विफल"
+  },
+  "projects": {
+    "title": "परियोजनाएं",
+    "subtitle": "परियोजना की प्रगति और बजट को ट्रैक करें।",
+    "create_new": "नई परियोजना बनाएं",
+    "stats": {
+      "in_progress": "प्रगति पर",
+      "on_hold": "रुका हुआ",
+      "completed": "पूरा हुआ",
+      "total": "कुल"
+    },
+    "search_placeholder": "परियोजनाएं या क्लाइंट खोजें...",
+    "filter": {
+      "all": "सभी",
+      "planning": "योजना",
+      "in_progress": "प्रगति पर",
+      "on_hold": "रुका हुआ",
+      "completed": "पूरा हुआ"
+    },
+    "status": {
+      "planning": "योजना",
+      "in_progress": "प्रगति पर",
+      "on_hold": "रोका गया",
+      "completed": "पूर्ण",
+      "cancelled": "रद्द"
+    },
+    "table": {
+      "details": "परियोजना विवरण",
+      "client": "क्लाइंट",
+      "budget": "बजट",
+      "status": "स्थिति",
+      "timeline": "समय सीमा"
+    },
+    "modal": {
+      "add_title": "नई परियोजना बनाएं",
+      "edit_title": "परियोजना अपडेट करें",
+      "name_label": "परियोजना का नाम",
+      "name_placeholder": "जैसे: वेबसाइट पुनर्रचना 2026",
+      "client_label": "असाइन किया गया क्लाइंट",
+      "client_select": "एक ग्राहक चुनें",
+      "start_date": "शुरू करने की तिथि",
+      "deadline": "अंतिम तिथि",
+      "budget_label": "बजट",
+      "status_label": "प्रारंभिक स्थिति",
+      "scope_label": "प्रोजेक्ट स्कोप",
+      "scope_placeholder": "प्रोजेक्ट विवरण, आवश्यकताएँ या नोट्स जोड़ें...",
+      "create_btn": "परियोजना शुरू करें",
+      "save_changes": "परिवर्तन सहेजें"
+    },
+    "delete": {
+      "title": "परियोजना हटाएं?",
+      "confirm_text": "क्या आप वाकई इस परियोजना को हटाना चाहते हैं? यह सभी संबद्ध डेटा को स्थायी रूप से हटा देगा।",
+      "delete_btn": "परियोजना हटाएं"
+    },
+    "add_success": "प्रोजेक्ट सफलतापूर्वक बनाया गया!",
+    "update_success": "प्रोजेक्ट सफलतापूर्वक अपडेट किया गया!",
+    "delete_success": "प्रोजेक्ट सफलतापूर्वक हटा दिया गया!",
+    "loading_error": "प्रोजेक्ट लोड करने में विफल",
+    "save_error": "प्रोजेक्ट सहेजने में विफल",
+    "delete_error": "प्रोजेक्ट हटाने में विफल"
+  },
+  "leads": {
+    "title": "बिक्री लीड्स",
+    "subtitle": "अपने संभावित ग्राहकों को ट्रैक करें।",
+    "add_new": "नई लीड जोड़ें",
+    "funnel": {
+      "leads": "लीड्स",
+      "New": "नया",
+      "Contacted": "संपर्क किया गया",
+      "Qualified": "योग्य",
+      "Proposal": "प्रस्ताव",
+      "Negotiation": "बातचीत",
+      "Won": "जीता",
+      "Lost": "खोया"
+    },
+    "search_placeholder": "लीड्स खोजें...",
+    "table": {
+      "client": "क्लाइंट",
+      "enquiry": "पूछताछ",
+      "location": "स्थान",
+      "assigned_to": "असाइन किया गया",
+      "opportunity": "अवसर",
+      "contact": "संपर्क",
+      "valuation": "मूल्यांकन",
+      "stage": "चरण",
+      "temperature": "रुचि स्तर"
+    },
+    "temperature": {
+      "Cold": "बर्फ़ीला",
+      "Warm": "गर्म",
+      "Hot": "बहुत गर्म"
+    },
+    "modal": {
+      "add_title": "नया लीड जोड़ें",
+      "edit_title": "लीड संपादित करें",
+      "client_name_label": "क्लाइंट का नाम",
+      "client_name_placeholder": "पूरा नाम दर्ज करें",
+      "email_label": "ईमेल पता",
+      "email_placeholder": "email@company.com",
+      "phone_label": "फोन नंबर",
+      "phone_Placeholder": "फोन नंबर दर्ज करें",
+      "source_label": "स्रोत",
+      "source_select": "स्रोत चुनें",
+      "property_type_label": "संपत्ति प्रकार",
+      "property_type_select": "प्रकार चुनें",
+      "specific_property_label": "विशिष्ट संपत्ति",
+      "specific_property_select": "संपत्ति चुनें",
+      "budget": "बजट रेंज",
+      "preferred_state_label": "पसंदीदा राज्य",
+      "preferred_state_select": "राज्य चुनें",
+      "preferred_state_first_select": "पहले राज्य चुनें",
+      "preferred_city_label": "पसंदीदा शहर / क्षेत्र",
+      "preferred_city_select": "शहर चुनें",
+      "assign_to_label": "असाइन करें",
+      "assign_to_select": "यूज़र चुनें",
+      "stage_label": "सेल्स स्टेज",
+      "temp_label": "रुचि स्तर",
+      "notes_label": "विवरण / नोट्स",
+      "notes_placeholder": "कोई अतिरिक्त विवरण दर्ज करें...",
+      "create_btn": "लीड बनाएं",
+      "update_btn": "लीड अपडेट करें"
+    },
+    "delete": {
+      "title": "लीड हटाएं?",
+      "confirm_text": "क्या आप वाकई <1>{{opportunity}}</1> को हटाना चाहते हैं?",
+      "delete_btn": "अभी हटाएं"
+    },
+    "add_success": "लीड सफलतापूर्वक बनाई गई!",
+    "update_success": "लीड सफलतापूर्वक अपडेट की गई!",
+    "delete_success": "लीড हटा दी गई",
+    "loading_error": "लीड लोड करने में विफल",
+    "save_error": "लीड सहेजने में विफल",
+    "delete_error": "लीड हटाने में विफल"
+  },
+  "tasks": {
+    "title": "कार्य सूची",
+    "subtitle": "अपने दैनिक कार्यों और प्राथमिकताओं का प्रबंधन करें।",
+    "new_task": "नया कार्य",
+    "filter": {
+      "all": "सभी",
+      "pending": "लंबित",
+      "in_progress": "प्रगति पर",
+      "completed": "पूरा हुआ"
+    },
+    "search_placeholder": "कार्य खोजें...",
+    "no_date": "कोई तारीख नहीं",
+    "assigned_to": "असाइन किया गया",
+    "new_item": "नया कार्य आइटम",
+    "priority": {
+      "High": "उच्च",
+      "Medium": "मध्यम",
+      "Low": "निम्न"
+    },
+    "modal": {
+      "add_title": "नया कार्य",
+      "edit_title": "कार्य अपडेट करें",
+      "title_label": "कार्य का शीर्षक",
+      "title_placeholder": "क्या किया जाना चाहिए?",
+      "priority_label": "प्राथमिकता",
+      "due_date": "अंतिम तिथि",
+      "assign_label": "असाइन करें",
+      "assign_select": "एजेंट चुनें...",
+      "desc_label": "विवरण (वैकल्पिक)",
+      "desc_placeholder": "नोट्स, उप-कार्य या लिंक जोड़ें...",
+      "create_btn": "कार्य बनाएं",
+      "update_btn": "कार्य अपडेट करें"
+    },
+    "delete": {
+      "title": "कार्य हटाएं?",
+      "confirm_text": "क्या आप वाकई इस कार्य को हटाना चाहते हैं?",
+      "delete_btn": "कार्य हटाएं"
+    },
+    "add_success": "कार्य बनाया गया!",
+    "update_success": "कार्य सफलतापूर्वक अपडेट किया गया!",
+    "delete_success": "कार्य सफलतापूर्वक हटा दिया गया!",
+    "loading_error": "कार्य लोड करने में विफल",
+    "save_error": "कार्य सहेजने में विफल",
+    "delete_error": "कार्य हटाने में विफल",
+    "status_update_success": "कार्य को {{status}} के रूप में चिह्नित किया गया",
+    "status_update_error": "स्थिति अपडेट करने में विफल"
+  },
+  "users": {
+    "title": "उपयोगकर्ता प्रबंधन",
+    "subtitle": "टीम के सदस्यों, भूमिकाओं और अनुमतियों का प्रबंधन करें।",
+    "add_new": "नया उपयोगकर्ता जोड़ें",
+    "stats": {
+      "total": "कुल उपयोगकर्ता",
+      "admins": "अव्यवस्थापक",
+      "active": "अभी सक्रिय"
+    },
+    "search_placeholder": "नाम या ईमेल द्वारा उपयोगकर्ता खोजें...",
+    "filter": {
+      "role_all": "भूमिका: सभी",
+      "status_active": "स्थिति: सक्रिय"
+    },
+    "table": {
+      "user": "उपयोगकर्ता",
+      "role": "भूमिका",
+      "status": "स्थिति",
+      "last_login": "पिछला लॉगिन",
+      "never": "कभी लॉगिन नहीं किया"
+    },
+    "status": {
+      "Active": "सक्रिय",
+      "Inactive": "निष्क्रिय",
+      "Pending": "लंबित"
+    },
+    "modal": {
+      "add_title": "नया उपयोगकर्ता जोड़ें",
+      "edit_title": "उपयोगकर्ता संपादित करें",
+      "full_name": "पूरा नाम",
+      "name_placeholder": "पूरा नाम दर्ज करें",
+      "email_label": "ईमेल पता",
+      "email_placeholder": "email@company.com",
+      "password_label": "पासवर्ड",
+      "password_placeholder": "पासवर्ड",
+      "role_label": "उपयोगकर्ता भूमिका",
+      "status_label": "स्थिति",
+      "create_btn": "उपयोगकर्ता बनाएं",
+      "save_changes": "परिवर्तन सहेजें"
+    },
+    "delete": {
+      "title": "उपयोगकर्ता हटाएं?",
+      "confirm_text": "क्या आप वाकई <1>{{name}}</1> को हटाना चाहते हैं?",
+      "delete_btn": "हटाएं"
+    }
+  },
+  "roles": {
+    "title": "भूमिका प्रबंधन",
+    "subtitle": "प्रत्येक भूमिका के लिए अनुमति और सौंपे गए मॉड्यूल कॉन्फ़िगर करें।",
+    "create_new": "नई भूमिका बनाएं",
+    "defined_roles": "परिभाषित भूमिकाएं",
+    "search_placeholder": "भूमिका खोजें...",
+    "table": {
+      "role_name": "भूमिका का नाम",
+      "members": "सदस्य",
+      "assigned_modules": "सौंपे गए मॉड्यूल",
+      "users_count": "{{count}} उपयोगकर्ता",
+      "all_access": "सभी मॉड्यूल एक्सेस",
+      "no_modules": "कोई मॉड्यूल नहीं सौंपा गया"
+    },
+    "modal": {
+      "create_title": "नई भूमिका बनाएं",
+      "edit_title": "भूमिका संपादित करें",
+      "role_name": "भूमिका का नाम",
+      "role_placeholder": "जैसे: सेल्स एग्जीक्यूटिव",
+      "desc_label": "विवरण",
+      "desc_placeholder": "वर्णन करें कि यह भूमिका क्या करती है...",
+      "module_access": "मॉड्यूल एक्सेस",
+      "full_admin": "पूर्ण व्यवस्थापक पहुंच",
+      "admin_desc": "प्रशासकों के पास हमेशा सभी मॉड्यूलों तक पहुंच होती है।",
+      "create_btn": "भूमिका बनाएं",
+      "save_changes": "परिवर्तन सहेजें"
+    },
+    "delete": {
+      "title": "भूमिका हटाएं?",
+      "confirm_text": "क्या आप वाकई? यह स्थायी रूप से <1>{{name}}</1> भूमिका को हटा देगा।",
+      "delete_btn": "हटाएं"
+    },
+    "modules": {
+      "dashboard": "डैशबोर्ड",
+      "customers": "ग्राहक",
+      "leads": "लीड्स",
+      "sales": "बिक्री",
+      "expenses": "खर्च",
+      "projects": "प्रोजेक्ट्स",
+      "stock": "स्टॉक",
+      "tasks": "कार्य",
+      "support": "सपोर्ट",
+      "users": "उपयोगकर्ता",
+      "reports": "स्मार्ट रिपोर्ट",
+      "activity": "गतिविधि लॉग",
+      "settings": "सेटिंग्स",
+      "emails": "ईमेल"
+    }
+  },
+  "assign_role": {
+    "title": "भूमिका सुपुर्दगी",
+    "subtitle": "टीम के सदस्यों को अलग-अलग पहुंच स्तरों पर फिर से सौंपें।",
+    "denied_title": "पहुंच अस्वीकृत",
+    "denied_msg": "केवल प्रशासक ही भूमिका सुपुर्दगी पैनल तक पहुँच सकते हैं।",
+    "step1": "1. उपयोगकर्ता चुनें",
+    "search_user": "उपयोगकर्ता खोजें...",
+    "step2": "2. नई भूमिका चुनें",
+    "select_user_first": "कृपया पहले बाएँ पैनल से एक उपयोगकर्ता चुनें।",
+    "promoting": "{{name}} को प्रमोट किया जा रहा है",
+    "update_btn": "भूमिका अपडेट करें",
+    "recent_changes": "हाल के बदलाव",
+    "table": {
+      "user": "उपयोगकर्ता",
+      "change": "बदलाव",
+      "date": "तारीख",
+      "assigned_by": "किसके द्वारा सौंपा गया",
+      "no_changes": "कोई हालिया बदलाव नहीं मिला",
+      "previous": "पिछला",
+      "assigned": "सौंपा गया",
+      "system_user": "सिस्टम उपयोगकर्ता",
+      "admin": "व्यवस्थापक"
+    }
+  },
+  "profile": {
+    "title": "अकाउंट सेटिंग्स",
+    "subtitle": "अपनी व्यक्तिगत जानकारी और सुरक्षा प्राथमिकताएं प्रबंधित करें।",
+    "full_name": "पूरा नाम",
+    "email_address": "ईमेल पता",
+    "change_password": "पासवर्ड बदलें",
+    "new_password": "नया पासवर्ड",
+    "confirm_password": "पासवर्ड की पुष्टि करें",
+    "password_placeholder": "वर्तमान रखने के लिए खाली छोड़ें",
+    "confirm_placeholder": "अपने नए पासवर्ड की पुष्टि करें",
+    "security_tip": "अपना पासवर्ड बदलने से आपकी सुरक्षा बढ़ेगी। सुनिश्चित करें कि यह कम से कम 6 अक्षरों का हो।",
+    "save_btn": "प्रोफ़ाइल परिवर्तन सहेजें",
+    "passwords_mismatch": "पासवर्ड मेल नहीं खाते",
+    "update_success": "प्रोफ़ाइल सफलतापूर्वक अपडेट की गई!",
+    "update_error": "प्रोफ़ाइल अपडेट करने में विफल"
+  },
+  "report": {
+    "title": "स्मार्ट रिपोर्ट",
+    "subtitle": "वैयक्तिकृत AI विश्लेषण।",
+    "reset_btn": "रीसेट",
+    "history_cleared": "चैट इतिहास हटा दिया गया। मैं और क्या मदद कर सकता हूँ?",
+    "welcome_msg": "नमस्ते! मैं आपका रिपोर्ट एजेंट हूँ। मेरे पास आपके सभी CRM डेटा तक पहुँच है। आप आज क्या विश्लेषण करना चाहेंगे?",
+    "error_msg": "क्षमा करें, मुझे Gemini API से जुड़ने में त्रुटि हुई। कृपया सेटिंग्स में अपनी API Key जांचें।",
+    "analyzing": "AI आपके डेटा का विश्लेषण कर रहा है...",
+    "input_placeholder": "AI से पूछें: 'फरवरी में कुल बिक्री कितनी थी?', 'मेरे लीड्स का विश्लेषण करें', 'लागत कम करने का सुझाव दें'...",
+    "suggested_queries": "सुझाए गए प्रश्न",
+    "suggestions": {
+      "sales": "इस महीने कुल बिक्री?",
+      "expenses": "श्रेणी के अनुसार मेरे खर्चों का विश्लेषण करें",
+      "customers": "मेरे शीर्ष 5 ग्राहक कौन हैं?",
+      "leads": "लंबित लीड्स को सारांशित करें",
+      "performance": "पिछले महीने की तुलना में प्रदर्शन",
+      "stock": "किन वस्तुओं का स्टॉक कम है?",
+      "projects": "मेरे सबसे लाभदायक प्रोजेक्ट कौन से हैं?",
+      "tasks": "मेरे उच्च प्राथमिकता वाले कार्यों की सूची बनाएं",
+      "profit": "वार्षिक शुद्ध लाभ विश्लेषण"
+    }
+  },
+  "support": {
+    "title": "संदेश",
+    "search_chats": "चैट खोजें...",
+    "active_now": "अभी सक्रिय",
+    "today": "आज",
+    "type_message": "अपना संदेश लिखें...",
+    "read": "पढ़ा गया",
+    "online": "ऑनलाइन",
+    "offline": "ऑफलाइन",
+    "busy": "व्यस्त",
+    "yesterday": "कल"
+  },
+  "activity": {
+    "title": "गतिविधि लॉग",
+    "subtitle": "CRM में सभी कार्यों का ऑडिट ट्रेल।",
+    "search_placeholder": "लॉग खोजें...",
+    "fetching": "ऑडिट ट्रेल प्राप्त की जा रही है...",
+    "no_logs": "कोई लॉग नहीं मिला",
+    "activity_appear": "जैसे ही उपयोगकर्ता ऐप के साथ इंटरैक्ट करेंगे, गतिविधि यहाँ दिखाई देगी।",
+    "performed_a": "ने किया",
+    "on": "पर",
+    "no_details": "कोई अतिरिक्त विवरण रिकॉर्ड नहीं किया गया।",
+    "fetch_error": "गतिविधि लॉग प्राप्त करने में विफल",
+    "entities": {
+      "Project": "प्रोजेक्ट",
+      "Task": "कार्य",
+      "Customer": "ग्राहक",
+      "Lead": "लीड",
+      "Sale": "बिक्री",
+      "Expense": "खर्च",
+      "ExpenseCategory": "श्रेणी",
+      "StockItem": "स्टॉक आइटम",
+      "User": "उपयोगकर्ता",
+      "All": "सभी"
+    },
+    "actions": {
+      "CREATED": "बनाया गया",
+      "UPDATED": "अपडेट किया गया",
+      "DELETED": "हटाया गया",
+      "STATUS_TOGGLE": "स्थिति स्विच"
+    }
+  },
+  "login": {
+    "welcome": "वापसी पर स्वागत है!",
+    "subtitle": "कृपया अपने खाते में लॉगिन करें।",
+    "email_label": "ईमेल पता",
+    "email_placeholder": "name@company.com",
+    "password_label": "पासवर्ड",
+    "remember_me": "मुझे याद रखें",
+    "forgot_password": "पासवर्ड भूल गए?",
+    "sign_in_btn": "साइन इन",
+    "signing_in": "साइन इन हो रहा है...",
+    "no_account": "खाता नहीं है?",
+    "contact_admin": "प्रशासक से संपर्क करें",
+    "error_msg": "लॉगिन विफल। कृपया अपनी साख जांचें।"
+  },
+  "settings": {
+    "title": "सेटिंग्स",
+    "subtitle": "अपना CRM और व्यक्तिगत प्राथमिकताएं कॉन्फ़िगर करें।",
+    "save_btn": "परिवर्तन सहेजें",
+    "saving": "सहेजा जा रहा है...",
+    "tabs": {
+      "General": "सामान्य",
+      "AI Settings": "AI सेटिंग्स",
+      "System": "सिस्टम"
+    },
+    "general": {
+      "title": "सामान्य विन्यास",
+      "company_name": "कंपनी का नाम",
+      "support_email": "सपोर्ट ईमेल",
+      "default_currency": "डिफ़ॉल्ट मुद्रा",
+      "timezone": "समय क्षेत्र (IANA)",
+      "show_clock": "टॉपबार में घड़ी प्रदर्शित करें",
+      "appearance": "दिखावट डिफ़ॉल्ट",
+      "light_mode": "लाइट मोड",
+      "dark_mode": "डार्क मोड"
+    },
+    "ai": {
+      "title": "AI विन्यास",
+      "subtitle": "Google Gemini के साथ अपनी रिपोर्ट्स को सशक्त बनाएं।",
+      "api_key": "Google Gemini API Key",
+      "api_key_placeholder": "अपनी Gemini API Key दर्ज करें",
+      "get_key": "यहाँ से अपनी निःशुल्क API key प्राप्त करें"
+    },
+    "system": {
+      "title": "सिस्टम प्रबंधन",
+      "subtitle": "अपने CRM सिस्टम को बनाए रखें और अनुकूलित करें।",
+      "danger_zone": "खतरा क्षेत्र",
+      "danger_desc": "निम्नलिखित कार्य अपरिवर्तनीय हैं। कृपया सावधानी से आगे बढ़ें।",
+      "clear_logs": "सभी गतिविधि लॉग साफ़ करें",
+      "clear_logs_desc": "सभी सिस्टम और उपयोगकर्ता गतिविधि रिकॉर्ड को स्थायी रूप से हटा दें।",
+      "clear_btn": "लॉग साफ़ करें",
+      "clear_success": "सभी गतिविधि लॉग सफलतापूर्वक हटा दिए गए हैं।",
+      "clear_error": "लॉग साफ़ करते समय कुछ गलत हो गया"
+    },
+    "modals": {
+      "updated_title": "सेटिंग्स अपडेट की गईं!",
+      "updated_msg": "आपके विन्यास सफलतापूर्वक सहेजे गए और पूरे CRM में लागू किए गए।",
+      "failed_title": "अपडेट विफल",
+      "failed_msg": "आपके परिवर्तन सहेजते समय कुछ गलत हुआ",
+      "confirm_title": "क्या आप पूरी तरह सुनिश्चित हैं?",
+      "confirm_msg": "यह डेटाबेस से सभी गतिविधि लॉग को स्थायी रूप से हटा देगा। इस क्रिया को पूर्ववत नहीं किया जा सकता।",
+      "logs_cleared_title": "लॉग साफ़ कर दिए गए!",
+      "logs_cleared_msg": "सभी गतिविधि लॉग सफलतापूर्वक हटा दिए गए हैं।",
+      "continue": "जारी रखें",
+      "confirm_btn": "हटाने की पुष्टि करें"
+    }
+  },
+  "emails": {
+    "title": "ईमेल भेजें",
+    "subtitle": "अपने ग्राहकों को वैयक्तिकृत ईमेल लिखें और भेजें।",
+    "tips": {
+      "title": "प्रो टिप्स",
+      "tip1": "ओपन रेट बढ़ाने के लिए विषय रेखा को वैयक्तिकृत करें।",
+      "tip2": "भेजने से पहले प्राप्तकर्ता के ईमेल को दोबारा जांचें।",
+      "tip3": "अपने संदेश में स्पष्ट और संक्षिप्त भाषा का उपयोग करें।"
+    },
+    "warning": {
+      "title": "एंटी-स्पैम नीति",
+      "text": "कृपया सुनिश्चित करें कि आपके पास इन संपर्कों को ईमेल करने की अनुमति है।"
+    },
+    "form": {
+      "to": "प्राप्तकर्ता",
+      "search_placeholder": "ग्राहक खोजें...",
+      "direct_placeholder": "या सीधे ईमेल पता दर्ज करें",
+      "subject": "विषय",
+      "subject_placeholder": "ईमेल विषय दर्ज करें",
+      "message": "संदेश का मुख्य भाग",
+      "message_placeholder": "अपना संदेश यहाँ लिखें...",
+      "send": "ईमेल भेजें",
+      "sending": "भेजा जा रहा है...",
+      "fill_fields": "कृपया सभी आवश्यक फ़ील्ड भरें",
+      "send_success": "ईमेल सफलतापूर्वक भेजा गया!",
+      "send_error": "ईमेल भेजने में विफल"
+    }
+  },
+  "properties": {
+    "title": "संपत्तियाँ",
+    "record_new": "नई संपत्ति जोड़ें",
+    "subtitle": "प्लॉट, अपार्टमेंट, रेंटल और जॉइंट वेंचर प्रबंधित करें",
+    "search_placeholder": "संपत्तियाँ खोजें...",
+    "loading_error": "संपत्तियाँ प्राप्त करने में विफल",
+    "delete_success": "संपत्ति सफलतापूर्वक हटाई गई",
+    "delete_error": "संपत्ति हटाने में विफल",
+    "filter": {
+      "all": "सभी",
+      "plot": "प्लॉट",
+      "apartment": "अपार्टमेंट",
+      "joint_venture": "जॉइंट वेंचर",
+      "rental": "रेंटल"
+    },
+    "stats": {
+      "rented": "किराए पर",
+      "under_construction": "निर्माणाधीन",
+      "available": "उपलब्ध",
+      "sold": "बेचा गया",
+      "total": "कुल"
+    },
+    "table": {
+      "property": "संपत्ति",
+      "project": "प्रोजेक्ट",
+      "type": "प्रकार",
+      "location": "स्थान",
+      "status": "स्थिति"
+    },
+    "delete": {
+      "title": "संपत्ति हटाएँ?",
+      "confirm_text": "क्या आप वाकई हटाना चाहते हैं",
+      "delete_btn": "हटाएँ"
+    },
+     "modal": {
+      "edit_title": "संपत्ति संपादित करें",
+      "add_title": "संपत्ति जोड़ें",
+      "name_placeholder": "संपत्ति का नाम दर्ज करें",
+      "project_label": "प्रोजेक्ट नाम",
+      "project_placeholder": "वैकल्पिक प्रोजेक्ट नाम",
+      "type_label": "संपत्ति प्रकार",
+      "status_label": "स्थिति",
+      "state_label": "राज्य",
+      "state_select": "राज्य चुनें",
+      "city_label": "शहर",
+      "city_select": "शहर चुनें",
+      "details_title": "संपत्ति विवरण",
+      "save_changes": "परिवर्तन सहेजें",
+      "create_btn": "संपत्ति बनाएं",
+      "bhk_type": "बीएचके प्रकार",
+      "area_sqft": "क्षेत्रफल (वर्ग फुट)",
+      "floor": "मंजिल",
+      "tower_block": "टावर / ब्लॉक",
+      "amenities": "सुविधाएँ",
+      "total_price": "कुल मूल्य",
+      "monthly_rent": "मासिक किराया",
+      "security_deposit": "सिक्योरिटी डिपॉजिट",
+      "lease_period": "लीज अवधि",
+      "tenant_name": "किरायेदार का नाम",
+      "partner_name": "पार्टनर का नाम",
+      "profit_sharing_ratio": "लाभ साझेदारी",
+      "land_area": "भूमि क्षेत्र",
+      "project_status": "प्रोजेक्ट स्थिति",
+      "total_project_value": "कुल प्रोजेक्ट मूल्य",
+      "area_sq_yard": "क्षेत्रफल (वर्ग गज)",
+      "dimensions": "आयाम",
+      "facing": "फेसिंग",
+      "price_per_sq_yard": "मूल्य / वर्ग गज"
+    }
+  }
+}

@@ -1,0 +1,863 @@
+{
+  "common": {
+    "cancel": "إلغاء",
+    "create": "إنشاء",
+    "update": "تحديث",
+    "delete": "حذف",
+    "save": "حفظ",
+    "edit": "تعديل",
+    "view": "عرض",
+    "add": "إضافة",
+    "loading": "جاري التحميل...",
+    "actions": "الإجراءات",
+    "status": "الحالة",
+    "search": "بحث",
+    "no_results": "لم يتم العثور على نتائج",
+    "in_progress": "قيد التنفيذ",
+    "completed": "مكتمل",
+    "status_options": {
+      "pending": "معلق",
+      "completed": "مكتمل",
+      "cancelled": "ملغى"
+    },
+    "na": "غير متاح",
+    "or": "or",
+    "change": "Change"
+  },
+  "sidebar": {
+    "dashboard": "لوحة القيادة",
+    "customers": "العملاء",
+    "sales": "المبيعات",
+    "expenses": "المصاريف",
+    "stock": "المخزون",
+    "projects": "المشاريع",
+    "reports": "التقرير الذكي",
+    "leads": "العملاء المحتملون",
+    "tasks": "المهام",
+    "users": "المستخدمين",
+    "user_list": "قائمة المستخدمين",
+    "manage_roles": "إدارة الأدوار",
+    "role_assignment": "تعيين الأدوار",
+    "settings": "الإعدادات",
+    "activity": "سجلات النشاط",
+    "profile": "ملفي الشخصي",
+    "emails": "البريد الإلكتروني",
+    "properties": "العقارات"
+  },
+  "topbar": {
+    "search_placeholder": "البحث عن العملاء...",
+    "customer_results": "نتائج العملاء",
+    "no_results": "لم يتم العثور على نتائج لـ",
+    "signed_in_as": "تم تسجيل الدخول باسم",
+    "account_settings": "إعدادات الحساب",
+    "logout": "تسجيل الخروج",
+    "switch_theme": "التبديل إلى وضع {{theme}}"
+  },
+  "dashboard": {
+    "overview": "نظرة عامة على لوحة القيادة",
+    "welcome": "مرحباً بكم مجدداً! إليكم ما يحدث اليوم.",
+    "total_customers": "إجمالي العملاء",
+    "all_time_customers": "العملاء على مدار الوقت",
+    "total_sales": "إجمالي المبيعات",
+    "sales_today": "اليوم: {{amount}}",
+    "total_expenses": "إجمالي المصاريف",
+    "expenses_today": "اليوم: {{amount}}",
+    "active_leads": "العملاء المحتملون المشرقون",
+    "excluding_won_lost": "باستثناء الرابح/الخاسر",
+    "stock_inventory": "المخزون",
+    "stock_value": "القيمة: {{amount}}",
+    "active_projects": "المشاريع النشطة",
+    "in_progress": "قيد التنفيذ حالياً",
+    "pending_tasks": "المهام المعلقة",
+    "tasks_to_complete": "المهام المطلوب إكمالها",
+    "net_earnings": "صافي الأرباح",
+    "sales_minus_expenses": "المبيعات - المصاريف",
+    "income_vs_expense": "مقارنة الدخل مقابل المصاريف",
+    "last_30_days": "آخر 30 يومًا",
+    "recent_activity": "النشاط الأخير",
+    "no_activity": "لا يوجد نشاط حديث",
+    "view_all_activity": "عرض جميع الأنشطة",
+    "project_status_overview": "نظرة عامة على حالة المشروع",
+    "task_workload_user": "عبء العمل لكل مستخدم"
+  },
+  "customers": {
+    "title": "العملاء",
+    "subtitle": "إدارة قاعدة بيانات العملاء والعلاقات.",
+    "add_new": "إضافة عميل جديد",
+    "search_placeholder": "البحث عن العملاء...",
+    "table": {
+      "customer": "العميل",
+      "company": "الشركة",
+      "contact": "جهة الاتصال",
+      "status": "الحالة",
+      "added_on": "تمت الإضافة في {{date}}"
+    },
+    "modal": {
+      "add_title": "إضافة عميل جديد",
+      "edit_title": "تعديل العميل",
+      "full_name": "الاسم الكامل",
+      "email_address": "البريد الإلكتروني",
+      "phone": "رقم الهاتف",
+      "company": "الشركة",
+      "status": "الحالة",
+      "location_details": "تفاصيل الموقع",
+      "address": "عنوان الشارع",
+      "city": "المدينة",
+      "country": "البلد",
+      "create_btn": "إنشاء عميل",
+      "update_btn": "تحديث العميل"
+    },
+    "delete": {
+      "title": "حذف العميل؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف <1>{{name}}</1>؟ سيؤدي هذا الإجراء إلى إزالة جميع البيانات المرتبطة بشكل دائم.",
+      "delete_now": "احذف الآن"
+    },
+    "status": {
+      "active": "نشط",
+      "pending": "معلق",
+      "inactive": "غير نشط"
+    },
+    "add_success": "تم إنشاء العميل بنجاح!",
+    "update_success": "تم تحديث العميل بنجاح!",
+    "delete_success": "تم حذف العميل بنجاح!",
+    "loading_error": "فشل في تحميل العملاء",
+    "delete_error": "فشل في حذف العميل"
+  },
+  "sales": {
+    "title": "المبيعات والإيرادات",
+    "subtitle": "تتبع المدفوعات وإدارة معاملات العملاء.",
+    "record_new": "تسجيل بيع جديد",
+    "total_revenue": "إجمالي الإيرادات",
+    "pending_payments": "المدفوعات المعلقة",
+    "avg_sale_size": "متوسط حجم البيع",
+    "search_placeholder": "البحث عن طريق العميل أو الحالة...",
+    "table": {
+      "transaction_details": "تفاصيل المعاملة",
+      "customer": "العميل",
+      "date": "التاريخ",
+      "amount": "المبلغ",
+      "method": "الطريقة",
+      "status": "الحالة",
+      "agent": "الوكيل: {{name}}",
+      "no_description": "لا يوجد وصف"
+    },
+    "modal": {
+      "add_title": "تسجيل بيع جديد",
+      "edit_title": "تحديث المعاملة",
+      "customer_select": "اختر عميلاً",
+      "amount_label": "المبلغ",
+      "payment_method": "طريقة الدفع",
+      "description": "الوصف",
+      "description_placeholder": "اكتب تفاصيل الصفقة أو ملاحظات المعاملة...",
+      "save_btn": "حفظ المعاملة",
+      "update_btn": "تحديث المعاملة"
+    },
+    "delete": {
+      "title": "حذف المعاملة؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف هذا السجل؟ سيؤثر هذا على تقارير الإيرادات الخاصة بك.",
+      "delete_btn": "حذف السجل"
+    },
+    "invoice": {
+      "title": "الفاتورة",
+      "id": "رقم الفاتورة",
+      "date": "تاريخ المعاملة",
+      "bill_to": "فاتورة إلى:",
+      "cust_name": "اسم العميل",
+      "company": "الشركة",
+      "total": "المبلغ الإجمالي",
+      "footer": "شكراً لتعاملكم معنا!"
+    },
+    "methods": {
+      "bank_transfer": "تحويل بنكي",
+      "credit_card": "بطاقة ائتمان",
+      "paypal": "باي بال",
+      "cash": "نقداً"
+    },
+    "add_success": "تم تسجيل عملية بيع جديدة!",
+    "update_success": "تم تحديث عملية البيع بنجاح!",
+    "delete_success": "تم حذف سجل البيع",
+    "loading_error": "فشل في تحميل بيانات المبيعات",
+    "save_error": "فشل في حفظ البيع",
+    "delete_error": "فشل في حذف البيع"
+  },
+  "expenses": {
+    "title": "إدارة المصاريف",
+    "subtitle": "تتبع نفقات العمل وإدارة الفئات.",
+    "categories_btn": "الفئات",
+    "add_expense": "إضافة مصروف",
+    "total_expense_month": "إجمالي مصاريف شهر {{month}}",
+    "this_month": "هذا الشهر",
+    "no_data": "لا توجد بيانات",
+    "recent_expenses": "المصاريف الأخيرة",
+    "search_placeholder": "البحث عن المصاريف...",
+    "table": {
+      "details": "تفاصيل المصروف",
+      "category": "الفئة",
+      "date": "التاريخ",
+      "amount": "المبلغ",
+      "general_expense": "مصروف عام"
+    },
+    "modal": {
+      "add_title": "تسجيل مصروف",
+      "edit_title": "تحديث المصروف",
+      "description_label": "الوصف / العنوان",
+      "description_placeholder": "مثال: إيجار المكتب، استضافة AWS",
+      "category_label": "الفئة",
+      "amount_label": "المبلغ",
+      "date_label": "التاريخ",
+      "payment_method": "طريقة الدفع",
+      "save_btn": "حفظ المصروف",
+      "update_btn": "تحديث السجل"
+    },
+    "categories_modal": {
+      "title": "فئات المصاريف",
+      "subtitle": "إدارة مجالات الإنفاق الخاصة بك.",
+      "add_category": "إضافة فئة",
+      "category_name": "الاسم",
+      "category_placeholder": "اسم الفئة...",
+      "color_theme": "نمط اللون",
+      "create_btn": "إنشاء فئة",
+      "active_categories": "الفئات النشطة",
+      "created_on": "تم الإنشاء في {{date}}",
+      "edit_category": "تعديل الفئة",
+      "update_btn": "تحديث الفئة",
+      "add_category_success": "تمت إضافة الفئة!",
+      "add_category_error": "فشل في إضافة الفئة",
+      "delete_category_success": "تم حذف الفئة بنجاح!",
+      "delete_category_error": "فشل في حذف الفئة"
+    },
+    "delete": {
+      "title": "حذف المصروف؟",
+      "confirm_text": "هل أنت متأكد أنك تريد إزالة هذا السجل؟ سيؤثر هذا بشكل دائم على تقاريرك المالية.",
+      "delete_btn": "حذف المصروف"
+    },
+    "delete_category": {
+      "title": "حذف الفئة؟",
+      "confirm_text": "هل أنت متأكد؟ سيؤدي هذا إلى حذف جميع المصاريف المرتبطة بهذه الفئة.",
+      "delete_btn": "حذف الفئة"
+    },
+    "methods": {
+      "credit_card": "بطاقة ائتمان",
+      "bank_transfer": "تحويل بنكي",
+      "paypal": "بايبال",
+      "cash": "نقداً"
+    },
+    "add_success": "تم تسجيل المصروفات!",
+    "update_success": "تم تحديث المصروفات بنجاح!",
+    "delete_success": "تم حذف المصروفات",
+    "loading_error": "فشل في تحميل بيانات المصروفات",
+    "save_error": "فشل في حفظ المصروفات",
+    "delete_error": "فشل في حذف المصروفات"
+  },
+  "stock": {
+    "title": "المخزون والتوريدات",
+    "subtitle": "إدارة كميات المنتجات وتقييم المخزون.",
+    "categories_btn": "الفئات",
+    "add_item": "إضافة صنف جديد",
+    "total_units": "إجمالي الوحدات",
+    "low_stock_alerts": "تنبيهات انخفاض المخزون",
+    "inventory_value": "قيمة المخزون",
+    "requires_restock": "تتطلب إعادة تعبئة عاجلة",
+    "asset_valuation": "تقييم إجمالي الأصول",
+    "search_placeholder": "البحث بالاسم أو SKU أو الفئة...",
+    "loading": "جاري تحميل المخزون...",
+    "no_items": "لم يتم العثور على أصناف في المخزون.",
+    "table": {
+      "item_details": "تفاصيل الصنف",
+      "category": "الفئة",
+      "quantity": "الكمية",
+      "unit_price": "سعر الوحدة",
+      "total_value": "القيمة الإجمالية",
+      "status": "الحالة",
+      "actions": "الإجراءات"
+    },
+    "status": {
+      "out_of_stock": "نفدت الكمية",
+      "low_stock": "مخزون منخفض",
+      "in_stock": "متوفر"
+    },
+    "modal": {
+      "add_title": "إضافة صنف جديد",
+      "edit_title": "تعديل صنف المخزون",
+      "product_name": "اسم المنتج",
+      "category": "الفئة",
+      "sku_code": "رمز SKU",
+      "quantity": "الكمية",
+      "unit_price": "سعر الوحدة",
+      "description": "الوصف",
+      "description_placeholder": "أضف مزيداً من التفاصيل حول المنتج...",
+      "create_btn": "إنشاء صنف",
+      "update_btn": "تحديث الصنف"
+    },
+    "delete": {
+      "title": "حذف الصنف؟",
+      "confirm_text": "هل أنت متأكد أنك تريد إزالة <1>{{name}}</1> من المخزون؟ لا يمكن التراجع عن هذا الإجراء.",
+      "delete_btn": "احذف الآن"
+    },
+    "category_modal": {
+      "title": "إدارة فئات المخزون",
+      "add_new_category": "إضافة فئة جديدة",
+      "edit_category": "تعديل الفئة",
+      "category_name": "اسم الفئة",
+      "description": "الوصف (اختياري)",
+      "color_tag": "علامة اللون:",
+      "add_btn": "إضافة",
+      "update_btn": "تحديث",
+      "existing_categories": "الفئات الموجودة",
+      "no_categories": "لم يتم العثور على فئات.",
+      "add_category_success": "تم إنشاء الفئة!",
+      "edit_category_success": "تم تحديث الفئة!",
+      "deleted_success": "تم حذف الفئة بنجاح!",
+      "add_category_error": "فشل في إنشاء الفئة",
+      "delete_category_error": "فشل في حذف الفئة"
+    },
+    "add_success": "تمت إضافة العنصر إلى المخزون!",
+    "update_success": "تم تحديث العنصر بنجاح!",
+    "delete_success": "تمت إزالة العنصر من المخزون",
+    "loading_error": "فشل في تحميل المخزون",
+    "delete_error": "فشل في حذف العنصر"
+  },
+  "projects": {
+    "title": "المشاريع",
+    "subtitle": "تتبع تقدم المشروع والميزانيات.",
+    "create_new": "إنشاء مشروع جديد",
+    "stats": {
+      "in_progress": "قيد التنفيذ",
+      "on_hold": "قيد الانتظار",
+      "completed": "مكتمل",
+      "total": "الإجمالي"
+    },
+    "search_placeholder": "البحث عن المشاريع أو العملاء...",
+    "filter": {
+      "all": "الكل",
+      "planning": "التخطيط",
+      "in_progress": "قيد التنفيذ",
+      "on_hold": "قيد الانتظار",
+      "completed": "مكتمل"
+    },
+    "status": {
+      "planning": "تخطيط",
+      "in_progress": "قيد التقدم",
+      "on_hold": "قيد الانتظار",
+      "completed": "مكتمل",
+      "cancelled": "مُلْغًى"
+    },
+    "table": {
+      "details": "تفاصيل المشروع",
+      "client": "العميل",
+      "budget": "الميزانية",
+      "status": "الحالة",
+      "timeline": "الجدول الزمني"
+    },
+    "modal": {
+      "add_title": "إنشاء مشروع جديد",
+      "edit_title": "تحديث المشروع",
+      "name_label": "اسم المشروع",
+      "name_placeholder": "مثال: إعادة تصميم الموقع 2026",
+      "client_label": "العميل المعين",
+      "client_select": "اختر عميلاً",
+      "start_date": "تاريخ البدء",
+      "deadline": "الموعد النهائي",
+      "budget_label": "الميزانية",
+      "status_label": "الحالة الأولية",
+      "scope_label": "نطاق المشروع",
+      "scope_placeholder": "أضف وصفاً للمشروع أو المتطلبات أو الملاحظات...",
+      "create_btn": "بدء المشروع",
+      "save_changes": "حفظ التغييرات"
+    },
+    "delete": {
+      "title": "حذف المشروع؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف هذا المشروع؟ سيؤدي هذا إلى إزالة جميع البيانات المرتبطة بشكل دائم.",
+      "delete_btn": "حذف المشروع"
+    },
+    "add_success": "تم إنشاء المشروع بنجاح!",
+    "update_success": "تم تحديث المشروع بنجاح!",
+    "delete_success": "تم حذف المشروع بنجاح!",
+    "loading_error": "فشل في تحميل المشاريع",
+    "save_error": "فشل في حفظ المشروع",
+    "delete_error": "فشل في حذف المشروع"
+  },
+  "leads": {
+    "title": "العملاء المحتملون",
+    "subtitle": "تتبع فرص المبيعات المحتملة الخاصة بك.",
+    "add_new": "إضافة عميل محتمل جديد",
+    "funnel": {
+      "leads": "العملاء المحتملون",
+      "New": "جديد",
+      "Contacted": "تم الاتصال",
+      "Qualified": "مؤهل",
+      "Proposal": "مقترح",
+      "Negotiation": "تفاوض",
+      "Won": "تم الربح",
+      "Lost": "تم الفقد"
+    },
+    "search_placeholder": "البحث عن العملاء المحتملين...",
+    "table": {
+      "client": "العميل",
+      "enquiry": "استفسار",
+      "location": "الموقع",
+      "assigned_to": "مُسند إلى",
+      "opportunity": "الفرصة",
+      "contact": "جهة الاتصال",
+      "valuation": "التقييم",
+      "stage": "المرحلة",
+      "temperature": "درجة الاهتمام"
+    },
+    "temperature": {
+      "Cold": "بارد",
+      "Warm": "دافئ",
+      "Hot": "حار"
+    },
+    "modal": {
+      "add_title": "إضافة عميل محتمل جديد",
+      "edit_title": "تعديل العميل المحتمل",
+      "client_name_label": "اسم العميل",
+      "client_name_placeholder": "أدخل الاسم الكامل",
+      "email_label": "البريد الإلكتروني",
+      "email_placeholder": "email@company.com",
+      "phone_label": "رقم الهاتف",
+      "phone_Placeholder": "أدخل رقم الهاتف",
+      "source_label": "المصدر",
+      "source_select": "اختر المصدر",
+      "property_type_label": "نوع العقار",
+      "property_type_select": "اختر النوع",
+      "specific_property_label": "عقار محدد",
+      "specific_property_select": "اختر العقار",
+      "budget": "نطاق الميزانية",
+      "preferred_state_label": "الولاية المفضلة",
+      "preferred_state_select": "اختر الولاية",
+      "preferred_state_first_select": "اختر الولاية أولاً",
+      "preferred_city_label": "المدينة / المنطقة المفضلة",
+      "preferred_city_select": "اختر المدينة",
+      "assign_to_label": "تعيين إلى",
+      "assign_to_select": "اختر المستخدم",
+      "stage_label": "مرحلة المبيعات",
+      "temp_label": "درجة الاهتمام",
+      "notes_label": "الوصف / الملاحظات",
+      "notes_placeholder": "أدخل أي تفاصيل إضافية...",
+      "create_btn": "إنشاء عميل محتمل",
+      "update_btn": "تحديث العميل المحتمل"
+    },
+    "delete": {
+      "title": "حذف العميل المحتمل؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف <1>{{opportunity}}</1>؟",
+      "delete_btn": "احذف الآن"
+    },
+    "add_success": "تم إنشاء العميل المحتمل بنجاح!",
+    "update_success": "تم تحديث العميل المحتمل بنجاح!",
+    "delete_success": "تم حذف العميل المحتمل",
+    "loading_error": "فشل في تحميل العملاء المحتملين",
+    "save_error": "فشل في حفظ العميل المحتمل",
+    "delete_error": "فشل في حذف العميل المحتمل"
+  },
+  "tasks": {
+    "title": "قائمة المهام",
+    "subtitle": "إدارة أفعالك اليومية وأولوياتك.",
+    "new_task": "مهمة جديدة",
+    "filter": {
+      "all": "الكل",
+      "pending": "معلقة",
+      "in_progress": "قيد التنفيذ",
+      "completed": "مكتملة"
+    },
+    "search_placeholder": "البحث عن المهام...",
+    "no_date": "بدون تاريخ",
+    "assigned_to": "مكلف بـ",
+    "new_item": "عنصر مهمة جديد",
+    "priority": {
+      "High": "عالية",
+      "Medium": "متوسطة",
+      "Low": "منخفضة"
+    },
+    "modal": {
+      "add_title": "مهمة جديدة",
+      "edit_title": "تحديث المهمة",
+      "title_label": "عنوان المهمة",
+      "title_placeholder": "ما الذي يجب فعله؟",
+      "priority_label": "الأولوية",
+      "due_date": "تاريخ الاستحقاق",
+      "assign_label": "تكليف",
+      "assign_select": "اختر وكيلاً...",
+      "desc_label": "الوصف (اختياري)",
+      "desc_placeholder": "أضف ملاحظات أو مهام فرعية أو روابط...",
+      "create_btn": "إنشاء مهمة",
+      "update_btn": "تحديث المهمة"
+    },
+    "delete": {
+      "title": "حذف المهمة؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف هذه المهمة؟",
+      "delete_btn": "حذف المهمة"
+    },
+    "add_success": "تم إنشاء المهمة!",
+    "update_success": "تم تحديث المهمة بنجاح!",
+    "delete_success": "تم حذف المهمة بنجاح!",
+    "loading_error": "فشل في تحميل المهام",
+    "save_error": "فشل في حفظ المهمة",
+    "delete_error": "فشل في حذف المهمة",
+    "status_update_success": "تم تحديد المهمة كـ {{status}}",
+    "status_update_error": "فشل في تحديث الحالة"
+  },
+  "users": {
+    "title": "إدارة المستخدمين",
+    "subtitle": "إدارة أعضاء الفريق والأدوار والأذونات.",
+    "add_new": "إضافة مستخدم جديد",
+    "stats": {
+      "total": "إجمالي المستخدمين",
+      "admins": "المسؤولون",
+      "active": "نشط الآن"
+    },
+    "search_placeholder": "البحث عن مستخدم بالاسم أو البريد الإلكتروني...",
+    "filter": {
+      "role_all": "الدور: الكل",
+      "status_active": "الحالة: نشط"
+    },
+    "table": {
+      "user": "المستخدم",
+      "role": "الدور",
+      "status": "الحالة",
+      "last_login": "آخر ظهور",
+      "never": "لم يسجل الدخول أبداً"
+    },
+    "status": {
+      "Active": "نشط",
+      "Inactive": "غير نشط",
+      "Pending": "معلق"
+    },
+    "modal": {
+      "add_title": "إضافة مستخدم جديد",
+      "edit_title": "تعديل المستخدم",
+      "full_name": "الاسم الكامل",
+      "name_placeholder": "أدخل الاسم الكامل",
+      "email_label": "البريد الإلكتروني",
+      "email_placeholder": "email@company.com",
+      "password_label": "كلمة المرور",
+      "password_placeholder": "كلمة المرور",
+      "role_label": "دور المستخدم",
+      "status_label": "الحالة",
+      "create_btn": "إنشاء مستخدم",
+      "save_changes": "حفظ التغييرات"
+    },
+    "delete": {
+      "title": "حذف المستخدم؟",
+      "confirm_text": "هل أنت متأكد أنك تريد حذف <1>{{name}}</1>؟",
+      "delete_btn": "حذف"
+    }
+  },
+  "roles": {
+    "title": "إدارة الأدوار",
+    "subtitle": "تكوين الأذونات والوحدات المعينة لكل دور.",
+    "create_new": "إنشاء دور جديد",
+    "defined_roles": "الأدوار المحددة",
+    "search_placeholder": "البحث عن دور...",
+    "table": {
+      "role_name": "اسم الدور",
+      "members": "الأعضاء",
+      "assigned_modules": "الوحدات المعينة",
+      "users_count": "{{count}} مستخدمين",
+      "all_access": "وصول لجميع الوحدات",
+      "no_modules": "لا توجد وحدات معينة"
+    },
+    "modal": {
+      "create_title": "إنشاء دور جديد",
+      "edit_title": "تعديل الدور",
+      "role_name": "اسم الدور",
+      "role_placeholder": "مثال: مسؤول مبيعات",
+      "desc_label": "الوصف",
+      "desc_placeholder": "صف ما يفعله هذا الدور...",
+      "module_access": "الوصول إلى الوحدات",
+      "full_admin": "وصول كامل للمسؤول",
+      "admin_desc": "المسؤولون لديهم دائماً وصول إلى جميع الوحدات.",
+      "create_btn": "إنشاء دور",
+      "save_changes": "حفظ التغييرات"
+    },
+    "delete": {
+      "title": "حذف الدور؟",
+      "confirm_text": "هل أنت متأكد؟ سيؤدي هذا إلى إزالة الدور <1>{{name}}</1> بشكل دائم.",
+      "delete_btn": "حذف"
+    },
+    "modules": {
+      "dashboard": "لوحة القيادة",
+      "customers": "العملاء",
+      "leads": "العملاء المحتملون",
+      "sales": "المبيعات",
+      "expenses": "المصاريف",
+      "projects": "المشاريع",
+      "stock": "المخزون",
+      "tasks": "المهام",
+      "support": "الدعم",
+      "users": "المستخدمين",
+      "reports": "التقرير الذكي",
+      "activity": "سجل النشاط",
+      "settings": "الإعدادات",
+      "emails": "البريد الإلكتروني"
+    }
+  },
+  "assign_role": {
+    "title": "تعيين الأدوار",
+    "subtitle": "إعادة تعيين أعضاء الفريق إلى مستويات وصول مختلفة.",
+    "denied_title": "تم رفض الوصول",
+    "denied_msg": "المسؤولون فقط يمكنهم الوصول إلى لوحة تعيين الأدوار.",
+    "step1": "1. اختيار مستخدم",
+    "search_user": "البحث عن مستخدم...",
+    "step2": "2. اختيار دور جديد",
+    "select_user_first": "يرجى اختيار مستخدم من اللوحة اليسرى أولاً.",
+    "promoting": "ترقية {{name}}",
+    "update_btn": "تحديث الدور",
+    "recent_changes": "التغييرات الأخيرة",
+    "table": {
+      "user": "المستخدم",
+      "change": "التغيير",
+      "date": "التاريخ",
+      "assigned_by": "تم التعيين بواسطة",
+      "no_changes": "لم يتم العثور على تغييرات أخيرة",
+      "previous": "السابق",
+      "assigned": "المعين",
+      "system_user": "مستخدم النظام",
+      "admin": "المسؤول"
+    }
+  },
+  "profile": {
+    "title": "إعدادات الحساب",
+    "subtitle": "إدارة معلوماتك الشخصية وتفضيلات الأمان.",
+    "full_name": "الاسم الكامل",
+    "email_address": "البريد الإلكتروني",
+    "change_password": "تغيير كلمة المرور",
+    "new_password": "كلمة المرور الجديدة",
+    "confirm_password": "تأكيد كلمة المرور",
+    "password_placeholder": "اتركه فارغاً للإبقاء على الحالية",
+    "confirm_placeholder": "تأكيد كلمة المرور الجديدة",
+    "security_tip": "تغيير كلمة المرور سيزيد من أمانك. تأكد من أنها لا تقل عن 6 أحرف.",
+    "save_btn": "حفظ تغييرات الملف الشخصي",
+    "passwords_mismatch": "كلمة المرور غير متطابقة",
+    "update_success": "تم تحديث الملف الشخصي بنجاح!",
+    "update_error": "فشل تحديث الملف الشخصي"
+  },
+  "report": {
+    "title": "التقرير الذكي",
+    "subtitle": "تحليل الذكاء الاصطناعي المخصص.",
+    "reset_btn": "إعادة تعيين",
+    "history_cleared": "تم مسح سجل المحادثة. كيف يمكنني مساعدتك أكثر؟",
+    "welcome_msg": "مرحباً! أنا وكيل التقارير الخاص بك. لدي وصول إلى جميع بيانات CRM الخاصة بك. ماذا تود أن تحلل اليوم؟",
+    "error_msg": "عذراً، واجهت خطأ في الاتصال بـ Gemini API. يرجى التحقق من API Key في الإعدادات.",
+    "analyzing": "الذكاء الاصطناعي يحلل بياناتك...",
+    "input_placeholder": "اسأل الذكاء الاصطناعي: 'ما هو إجمالي المبيعات في فبراير؟'، 'حلل العملاء المحتملين'...",
+    "suggested_queries": "استعلامات مقترحة",
+    "suggestions": {
+      "sales": "إجمالي المبيعات هذا الشهر؟",
+      "expenses": "حلل مصاريفي حسب الفئة",
+      "customers": "من هم أفضل 5 عملاء لي؟",
+      "leads": "لخص العملاء المحتملين المعلقين",
+      "performance": "مقارنة الأداء بالشهر الماضي",
+      "stock": "ما هي الأصناف منخفضة المخزون؟",
+      "projects": "ما هي أكثر مشاريعي ربحية؟",
+      "tasks": "أدرج مهامي ذات الأولوية العالية",
+      "profit": "تحليل صافي الربح السنوي"
+    }
+  },
+  "support": {
+    "title": "الرسائل",
+    "search_chats": "البحث عن المحادثات...",
+    "active_now": "نشط الآن",
+    "today": "اليوم",
+    "type_message": "اكتب رسالتك هنا...",
+    "read": "مقروء",
+    "online": "متصل",
+    "offline": "غير متصل",
+    "busy": "مشغول",
+    "yesterday": "أمس"
+  },
+  "activity": {
+    "title": "سجل النشاط",
+    "subtitle": "مسار التدقيق لجميع الإجراءات في CRM.",
+    "search_placeholder": "البحث في السجلات...",
+    "fetching": "جاري جلب مسار التدقيق...",
+    "no_logs": "لم يتم العثور على سجلات",
+    "activity_appear": "ستظهر الأنشطة هنا بمجرد تفاعل المستخدمين مع التطبيق.",
+    "performed_a": "قام بـ",
+    "on": "على",
+    "no_details": "لم يتم تسجيل تفاصيل إضافية.",
+    "fetch_error": "فشل جلب سجل النشاط",
+    "entities": {
+      "Project": "مشروع",
+      "Task": "مهمة",
+      "Customer": "عميل",
+      "Lead": "عميل محتمل",
+      "Sale": "بيع",
+      "Expense": "مصروف",
+      "ExpenseCategory": "فئة",
+      "StockItem": "صنف مخزون",
+      "User": "مستخدم",
+      "All": "الكل"
+    },
+    "actions": {
+      "CREATED": "تم الإنشاء",
+      "UPDATED": "تم التحديث",
+      "DELETED": "تم الحذف",
+      "STATUS_TOGGLE": "تبديل الحالة"
+    }
+  },
+  "login": {
+    "welcome": "مرحباً بك مجدداً!",
+    "subtitle": "يرجى تسجيل الدخول إلى حسابك.",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "name@company.com",
+    "password_label": "كلمة المرور",
+    "remember_me": "تذكرني",
+    "forgot_password": "نسيت كلمة المرور؟",
+    "sign_in_btn": "تسجيل الدخول",
+    "signing_in": "جاري تسجيل الدخول...",
+    "no_account": "ليس لديك حساب؟",
+    "contact_admin": "اتصل بالمسؤول",
+    "error_msg": "فشل تسجيل الدخول. يرجى التحقق من بياناتك."
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "subtitle": "تكوين CRM والتفضيلات الشخصية.",
+    "save_btn": "حفظ التغييرات",
+    "saving": "جاري الحفظ...",
+    "tabs": {
+      "General": "عام",
+      "AI Settings": "إعدادات الذكاء الاصطناعي",
+      "System": "النظام"
+    },
+    "general": {
+      "title": "التكوين العام",
+      "company_name": "اسم الشركة",
+      "support_email": "بريد الدعم",
+      "default_currency": "العملة الافتراضية",
+      "timezone": "المنطقة الزمنية (IANA)",
+      "show_clock": "عرض الساعة في الشريط العلوي",
+      "appearance": "المظهر الافتراضي",
+      "light_mode": "الوضع الفاتح",
+      "dark_mode": "الوضع الداكن"
+    },
+    "ai": {
+      "title": "تكوين الذكاء الاصطناعي",
+      "subtitle": "عزز تقاريرك باستخدام Google Gemini.",
+      "api_key": "Google Gemini API Key",
+      "api_key_placeholder": "أدخل API Key الخاص بك",
+      "get_key": "احصل على API key المجاني من هنا"
+    },
+    "system": {
+      "title": "إدارة النظام",
+      "subtitle": "صيانة وتحسين نظام CRM الخاص بك.",
+      "danger_zone": "منطقة الخطر",
+      "danger_desc": "الإجراءات التالية غير قابلة للتراجع. يرجى المتابعة بحذر.",
+      "clear_logs": "مسح جميع سجلات النشاط",
+      "clear_logs_desc": "حذف جميع سجلات نشاط النظام والمستخدمين بشكل دائم.",
+      "clear_btn": "مسح السجلات",
+      "clear_success": "تم حذف جميع سجلات النشاط بنجاح.",
+      "clear_error": "حدث خطأ أثناء مسح السجلات"
+    },
+    "modals": {
+      "updated_title": "تم تحديث الإعدادات!",
+      "updated_msg": "تم حفظ التكوينات الخاصة بك بنجاح وتطبيقها عبر CRM.",
+      "failed_title": "فشل التحديث",
+      "failed_msg": "حدث خطأ ما أثناء حفظ التغييرات",
+      "confirm_title": "هل أنت متأكد تماماً؟",
+      "confirm_msg": "سيؤدي هذا إلى حذف جميع سجلات النشاط من قاعدة البيانات بشكل دائم. لا يمكن التراجع عن هذا الإجراء.",
+      "logs_cleared_title": "تم مسح السجلات!",
+      "logs_cleared_msg": "تم حذف جميع سجلات النشاط بنجاح.",
+      "continue": "استمرار",
+      "confirm_btn": "تأكيد الحذف"
+    }
+  },
+  "emails": {
+    "title": "إرسال بريد إلكتروني",
+    "subtitle": "قم بإنشاء وإرسال رسائل بريد إلكتروني مخصصة لعملائك.",
+    "tips": {
+      "title": "نصائح الخبراء",
+      "tip1": "اجعل موضوع الرسالة شخصيًا لزيادة معدل الافتتاح.",
+      "tip2": "تحقق جيدًا من بريد المستلم قبل الإرسال.",
+      "tip3": "استخدم لغة واضحة وموجزة في رسالتك."
+    },
+    "warning": {
+      "title": "سياسة مكافحة السبام",
+      "text": "يرجى التأكد من حصولك على إذن لمراسلة هذه الجهات."
+    },
+    "form": {
+      "to": "المستلم",
+      "search_placeholder": "البحث عن عميل...",
+      "direct_placeholder": "أو أدخل عنوان البريد مباشرة",
+      "subject": "الموضوع",
+      "subject_placeholder": "أدخل موضوع البريد",
+      "message": "نص الرسالة",
+      "message_placeholder": "اكتب رسالتك هنا...",
+      "send": "إرسال البريد",
+      "sending": "جاري الإرسال...",
+      "fill_fields": "يرجى ملء جميع الحقول المطلوبة",
+      "send_success": "تم إرسال البريد بنجاح!",
+      "send_error": "فشل في إرسال البريد"
+    }
+  },
+  "properties": {
+    "title": "العقارات",
+    "record_new": "إضافة عقار جديد",
+    "subtitle": "إدارة الأراضي والشقق والإيجارات والمشاريع المشتركة",
+    "search_placeholder": "ابحث عن العقارات...",
+    "loading_error": "فشل في جلب العقارات",
+    "delete_success": "تم حذف العقار بنجاح",
+    "delete_error": "فشل في حذف العقار",
+    "filter": {
+      "all": "الكل",
+      "plot": "قطعة أرض",
+      "apartment": "شقة",
+      "joint_venture": "مشروع مشترك",
+      "rental": "إيجار"
+    },
+    "stats": {
+      "rented": "مؤجر",
+      "under_construction": "قيد الإنشاء",
+      "available": "متاح",
+      "sold": "تم البيع",
+      "total": "الإجمالي"
+    },
+    "table": {
+      "property": "العقار",
+      "project": "المشروع",
+      "type": "النوع",
+      "location": "الموقع",
+      "status": "الحالة"
+    },
+    "delete": {
+      "title": "هل تريد حذف العقار؟",
+      "confirm_text": "هل أنت متأكد أنك تريد الحذف",
+      "delete_btn": "حذف"
+    },
+    "modal": {
+      "edit_title": "تعديل العقار",
+      "add_title": "إضافة عقار",
+      "name_placeholder": "أدخل اسم العقار",
+      "project_label": "اسم المشروع",
+      "project_placeholder": "اسم مشروع اختياري",
+      "type_label": "نوع العقار",
+      "status_label": "الحالة",
+      "state_label": "الولاية",
+      "state_select": "اختر الولاية",
+      "city_label": "المدينة",
+      "city_select": "اختر المدينة",
+      "details_title": "تفاصيل العقار",
+      "save_changes": "حفظ التغييرات",
+      "create_btn": "إنشاء عقار",
+      "bhk_type": "نوع BHK",
+      "area_sqft": "المساحة بالقدم المربع",
+      "floor": "الطابق",
+      "tower_block": "البرج / المبنى",
+      "amenities": "المرافق",
+      "total_price": "السعر الإجمالي",
+      "monthly_rent": "الإيجار الشهري",
+      "security_deposit": "التأمين",
+      "lease_period": "مدة الإيجار",
+      "tenant_name": "اسم المستأجر",
+      "partner_name": "اسم الشريك",
+      "profit_sharing_ratio": "تقاسم الأرباح",
+      "land_area": "مساحة الأرض",
+      "project_status": "حالة المشروع",
+      "total_project_value": "القيمة الإجمالية للمشروع",
+      "area_sq_yard": "المساحة بالياردة المربعة",
+      "dimensions": "الأبعاد",
+      "facing": "الاتجاه",
+      "price_per_sq_yard": "السعر / الياردة المربعة"
+    }
+  }
+}

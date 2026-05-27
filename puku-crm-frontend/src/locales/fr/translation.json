@@ -1,0 +1,866 @@
+{
+  "common": {
+    "cancel": "Annuler",
+    "create": "Créer",
+    "update": "Mettre à jour",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "add": "Ajouter",
+    "loading": "Chargement...",
+    "actions": "Actions",
+    "status": "Statut",
+    "search": "Rechercher",
+    "no_results": "Aucun résultat trouvé",
+    "in_progress": "En cours",
+    "completed": "Terminé",
+    "status_options": {
+      "pending": "En attente",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    },
+    "na": "N/A",
+    "or": "or",
+    "change": "Change"
+  },
+  "sidebar": {
+    "dashboard": "Tableau de bord",
+    "customers": "Clients",
+    "sales": "Ventes",
+    "expenses": "Dépenses",
+    "stock": "Stock",
+    "projects": "Projets",
+    "reports": "Rapport intelligent",
+    "leads": "Pistes",
+    "tasks": "À faire",
+    "users": "Utilisateurs",
+    "user_list": "Liste des utilisateurs",
+    "manage_roles": "Gérer les rôles",
+    "role_assignment": "Attribution des rôles",
+    "settings": "Paramètres",
+    "activity": "Journaux d'activité",
+    "profile": "Mon profil",
+    "emails": "E-mails",
+    "properties": "Propriétés"
+  },
+  "topbar": {
+    "search_placeholder": "Rechercher des clients...",
+    "customer_results": "Résultats clients",
+    "no_results": "Aucun résultat trouvé pour",
+    "signed_in_as": "Connecté en tant que",
+    "account_settings": "Paramètres du compte",
+    "logout": "Se déconnecter",
+    "switch_theme": "Passer en mode {{theme}}"
+  },
+  "dashboard": {
+    "overview": "Aperçu du tableau de bord",
+    "welcome": "Bienvenue de nouveau ! Voici les activités d'aujourd'hui.",
+    "total_customers": "Total des clients",
+    "all_time_customers": "Clients de tous les temps",
+    "total_sales": "Ventes totales",
+    "sales_today": "Aujourd'hui : {{amount}}",
+    "total_expenses": "Dépenses totales",
+    "expenses_today": "Aujourd'hui : {{amount}}",
+    "active_leads": "Pistes actives",
+    "excluding_won_lost": "Hors Gagné/Perdu",
+    "stock_inventory": "Inventaire de stock",
+    "stock_value": "Valeur : {{amount}}",
+    "active_projects": "Projets actifs",
+    "in_progress": "Actuellement en cours",
+    "pending_tasks": "Tâches en attente",
+    "tasks_to_complete": "Tâches à terminer",
+    "net_earnings": "Bénéfices nets",
+    "sales_minus_expenses": "Ventes - Dépenses",
+    "income_vs_expense": "Comparaison revenus vs dépenses",
+    "last_30_days": "Les 30 derniers jours",
+    "recent_activity": "Activité récente",
+    "no_activity": "Aucune activité récente",
+    "view_all_activity": "Voir toute l'activité",
+    "project_status_overview": "Aperçu de l'état du projet",
+    "task_workload_user": "Charge de travail par utilisateur"
+  },
+  "customers": {
+    "title": "Clients",
+    "subtitle": "Gérez votre base de données clients et vos relations.",
+    "add_new": "Ajouter un nouveau client",
+    "search_placeholder": "Rechercher des clients...",
+    "table": {
+      "customer": "Client",
+      "company": "Entreprise",
+      "contact": "Contact",
+      "status": "Statut",
+      "added_on": "Ajouté le {{date}}"
+    },
+    "modal": {
+      "add_title": "Ajouter un nouveau client",
+      "edit_title": "Modifier le client",
+      "full_name": "Nom complet",
+      "email_address": "Adresse e-mail",
+      "phone": "Numéro de téléphone",
+      "company": "Entreprise",
+      "status": "Statut",
+      "location_details": "Détails de l'emplacement",
+      "address": "Adresse",
+      "city": "Ville",
+      "country": "Pays",
+      "create_btn": "Créer un client",
+      "update_btn": "Mettre à jour le client"
+    },
+    "delete": {
+      "title": "Supprimer le client ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer <1>{{name}}</1> ? Cette action supprimera définitivement toutes les données associées.",
+      "delete_now": "Supprimer maintenant"
+    },
+    "status": {
+      "active": "Actif",
+      "pending": "En attente",
+      "inactive": "Inactif"
+    },
+    "add_success": "Client créé avec succès !",
+    "update_success": "Client mis à jour avec succès !",
+    "delete_success": "Client supprimé avec succès !",
+    "loading_error": "Échec du chargement des clients",
+    "delete_error": "Échec de la suppression du client"
+  },
+  "sales": {
+    "title": "Ventes et Revenus",
+    "subtitle": "Suivez les paiements et gérez les transactions clients.",
+    "record_new": "Enregistrer une nouvelle vente",
+    "total_revenue": "Revenu total",
+    "pending_payments": "Paiements en attente",
+    "avg_sale_size": "Taille moyenne des ventes",
+    "search_placeholder": "Rechercher par client ou statut...",
+    "table": {
+      "transaction_details": "Détails de la transaction",
+      "customer": "Client",
+      "date": "Date",
+      "amount": "Montant",
+      "method": "Méthode",
+      "status": "Statut",
+      "agent": "Agent : {{name}}",
+      "no_description": "Aucune description"
+    },
+    "modal": {
+      "add_title": "Enregistrer une nouvelle vente",
+      "edit_title": "Mettre à jour la transaction",
+      "customer_select": "Sélectionner un client",
+      "amount_label": "Montant",
+      "payment_method": "Méthode de paiement",
+      "description": "Description",
+      "description_placeholder": "Écrivez les détails du deal ou les notes de transaction...",
+      "save_btn": "Enregistrer la transaction",
+      "update_btn": "Mettre à jour la transaction"
+    },
+    "delete": {
+      "title": "Supprimer la transaction ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer cet enregistrement ? Cela affectera vos rapports de revenus.",
+      "delete_btn": "Supprimer l'enregistrement"
+    },
+    "invoice": {
+      "title": "FACTURE",
+      "id": "ID de facture",
+      "date": "Date de transaction",
+      "bill_to": "Facturé à :",
+      "cust_name": "Nom du client",
+      "company": "Entreprise",
+      "total": "Montant total",
+      "footer": "Merci de faire affaire avec nous !"
+    },
+    "methods": {
+      "bank_transfer": "Virement bancaire",
+      "credit_card": "Carte de crédit",
+      "paypal": "PayPal",
+      "cash": "Espèces"
+    },
+    "add_success": "Nouvelle vente enregistrée !",
+    "update_success": "Vente mise à jour avec succès !",
+    "delete_success": "Enregistrement de vente supprimé",
+    "loading_error": "Échec du chargement des données de vente",
+    "save_error": "Échec de l'enregistrement de la vente",
+    "delete_error": "Échec de la suppression de la vente"
+  },
+  "expenses": {
+    "title": "Gestion des Dépenses",
+    "subtitle": "Suivez les dépenses professionnelles et gérez les catégories.",
+    "categories_btn": "Catégories",
+    "add_expense": "Ajouter une dépense",
+    "total_expense_month": "Dépenses totales pour {{month}}",
+    "this_month": "Ce mois-ci",
+    "no_data": "Aucune donnée",
+    "recent_expenses": "Dépenses récentes",
+    "search_placeholder": "Rechercher des dépenses...",
+    "table": {
+      "details": "Détails de la dépense",
+      "category": "Catégorie",
+      "date": "Date",
+      "amount": "Montant",
+      "general_expense": "Dépense générale"
+    },
+    "modal": {
+      "add_title": "Enregistrer une dépense",
+      "edit_title": "Mettre à jour la dépense",
+      "description_label": "Description / Titre",
+      "description_placeholder": "Ex : Loyer du bureau, hébergement AWS",
+      "category_label": "Catégorie",
+      "amount_label": "Montant",
+      "date_label": "Date",
+      "payment_method": "Méthode de paiement",
+      "save_btn": "Enregistrer la dépense",
+      "update_btn": "Mettre à jour l'enregistrement"
+    },
+    "categories_modal": {
+      "title": "Catégories de dépenses",
+      "subtitle": "Gérez vos domaines de dépenses.",
+      "add_category": "Ajouter une catégorie",
+      "category_name": "Nom",
+      "category_placeholder": "Nom de la catégorie...",
+      "color_theme": "Thème de couleur",
+      "create_btn": "Créer une catégorie",
+      "active_categories": "Catégories actives",
+      "created_on": "Créé le {{date}}",
+      "edit_category": "Modifier la catégorie",
+      "update_btn": "Mettre à jour la catégorie",
+      "add_category_success": "Catégorie ajoutée !",
+      "add_category_error": "Échec de l'ajout de la catégorie",
+      "delete_category_success": "Catégorie supprimée avec succès !",
+      "delete_category_error": "Échec de la suppression de la catégorie"
+    },
+    "delete": {
+      "title": "Supprimer la dépense ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer cet enregistrement ? Cela affectera définitivement vos rapports financiers.",
+      "delete_btn": "Supprimer la dépense"
+    },
+    "delete_category": {
+      "title": "Supprimer la catégorie ?",
+      "confirm_text": "Êtes-vous sûr ? Cela supprimera toutes les dépenses associées à cette catégorie.",
+      "delete_btn": "Supprimer la catégorie"
+    },
+    "methods": {
+      "credit_card": "Carte de crédit",
+      "bank_transfer": "Virement bancaire",
+      "paypal": "PayPal",
+      "cash": "Espèces"
+    },
+    "add_success": "Dépense enregistrée !",
+    "update_success": "Dépense mise à jour avec succès !",
+    "delete_success": "Dépense supprimée",
+    "loading_error": "Échec du chargement des données de dépenses",
+    "save_error": "Échec de l'enregistrement de la dépense",
+    "delete_error": "Échec de la suppression de la dépense"
+  },
+  "stock": {
+    "title": "Inventaire et Stock",
+    "subtitle": "Gérez les quantités de produits et l'évaluation de l'inventaire.",
+    "categories_btn": "Catégories",
+    "add_item": "Ajouter un nouvel article",
+    "total_units": "Unités totales",
+    "low_stock_alerts": "Alertes de stock faible",
+    "inventory_value": "Valeur de l'inventaire",
+    "requires_restock": "Nécessite un réapprovisionnement urgent",
+    "asset_valuation": "Évaluation totale des actifs",
+    "search_placeholder": "Rechercher par nom, SKU ou catégorie...",
+    "loading": "Chargement de l'inventaire...",
+    "no_items": "Aucun article trouvé dans l'inventaire.",
+    "table": {
+      "item_details": "Détails de l'article",
+      "category": "Catégorie",
+      "quantity": "Quantité",
+      "unit_price": "Prix unitaire",
+      "total_value": "Valeur totale",
+      "status": "Statut",
+      "actions": "Actions"
+    },
+    "status": {
+      "out_of_stock": "Rupture de stock",
+      "low_stock": "Stock faible",
+      "in_stock": "En stock"
+    },
+    "modal": {
+      "add_title": "Ajouter un nouvel article",
+      "edit_title": "Modifier l'article d'inventaire",
+      "product_name": "Nom du produit",
+      "category": "Catégorie",
+      "sku_code": "Code SKU",
+      "quantity": "Quantité",
+      "unit_price": "Prix unitaire",
+      "description": "Description",
+      "description_placeholder": "Ajoutez plus de détails sur le produit...",
+      "create_btn": "Créer l'article",
+      "update_btn": "Mettre à jour l'article"
+    },
+    "delete": {
+      "title": "Supprimer l'article ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer <1>{{name}}</1> de l'inventaire ? Cette action est irréversible.",
+      "delete_now": "Supprimer maintenant",
+      "delete_btn": "Delete Now"
+    },
+    "category_modal": {
+      "title": "Gestion des catégories de stock",
+      "add_new_category": "Ajouter une nouvelle catégorie",
+      "edit_category": "Modifier la catégorie",
+      "category_name": "Nom de la catégorie",
+      "description": "Description (facultatif)",
+      "color_tag": "Tag de couleur :",
+      "add_btn": "Ajouter",
+      "update_btn": "Mettre à jour",
+      "existing_categories": "Catégories existantes",
+      "no_categories": "Aucune catégorie trouvée.",
+      "add_category_success": "Catégorie créée !",
+      "edit_category_success": "Catégorie mise à jour !",
+      "deleted_success": "Catégorie supprimée avec succès !",
+      "add_category_error": "Échec de la création de la catégorie",
+      "delete_category_error": "Échec de la suppression de la catégorie"
+    },
+    "add_success": "Article ajouté à l'inventaire !",
+    "update_success": "Article mis à jour avec succès !",
+    "delete_success": "Article retiré de l'inventaire",
+    "loading_error": "Échec du chargement de l'inventaire",
+    "delete_error": "Échec de la suppression de l'article"
+  },
+  "projects": {
+    "title": "Projets",
+    "subtitle": "Suivez l'avancement des projets et les budgets.",
+    "create_new": "Créer un nouveau projet",
+    "stats": {
+      "in_progress": "En cours",
+      "on_hold": "En attente",
+      "completed": "Terminé",
+      "total": "Total"
+    },
+    "search_placeholder": "Rechercher des projets ou des clients...",
+    "filter": {
+      "all": "Tous",
+      "planning": "Planification",
+      "in_progress": "En cours",
+      "on_hold": "En attente",
+      "completed": "Terminé"
+    },
+    "status": {
+      "active": "Actif",
+      "planning": "Planification",
+      "in_progress": "En cours",
+      "on_hold": "En attente",
+      "completed": "Terminé",
+      "cancelled": "Annulé"
+    },
+    "table": {
+      "details": "Détails du projet",
+      "client": "Client",
+      "budget": "Budget",
+      "status": "Statut",
+      "timeline": "Calendrier"
+    },
+    "modal": {
+      "add_title": "Créer un nouveau projet",
+      "edit_title": "Mettre à jour le projet",
+      "name_label": "Nom du projet",
+      "name_placeholder": "Ex : Refonte du site web 2026",
+      "client_label": "Client assigné",
+      "client_select": "Sélectionner un client",
+      "start_date": "Date de début",
+      "deadline": "Date limite",
+      "budget_label": "Budget",
+      "status_label": "Statut initial",
+      "scope_label": "Périmètre du projet",
+      "scope_placeholder": "Ajoutez une description du projet, les exigences ou des notes...",
+      "create_btn": "Démarrer le projet",
+      "save_changes": "Enregistrer les modifications"
+    },
+    "delete": {
+      "title": "Supprimer le projet ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer ce projet ? Cela supprimera définitivement toutes les données associées.",
+      "delete_btn": "Supprimer le projet"
+    },
+    "add_success": "Projet créé avec succès !",
+    "update_success": "Projet mis à jour avec succès !",
+    "delete_success": "Projet supprimé avec succès !",
+    "loading_error": "Échec du chargement des projets",
+    "save_error": "Échec de l'enregistrement du projet",
+    "delete_error": "Échec de la suppression du projet"
+  },
+  "leads": {
+    "title": "Pistes de Vente",
+    "subtitle": "Suivez vos opportunités clients potentiels.",
+    "add_new": "Ajouter une nouvelle piste",
+    "funnel": {
+      "leads": "Pistes",
+      "New": "Neuf",
+      "Contacted": "Contacté",
+      "Qualified": "Qualifié",
+      "Proposal": "Proposition",
+      "Negotiation": "Négociation",
+      "Won": "Gagné",
+      "Lost": "Perdu"
+    },
+    "search_placeholder": "Rechercher des pistes...",
+    "table": {
+      "client": "Client",
+      "enquiry": "Demande",
+      "location": "Emplacement",
+      "assigned_to": "Attribué à",
+      "opportunity": "Opportunité",
+      "contact": "Contact",
+      "valuation": "Évaluation",
+      "stage": "Étape",
+      "temperature": "Température"
+    },
+    "temperature": {
+      "Cold": "Froid",
+      "Warm": "Chaud",
+      "Hot": "Très chaud"
+    },
+    "modal": {
+      "add_title": "Ajouter un nouveau lead",
+      "edit_title": "Modifier le lead",
+      "client_name_label": "Nom du client",
+      "client_name_placeholder": "Entrez le nom complet",
+      "email_label": "Adresse e-mail",
+      "email_placeholder": "email@company.com",
+      "phone_label": "Numéro de téléphone",
+      "phone_Placeholder": "Entrez le numéro de téléphone",
+      "source_label": "Source",
+      "source_select": "Sélectionner une source",
+      "property_type_label": "Type de propriété",
+      "property_type_select": "Sélectionner le type",
+      "specific_property_label": "Propriété spécifique",
+      "specific_property_select": "Sélectionner une propriété",
+      "budget": "Budget",
+      "preferred_state_label": "État préféré",
+      "preferred_state_select": "Sélectionner un État",
+      "preferred_state_first_select": "Sélectionnez d'abord un État",
+      "preferred_city_label": "Ville / Zone préférée",
+      "preferred_city_select": "Sélectionner une ville",
+      "assign_to_label": "Attribuer à",
+      "assign_to_select": "Sélectionner un utilisateur",
+      "stage_label": "Étape des ventes",
+      "temp_label": "Température",
+      "notes_label": "Description / Notes",
+      "notes_placeholder": "Entrez des détails supplémentaires...",
+      "create_btn": "Créer un lead",
+      "update_btn": "Mettre à jour le lead"
+    },
+    "delete": {
+      "title": "Supprimer la piste ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer <1>{{opportunity}}</1> ?",
+      "delete_now": "Supprimer maintenant",
+      "delete_btn": "Delete Now"
+    },
+    "add_success": "Prospect créé avec succès !",
+    "update_success": "Prospect mis à jour avec succès !",
+    "delete_success": "Prospect supprimé",
+    "loading_error": "Échec du chargement des prospects",
+    "save_error": "Échec de l'enregistrement du prospect",
+    "delete_error": "Échec de la suppression du prospect"
+  },
+  "tasks": {
+    "title": "Liste de Tâches",
+    "subtitle": "Gérez vos actions quotidiennes et vos priorités.",
+    "new_task": "Nouvelle tâche",
+    "filter": {
+      "all": "Tous",
+      "pending": "En attente",
+      "in_progress": "En cours",
+      "completed": "Terminé"
+    },
+    "search_placeholder": "Rechercher des tâches...",
+    "no_date": "Pas de date",
+    "assigned_to": "Assigné à",
+    "new_item": "Nouvel élément de tâche",
+    "priority": {
+      "High": "Haute",
+      "Medium": "Moyenne",
+      "Low": "Basse"
+    },
+    "modal": {
+      "add_title": "Nouvelle tâche",
+      "edit_title": "Mettre à jour la tâche",
+      "title_label": "Titre de la tâche",
+      "title_placeholder": "Que faut-il faire ?",
+      "priority_label": "Priorité",
+      "due_date": "Date d'échéance",
+      "assign_label": "Assigner",
+      "assign_select": "Sélectionner un agent...",
+      "desc_label": "Description (facultatif)",
+      "desc_placeholder": "Ajoutez des notes, des sous-tâches ou des liens...",
+      "create_btn": "Créer une tâche",
+      "update_btn": "Mettre à jour la tâche"
+    },
+    "delete": {
+      "title": "Supprimer la tâche ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer cette tâche ?",
+      "delete_btn": "Supprimer la tâche"
+    },
+    "add_success": "Tâche créée !",
+    "update_success": "Tâche mise à jour avec succès !",
+    "delete_success": "Tâche supprimée avec succès !",
+    "loading_error": "Échec du chargement des tâches",
+    "save_error": "Échec de l'enregistrement de la tâche",
+    "delete_error": "Échec de la suppression de la tâche",
+    "status_update_success": "Tâche marquée comme {{status}}",
+    "status_update_error": "Échec de la mise à jour du statut"
+  },
+  "users": {
+    "title": "Gestion des Utilisateurs",
+    "subtitle": "Gérez les membres de l'équipe, les rôles et les autorisations.",
+    "add_new": "Ajouter un utilisateur",
+    "stats": {
+      "total": "Total des utilisateurs",
+      "admins": "Administrateurs",
+      "active": "Actif maintenant"
+    },
+    "search_placeholder": "Rechercher un utilisateur par nom ou e-mail...",
+    "filter": {
+      "role_all": "Rôle : Tous",
+      "status_active": "Statut : Actif"
+    },
+    "table": {
+      "user": "Utilisateur",
+      "role": "Rôle",
+      "status": "Statut",
+      "last_login": "Dernière connexion",
+      "never": "Jamais connecté"
+    },
+    "status": {
+      "Active": "Actif",
+      "Inactive": "Inactif",
+      "Pending": "En attente"
+    },
+    "modal": {
+      "add_title": "Ajouter un utilisateur",
+      "edit_title": "Modifier l'utilisateur",
+      "full_name": "Nom complet",
+      "name_placeholder": "Entrez le nom complet",
+      "email_label": "Adresse e-mail",
+      "email_placeholder": "email@company.com",
+      "password_label": "Mot de passe",
+      "password_placeholder": "Mot de passe",
+      "role_label": "Rôle de l'utilisateur",
+      "status_label": "Statut",
+      "create_btn": "Créer l'utilisateur",
+      "save_changes": "Enregistrer les modifications"
+    },
+    "delete": {
+      "title": "Supprimer l'utilisateur ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer <1>{{name}}</1> ?",
+      "delete_btn": "Supprimer"
+    }
+  },
+  "roles": {
+    "title": "Gestion des Rôles",
+    "subtitle": "Configurez les autorisations et les modules assignés pour chaque rôle.",
+    "create_new": "Créer un nouveau rôle",
+    "defined_roles": "Rôles définis",
+    "search_placeholder": "Rechercher un rôle...",
+    "table": {
+      "role_name": "Nom du rôle",
+      "members": "Membres",
+      "assigned_modules": "Modules assignés",
+      "users_count": "{{count}} utilisateurs",
+      "all_access": "Accès à tous les modules",
+      "no_modules": "Aucun module assigné"
+    },
+    "modal": {
+      "create_title": "Créer un nouveau rôle",
+      "edit_title": "Modifier le rôle",
+      "role_name": "Nom du rôle",
+      "role_placeholder": "Ex : Commercial",
+      "desc_label": "Description",
+      "desc_placeholder": "Décrivez ce que fait ce rôle...",
+      "module_access": "Accès aux modules",
+      "full_admin": "Accès administrateur complet",
+      "admin_desc": "Les administrateurs ont toujours accès à tous les modules.",
+      "create_btn": "Créer le rôle",
+      "save_changes": "Enregistrer les modifications"
+    },
+    "delete": {
+      "title": "Supprimer le rôle ?",
+      "confirm_text": "Êtes-vous sûr ? Cela supprimera définitivement le rôle <1>{{name}}</1>.",
+      "delete_btn": "Supprimer"
+    },
+    "modules": {
+      "dashboard": "Tableau de bord",
+      "customers": "Clients",
+      "leads": "Pistes",
+      "sales": "Ventes",
+      "expenses": "Dépenses",
+      "projects": "Projets",
+      "stock": "Stock",
+      "tasks": "Tâches",
+      "support": "Support",
+      "users": "Utilisateurs",
+      "reports": "Rapport intelligent",
+      "activity": "Journaux d'activité",
+      "settings": "Paramètres",
+      "emails": "E-mails"
+    }
+  },
+  "assign_role": {
+    "title": "Attribution des Rôles",
+    "subtitle": "Réassignez les membres de l'équipe à différents niveaux d'accès.",
+    "denied_title": "Accès refusé",
+    "denied_msg": "Seuls les administrateurs peuvent accéder au panneau d'attribution des rôles.",
+    "step1": "1. Sélectionner un utilisateur",
+    "search_user": "Rechercher un utilisateur...",
+    "step2": "2. Sélectionner un nouveau rôle",
+    "select_user_first": "Veuillez d'abord sélectionner un utilisateur dans le panneau de gauche.",
+    "promoting": "Promotion de {{name}}",
+    "update_btn": "Mettre à jour le rôle",
+    "recent_changes": "Modifications récentes",
+    "table": {
+      "user": "Utilisateur",
+      "change": "Modification",
+      "date": "Date",
+      "assigned_by": "Assigné par",
+      "no_changes": "Aucune modification récente trouvée",
+      "previous": "Précédent",
+      "assigned": "Assigné",
+      "system_user": "Utilisateur système",
+      "admin": "Administrateur"
+    }
+  },
+  "profile": {
+    "title": "Paramètres du Compte",
+    "subtitle": "Gérez vos informations personnelles et vos préférences de sécurité.",
+    "full_name": "Nom complet",
+    "email_address": "Adresse e-mail",
+    "change_password": "Changer le mot de passe",
+    "new_password": "Nouveau mot de passe",
+    "confirm_password": "Confirmer le mot de passe",
+    "password_placeholder": "Laissez vide pour conserver l'actuel",
+    "confirm_placeholder": "Confirmez votre nouveau mot de passe",
+    "security_tip": "Changer votre mot de passe augmentera votre sécurité. Assurez-vous qu'il fasse au moins 6 caractères.",
+    "save_btn": "Enregistrer les modifications du profil",
+    "passwords_mismatch": "Les mots de passe ne correspondent pas",
+    "update_success": "Profil mis à jour avec succès !",
+    "update_error": "Échec de la mise à jour du profil"
+  },
+  "report": {
+    "title": "Rapport Intelligent",
+    "subtitle": "Analyse personnalisée par IA.",
+    "reset_btn": "Réinitialiser",
+    "history_cleared": "Historique de discussion effacé. Comment puis-je vous aider d'autre ?",
+    "welcome_msg": "Bonjour ! Je suis votre agent de rapport. J'ai accès à toutes vos données CRM. Que souhaitez-vous analyser aujourd'hui ?",
+    "error_msg": "Désolé, j'ai rencontré une erreur lors de la connexion à l'API Gemini. Veuillez vérifier votre clé API dans les paramètres.",
+    "analyzing": "L'IA analyse vos données...",
+    "input_placeholder": "Demandez à l'IA : 'Quel était le total des ventes en février ?', 'Analysez mes pistes', 'Suggérez des réductions de coûts'...",
+    "suggested_queries": "Requêtes suggérées",
+    "suggestions": {
+      "sales": "Ventes totales ce mois-ci ?",
+      "expenses": "Analysez mes dépenses par catégorie",
+      "customers": "Qui sont mes 5 meilleurs clients ?",
+      "leads": "Résumez les pistes en attente",
+      "performance": "Comparaison de performance avec le mois dernier",
+      "stock": "Quels articles sont en stock faible ?",
+      "projects": "Quels sont mes projets les plus rentables ?",
+      "tasks": "Listez mes tâches prioritaires",
+      "profit": "Analyse du bénéfice net annuel"
+    }
+  },
+  "support": {
+    "title": "Messages",
+    "search_chats": "Rechercher des discussions...",
+    "active_now": "Actif maintenant",
+    "today": "Aujourd'hui",
+    "type_message": "Tapez votre message ici...",
+    "read": "Lu",
+    "online": "En ligne",
+    "offline": "Hors ligne",
+    "busy": "Occupé",
+    "yesterday": "Hier"
+  },
+  "activity": {
+    "title": "Journaux d'Activité",
+    "subtitle": "Piste d'audit pour toutes les actions dans le CRM.",
+    "search_placeholder": "Rechercher dans les journaux...",
+    "fetching": "Récupération de la piste d'audit...",
+    "no_logs": "Aucun journal trouvé",
+    "activity_appear": "Les activités apparaîtront ici dès que les utilisateurs interagiront avec l'application.",
+    "performed_a": "a effectué un(e)",
+    "on": "sur",
+    "no_details": "Aucun détail supplémentaire enregistré.",
+    "fetch_error": "Échec de la récupération des journaux d'activité",
+    "entities": {
+      "Project": "Projet",
+      "Task": "Tâche",
+      "Customer": "Client",
+      "Lead": "Piste",
+      "Sale": "Vente",
+      "Expense": "Dépense",
+      "ExpenseCategory": "Catégorie",
+      "StockItem": "Article de stock",
+      "User": "Utilisateur",
+      "All": "Tout"
+    },
+    "actions": {
+      "CREATED": "CRÉÉ",
+      "UPDATED": "MIS À JOUR",
+      "DELETED": "SUPPRIMÉ",
+      "STATUS_TOGGLE": "CHANGEMENT DE STATUT"
+    }
+  },
+  "login": {
+    "welcome": "Bienvenue de nouveau !",
+    "subtitle": "Veuillez vous connecter à votre compte.",
+    "email_label": "Adresse e-mail",
+    "email_placeholder": "nom@entreprise.com",
+    "password_label": "Mot de passe",
+    "remember_me": "Se souvenir de moi",
+    "forgot_password": "Mot de passe oublié ?",
+    "sign_in_btn": "Se connecter",
+    "signing_in": "Connexion en cours...",
+    "no_account": "Pas de compte ?",
+    "contact_admin": "Contactez l'administrateur",
+    "error_msg": "Échec de la connexion. Veuillez vérifier vos identifiants."
+  },
+  "settings": {
+    "title": "Paramètres",
+    "subtitle": "Configurez votre CRM et vos préférences personnelles.",
+    "save_btn": "Enregistrer les modifications",
+    "saving": "Enregistrement en cours...",
+    "tabs": {
+      "General": "Général",
+      "AI Settings": "Paramètres IA",
+      "System": "Système"
+    },
+    "general": {
+      "title": "Configuration générale",
+      "company_name": "Nom de l'entreprise",
+      "support_email": "E-mail de support",
+      "default_currency": "Devise par défaut",
+      "timezone": "Fuseau horaire (IANA)",
+      "show_clock": "Afficher l'horloge dans le ruban supérieur",
+      "appearance": "Apparence par défaut",
+      "light_mode": "Mode clair",
+      "dark_mode": "Mode sombre"
+    },
+    "ai": {
+      "title": "Configuration IA",
+      "subtitle": "Boostez vos rapports avec Google Gemini.",
+      "api_key": "Clé API Google Gemini",
+      "api_key_placeholder": "Entrez votre clé API Gemini",
+      "get_key": "Obtenez votre clé API gratuite ici"
+    },
+    "system": {
+      "title": "Gestion du système",
+      "subtitle": "Maintenez et optimisez votre système CRM.",
+      "danger_zone": "Zone de danger",
+      "danger_desc": "Les actions suivantes sont irréversibles. Veuillez procéder avec prudence.",
+      "clear_logs": "Effacer tous les journaux d'activité",
+      "clear_logs_desc": "Supprimer définitivement tous les enregistrements d'activité système et utilisateur.",
+      "clear_btn": "Effacer les journaux",
+      "clear_success": "Tous les journaux d'activité ont été supprimés avec succès.",
+      "clear_error": "Une erreur s'est produite lors de l'effacement des journaux"
+    },
+    "modals": {
+      "updated_title": "Paramètres mis à jour !",
+      "updated_msg": "Vos configurations ont été enregistrées avec succès et appliquées à travers le CRM.",
+      "failed_title": "Échec de la mise à jour",
+      "failed_msg": "Un problème est survenu lors de l'enregistrement de vos modifications",
+      "confirm_title": "Êtes-vous absolument sûr ?",
+      "confirm_msg": "Cela supprimera définitivement tous les journaux d'activité de la base de données. Cette action ne peut pas être annulée.",
+      "logs_cleared_title": "Journaux effacés !",
+      "logs_cleared_msg": "Tous les journaux d'activité ont été supprimés avec succès.",
+      "continue": "Continuer",
+      "confirm_btn": "Confirmer la suppression"
+    }
+  },
+  "emails": {
+    "title": "Envoyer un e-mail",
+    "subtitle": "Composez et envoyez des e-mails personnalisés à vos clients.",
+    "tips": {
+      "title": "Conseils de pro",
+      "tip1": "Personnalisez l'objet pour augmenter le taux d'ouverture.",
+      "tip2": "Vérifiez l'adresse de destination avant l'envoi.",
+      "tip3": "Utilisez un langage clair et concis."
+    },
+    "warning": {
+      "title": "Politique Anti-Spam",
+      "text": "Assurez-vous d'avoir l'autorisation de contacter ces personnes."
+    },
+    "form": {
+      "to": "Destinataire",
+      "search_placeholder": "Rechercher un client...",
+      "direct_placeholder": "Ou entrez l'adresse e-mail directement",
+      "subject": "Objet",
+      "subject_placeholder": "Entrez l'objet de l'e-mail",
+      "message": "Corps du message",
+      "message_placeholder": "Écrivez votre message ici...",
+      "send": "Envoyer l'e-mail",
+      "sending": "Envoi en cours...",
+      "fill_fields": "Veuillez remplir tous les champs obligatoires",
+      "send_success": "E-mail envoyé avec succès !",
+      "send_error": "Échec de l'envoi de l'e-mail"
+    }
+  },
+  "properties": {
+    "title": "Propriétés",
+    "record_new": "Ajouter une nouvelle propriété",
+    "subtitle": "Gérez les terrains, appartements, locations et coentreprises",
+    "search_placeholder": "Rechercher des propriétés...",
+    "loading_error": "Échec du chargement des propriétés",
+    "delete_success": "Propriété supprimée avec succès",
+    "delete_error": "Échec de la suppression de la propriété",
+    "filter": {
+      "all": "Tous",
+      "plot": "Terrain",
+      "apartment": "Appartement",
+      "joint_venture": "Coentreprise",
+      "rental": "Location"
+    },
+    "stats": {
+      "rented": "Loué",
+      "under_construction": "En construction",
+      "available": "Disponible",
+      "sold": "Vendu",
+      "total": "Total"
+    },
+    "table": {
+      "property": "Propriété",
+      "project": "Projet",
+      "type": "Type",
+      "location": "Emplacement",
+      "status": "Statut"
+    },
+    "delete": {
+      "title": "Supprimer la propriété ?",
+      "confirm_text": "Êtes-vous sûr de vouloir supprimer",
+      "delete_btn": "Supprimer"
+    },
+      "modal": {
+      "edit_title": "Modifier la propriété",
+      "add_title": "Ajouter une propriété",
+      "name_placeholder": "Entrez le nom de la propriété",
+      "project_label": "Nom du projet",
+      "project_placeholder": "Nom du projet facultatif",
+      "type_label": "Type de propriété",
+      "status_label": "Statut",
+      "state_label": "État",
+      "state_select": "Sélectionner un État",
+      "city_label": "Ville",
+      "city_select": "Sélectionner une ville",
+      "details_title": "Détails de la propriété",
+      "save_changes": "Enregistrer les modifications",
+      "create_btn": "Créer une propriété",
+      "bhk_type": "Type BHK",
+      "area_sqft": "Superficie en pieds carrés",
+      "floor": "Étage",
+      "tower_block": "Tour / Bloc",
+      "amenities": "Équipements",
+      "total_price": "Prix total",
+      "monthly_rent": "Loyer mensuel",
+      "security_deposit": "Dépôt de garantie",
+      "lease_period": "Durée du bail",
+      "tenant_name": "Nom du locataire",
+      "partner_name": "Nom du partenaire",
+      "profit_sharing_ratio": "Partage des bénéfices",
+      "land_area": "Superficie du terrain",
+      "project_status": "Statut du projet",
+      "total_project_value": "Valeur totale du projet",
+      "area_sq_yard": "Superficie en yards carrés",
+      "dimensions": "Dimensions",
+      "facing": "Orientation",
+      "price_per_sq_yard": "Prix / Yard carré"
+    }
+  }
+}
