@@ -95,13 +95,13 @@ const Leads = () => {
         }
     }, [cities, formData.preferredCity]);
 
-    const selectedStateName = useMemo(() => {
-        return states.find(state => String(state.id) === String(formData.preferredState))?.state_name || formData.preferredState;
-    }, [states, formData.preferredState]);
+    // const selectedStateName = useMemo(() => {
+    //     return states.find(state => String(state.id) === String(formData.preferredState))?.state_name || formData.preferredState;
+    // }, [states, formData.preferredState]);
 
-    const selectedCityName = useMemo(() => {
-        return cities.find(city => String(city.id) === String(formData.preferredCity))?.city_name || formData.preferredCity;
-    }, [cities, formData.preferredCity]);
+    // const selectedCityName = useMemo(() => {
+    //     return cities.find(city => String(city.id) === String(formData.preferredCity))?.city_name || formData.preferredCity;
+    // }, [cities, formData.preferredCity]);
 
     const filteredProperties = useMemo(() => {
         if (!formData.propertyType) return properties;
@@ -186,18 +186,18 @@ const Leads = () => {
         setSubmitting(true);
         setError('');
 
-        const payload = {
-            ...formData,
-            preferredState: selectedStateName,
-            preferredCity: selectedCityName
-        };
+        // const payload = {
+        //     ...formData,
+        //     preferredState: selectedStateName,
+        //     preferredCity: selectedCityName
+        // };
 
         try {
             if (selectedLead) {
-                await api.put(`/leads/${selectedLead.id}`, payload);
+                await api.put(`/leads/${selectedLead.id}`, formData);
                 showToast(t('leads.update_success') || 'Lead updated successfully!', 'success');
             } else {
-                await api.post('/leads', payload);
+                await api.post('/leads', formData);
                 showToast(t('leads.add_success') || 'Lead created successfully!', 'success');
             }
             setIsModalOpen(false);
@@ -320,9 +320,9 @@ const Leads = () => {
                                             <p className="text-xs text-slate-500 mt-1">{lead.source || 'Source'} • {lead.enquiryType || 'Tele'} • {lead.budget || 'Budget not set'}</p>
                                         </td>
                                         <td className="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">
-                                            <span className="inline-flex items-center gap-1.5"><MapPin size={14} />{[lead.preferredCity, lead.preferredState].filter(Boolean).join(', ') || '-'}</span>
+                                            <span className="inline-flex items-center gap-1.5"><MapPin size={14} />{[lead.city_name, lead.state_name].filter(Boolean).join(', ') || '-'}</span>
                                         </td>
-                                        <td className="px-6 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300">{lead.assignedTo || '-'}</td>
+                                        <td className="px-6 py-4 text-sm font-semibold text-slate-700 dark:text-slate-300">{lead.assigned_user_name || '-'}</td>
                                         <td className="px-6 py-4 text-right">
                                             <div className="flex justify-end gap-2">
                                                 <button onClick={() => handleOpenModal(lead)} className="p-2 transition-all rounded-lg text-slate-400 hover:text-primary-600 hover:bg-primary-50 dark:hover:bg-primary-900/20">
@@ -389,7 +389,7 @@ const Leads = () => {
                                             {t('leads.modal.source_label')} <span className="text-red-500">*</span>
                                             <select required className={`${selectClass} mt-1.5`} value={formData.source} onChange={(e) => handleChange('source', e.target.value)}>
                                                 <option value="">{t('leads.modal.source_select')}</option>
-                                                {sourceOptions.map(source => <option key={source} value={source}>{source}</option>)}
+                                                {sourceOptions.map(source => <option key={source} value={source.id}>{source}</option>)}
                                             </select>
                                         </label>
                                         <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">
@@ -428,7 +428,7 @@ const Leads = () => {
                                            {t('leads.modal.assign_to_label')} <span className="text-red-500">*</span>
                                             <select required className={`${selectClass} mt-1.5`} value={formData.assignedTo} onChange={(e) => handleChange('assignedTo', e.target.value)}>
                                                 <option value="">{t('leads.modal.assign_to_select')}</option>
-                                                {users.map(user => <option key={user.id} value={user.name}>{user.name}</option>)}
+                                                {users.map(user => <option key={user.id} value={user.id}>{user.name}</option>)}
                                             </select>
                                         </label>
                                     </div>

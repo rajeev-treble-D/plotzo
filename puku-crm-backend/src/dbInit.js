@@ -387,6 +387,23 @@ const initDB = async (providedConnection = null) => {
       )
     `);
 
+    await connection.query(`
+      CREATE TABLE IF NOT EXISTS temperatures (
+        id INT PRIMARY KEY AUTO_INCREMENT,
+        name VARCHAR(50) NOT NULL UNIQUE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+
+    await connection.query(`
+      INSERT IGNORE INTO temperatures (name) VALUES
+      ('Cold'),
+      ('Warm'),
+      ('Hot'),
+      ('Very Hot'),
+      ('Mature')
+    `);
+
     // Insert Google API Key placeholder if not exists
     const [existingGeminiKey] = await connection.query('SELECT COUNT(*) as count FROM settings WHERE key_name = "gemini_api_key"');
     if (existingGeminiKey[0].count === 0) {
