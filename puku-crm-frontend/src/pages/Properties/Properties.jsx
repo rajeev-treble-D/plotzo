@@ -807,6 +807,7 @@ const Properties = () => {
                       </label>
                       <select
                         required
+                        disabled={!formData.state_id}
                         className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm text-slate-900 dark:text-slate-100 font-bold transition-all"
                         value={formData.city_id}
                         onChange={(e) =>
@@ -814,7 +815,7 @@ const Properties = () => {
                         }
                       >
                         <option value="">
-                          {tx("properties.modal.city_select", "Select city")}
+                          {formData.state_id ? tx("properties.modal.city_select", "Select city"): tx("properties.modal.fisrt_state_select", "Select State First")}
                         </option>
                         {filteredCities.map((city) => (
                           <option key={city.id} value={city.id}>
