@@ -40,6 +40,8 @@ const initDB = async (providedConnection = null) => {
       )
     `);
 
+    // await connection.query(`DROP TABLE IF EXISTS leads`);
+
     // Create Leads Table
     await connection.query(`
       CREATE TABLE IF NOT EXISTS leads (
@@ -54,6 +56,10 @@ const initDB = async (providedConnection = null) => {
         preferredState VARCHAR(100),
         preferredCity VARCHAR(100),
         assignedTo VARCHAR(255),
+        temprature VARCHAR(100),
+        status VARCHAR(100),
+        followupDate DATE,
+        followupTime TIME,
         enquiryType ENUM('Tele', 'Sales') DEFAULT 'Tele',
         note TEXT,
         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,

@@ -4,10 +4,10 @@ const optional = value => value === undefined ? null : value;
 
 const Lead = {
     create: async (data) => {
-        const { name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, enquiryType, note} = data;
+        const { name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, temprature, status, followupDate, followupTime, enquiryType, note } = data;
         const [result] = await pool.query(
-            `INSERT INTO leads (name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, enquiryType, note) 
-       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            `INSERT INTO leads (name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, temprature, status, followupDate, followupTime, enquiryType, note) 
+       VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
             [
                 name,
                 optional(email),
@@ -19,6 +19,10 @@ const Lead = {
                 optional(preferredState),
                 optional(preferredCity),
                 assignedTo,
+                optional(temprature),
+                optional(status),
+                followupDate,
+                followupTime,
                 enquiryType || 'Tele',
                 optional(note)
             ]
@@ -77,10 +81,26 @@ const Lead = {
     },
 
     update: async (id, data) => {
-        const { name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, enquiryType, note } = data;
+        const { name, email, phone, source, propertyType, specificProperty, budget, preferredState, preferredCity, assignedTo, temprature, status, followupDate, followupTime, enquiryType, note } = data;
         const [result] = await pool.query(
-            `UPDATE leads SET name = ?, email = ?, phone = ?, source = ?, propertyType = ?, specificProperty = ?, budget = ?, preferredState = ?, preferredCity = ?, assignedTo = ?, enquiryType = ?, note = ? 
-       WHERE id = ?`,
+            `UPDATE leads SET 
+                name = ?, 
+                email = ?, 
+                phone = ?, 
+                source = ?, 
+                propertyType = ?, 
+                specificProperty = ?, 
+                budget = ?, 
+                preferredState = ?, 
+                preferredCity = ?, 
+                assignedTo = ?, 
+                temprature = ?, 
+                status = ?, 
+                followupDate = ?, 
+                followupTime = ?, 
+                enquiryType = ?, 
+                note = ? 
+           WHERE id = ?`,
             [
                 name,
                 optional(email),
@@ -92,6 +112,10 @@ const Lead = {
                 optional(preferredState),
                 optional(preferredCity),
                 assignedTo,
+                optional(temprature),
+                optional(status),
+                followupDate,
+                followupTime,
                 enquiryType || 'Tele',
                 optional(note),
                 id
