@@ -40,7 +40,7 @@ const initDB = async (providedConnection = null) => {
       )
     `);
 
-    // await connection.query(`DROP TABLE IF EXISTS leads`);
+    // await connection.query(`DROP TABLE IF EXISTS followups`);
 
     // Create Leads Table
     await connection.query(`
@@ -409,6 +409,20 @@ const initDB = async (providedConnection = null) => {
       ('Very Hot'),
       ('Mature')
     `);
+
+    await connection.query(`
+        CREATE TABLE IF NOT EXISTS followups (
+          id INT PRIMARY KEY AUTO_INCREMENT,
+          lead_id INT NOT NULL,
+          disposition VARCHAR(100) NOT NULL,
+          meta JSON,
+          created_by INT NOT NULL,
+          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+          updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+          FOREIGN KEY (lead_id) REFERENCES leads(id) ON DELETE CASCADE,
+          FOREIGN KEY (created_by) REFERENCES users(id)
+        )
+      `);
 
     // Insert Google API Key placeholder if not exists
     const [existingGeminiKey] = await connection.query('SELECT COUNT(*) as count FROM settings WHERE key_name = "gemini_api_key"');

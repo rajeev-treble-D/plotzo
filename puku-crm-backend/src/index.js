@@ -46,6 +46,7 @@ app.use('/api/emails', require('./routes/emailRoutes'));
 app.use('/api/states', require('./routes/stateRoutes'));
 app.use('/api/cities', require('./routes/cityRoutes'));
 app.use('/api/properties', require('./routes/propertyRoutes'));
+app.use('/api/followups', require('./routes/followupRoutes'));
 
 // Basic Route
 app.get('/', (req, res) => {
