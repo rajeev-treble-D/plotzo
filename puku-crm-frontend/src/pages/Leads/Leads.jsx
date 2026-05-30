@@ -326,7 +326,7 @@ const Leads = () => {
                         <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                             {loading ? (
                                 <tr>
-                                    <td colSpan="5" className="px-6 py-12 text-center text-slate-400">
+                                    <td colSpan="10" className="px-6 py-12 text-center text-slate-400">
                                         <div className="flex flex-col items-center gap-2">
                                             <Loader2 size={32} className="animate-spin text-primary-500" />
                                             <span>{t('common.loading')}</span>

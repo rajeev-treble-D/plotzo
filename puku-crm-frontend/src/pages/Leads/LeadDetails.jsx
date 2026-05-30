@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import {
     Building2,
     Phone,
@@ -18,9 +18,13 @@ import {
     X,
     CheckCircle2,
     XCircle,
+    Loader2,
 } from 'lucide-react';
+import api from '../../services/api'
+import { useToast } from '../../context/ToastContext';
 
 const tempratureOptions = ['Cold', 'Warm', 'Hot', 'Very Hot', 'Mature'];
+const nextFollowUpOptions = ['Call', 'Site Visit', 'Meeting', 'Whatsapp', 'Email'];
 const intrestOptions = ['Very Intrested', 'Intrested', 'Neutral', 'Not Intrested'];
 const nextActionOptions = ['Follow Up Calls', 'Send Quotation', 'Schedule Meeting', 'Move to Negotiation', 'Booking', 'Close'];
 const paymentPlanOptions = ['Full Payment', 'Construction Linked', 'EMI - 12 Months', 'EMI - 24 Months', 'EMI - 36 Months'];
@@ -119,6 +123,56 @@ const dispositionOptions = [
 
 const LeadDetails = ({ lead }) => {
     const [selectedDisposition, setSelectedDisposition] = useState('');
+    const [formData, setFormData] = useState({});
+    const [loading, setLoading] = useState(false);
+    const { showToast } = useToast();
+    const [followupHistory, setFollowupHistory] = useState([])
+
+    const handleFieldChange = useCallback((field, value) => {
+        setFormData(prev => ({ ...prev, [field]: value }));
+    }, []);
+
+    const handleDispositionChange = (value) => {
+        setSelectedDisposition(value);
+        setFormData({});
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (loading) return;
+
+        setLoading(true);
+        const payload = {
+            lead_id: lead.id,
+            disposition: selectedDisposition,
+            meta: formData,
+            created_by: lead.assignedTo,
+        };
+        try {
+            await api.post('/followups', payload);
+            showToast('Follow-up updated', 'success');
+        } catch {
+            showToast('Failed to update follow-up', 'error');
+        } finally {
+            setLoading(false);
+            setFormData({});
+        }
+    }
+
+    useEffect(()=>{
+        fetchFollowupHistory()
+    },[])
+
+    console.log(followupHistory)
+    const fetchFollowupHistory = async() => {
+        try {
+            const res = await api.get(`followups/lead/${lead.id}`);
+            setFollowupHistory(res.data.followUps)
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
     if (!lead) return null;
     const location = [lead.city_name, lead.state_name].filter(Boolean).join(', ');
 
@@ -282,7 +336,7 @@ const LeadDetails = ({ lead }) => {
                                         <p className="text-[10px] font-black uppercase tracking-[0.15em] text-slate-400">
                                             Internal Notes
                                         </p>
-                                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-800/40 p-3 rounded-xl border border-slate-100 dark:border-slate-800/60 shadow-sm leading-relaxed">
+                                        <p className="text-sm font-semibold text-slate-700 dark:text-slate-300 leading-relaxed">
                                             {lead.note}
                                         </p>
                                     </div>
@@ -293,7 +347,7 @@ const LeadDetails = ({ lead }) => {
                         {/* Follow-up History (Static for now) */}
                         <div>
                             <h4 className="text-[11px] font-black uppercase tracking-[0.2em] text-slate-500 mb-5 ml-0.5">
-                                Follow-up History (1)
+                                Follow-up History ({followupHistory?.length})
                             </h4>
 
                             <div className="relative pl-10 border-l border-slate-200 dark:border-slate-800 ml-4 space-y-6">
@@ -369,7 +423,7 @@ const LeadDetails = ({ lead }) => {
                                 </label>
                                 <select
                                     value={selectedDisposition}
-                                    onChange={(e) => setSelectedDisposition(e.target.value)}
+                                    onChange={(e) => handleDispositionChange(e.target.value)}
                                     className="w-full px-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                 >
                                     <option value="">Select disposition...</option>
@@ -381,17 +435,19 @@ const LeadDetails = ({ lead }) => {
                                 </select>
                             </div>
                             {selectedDisposition &&
-                                <form>
+                                <form onSubmit={handleSubmit}>
                                     <div className="grid grid-cols-1 gap-4">
                                         {selectedDisposition == "Called & Talked" &&
                                             <>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">What did you discuss?
                                                     <textarea
+                                                        value={formData.discussion_notes || ''}
+                                                        onChange={(e) => handleFieldChange('discussion_notes', e.target.value)}
                                                         className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                     ></textarea>
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300" >Update Temprature
-                                                    <select name="" id="" className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                    <select value={formData.temperature_update || lead.temprature} onChange={(e) => handleFieldChange('temperature_update', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
                                                         <option value={lead.temprature}>keep Current ({lead.temprature})</option>
                                                         {tempratureOptions.map((temprature, index) => (
                                                             <option key={index} value={temprature}>
@@ -401,10 +457,20 @@ const LeadDetails = ({ lead }) => {
                                                     </select>
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Next Follow-up Date
-                                                    <input type="date" className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm" />
+                                                    <input type="date" value={formData.next_follow_up_date || ''} onChange={(e) => handleFieldChange('next_follow_up_date', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm" />
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Next Follow-up Time
-                                                    <input type="time" className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm" />
+                                                    <input type="time" value={formData.next_follow_up_time || ''} onChange={(e) => handleFieldChange('next_follow_up_time', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm" />
+                                                </label>
+                                                <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300" >Next Follow Up Type
+                                                    <select value={formData.next_follow_up_type || ''} onChange={(e) => handleFieldChange('next_follow_up_type', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                        <option value="">Select Type</option>
+                                                        {nextFollowUpOptions.map((followUp, index) => (
+                                                            <option key={index} value={followUp}>
+                                                                {followUp}
+                                                            </option>
+                                                        ))}
+                                                    </select>
                                                 </label>
                                             </>
                                         }
@@ -424,6 +490,8 @@ const LeadDetails = ({ lead }) => {
                                                     <textarea
                                                         placeholder="Any additional notes..."
                                                         rows={3}
+                                                        value={formData.additional_notes || ''}
+                                                        onChange={(e) => handleFieldChange('additional_notes', e.target.value)}
                                                         className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm resize-none"
                                                     ></textarea>
                                                 </label>
@@ -434,11 +502,13 @@ const LeadDetails = ({ lead }) => {
                                             <>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Visit FeedBack
                                                     <textarea
+                                                        value={formData.visit_feedback || ''}
+                                                        onChange={(e) => handleFieldChange('visit_feedback', e.target.value)}
                                                         className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                     ></textarea>
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300" >Intrest Level
-                                                    <select name="" id="" className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                    <select value={formData.interest_level || ''} onChange={(e) => handleFieldChange('interest_level', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
                                                         <option value="">Select Interest Level</option>
                                                         {intrestOptions.map((temprature, index) => (
                                                             <option key={index} value={temprature}>
@@ -448,7 +518,7 @@ const LeadDetails = ({ lead }) => {
                                                     </select>
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300" >Intrest Level
-                                                    <select name="" id="" className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                    <select value={formData.next_action || ''} onChange={(e) => handleFieldChange('next_action', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
                                                         <option value="">Next Action</option>
                                                         {nextActionOptions.map((temprature, index) => (
                                                             <option key={index} value={temprature}>
@@ -476,6 +546,8 @@ const LeadDetails = ({ lead }) => {
                                                         <input
                                                             type="number"
                                                             placeholder="Enter amount"
+                                                            value={formData.discussion_price || ''}
+                                                            onChange={(e) => handleFieldChange('discussion_price', e.target.value)}
                                                             className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                         />
                                                     </div>
@@ -499,6 +571,8 @@ const LeadDetails = ({ lead }) => {
                                                             <input
                                                                 type="number"
                                                                 placeholder="Client offer"
+                                                                value={formData.offered_price || ''}
+                                                                onChange={(e) => handleFieldChange('offered_price', e.target.value)}
                                                                 className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                             />
                                                         </div>
@@ -509,6 +583,8 @@ const LeadDetails = ({ lead }) => {
                                                             <input
                                                                 type="number"
                                                                 placeholder="Our price"
+                                                                value={formData.asking_price || ''}
+                                                                onChange={(e) => handleFieldChange('asking_price', e.target.value)}
                                                                 className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                             />
                                                         </div>
@@ -520,6 +596,8 @@ const LeadDetails = ({ lead }) => {
                                                         <input
                                                             type="number"
                                                             placeholder="Counter offer amount"
+                                                            value={formData.counter_offer || ''}
+                                                            onChange={(e) => handleFieldChange('counter_offer', e.target.value)}
                                                             className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                         />
                                                     </div>
@@ -527,6 +605,8 @@ const LeadDetails = ({ lead }) => {
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Next Meeting Date
                                                     <input
                                                         type="datetime-local"
+                                                        value={formData.next_meeting || ''}
+                                                        onChange={(e) => handleFieldChange('next_meeting', e.target.value)}
                                                         className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                     />
                                                 </label>
@@ -549,6 +629,8 @@ const LeadDetails = ({ lead }) => {
                                                         <input
                                                             type="number"
                                                             placeholder="Final agreed price"
+                                                            value={formData.final_price || ''}
+                                                            onChange={(e) => handleFieldChange('final_price', e.target.value)}
                                                             className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                         />
                                                     </div>
@@ -559,12 +641,14 @@ const LeadDetails = ({ lead }) => {
                                                         <input
                                                             type="number"
                                                             placeholder="Token / booking amount"
+                                                            value={formData.booking_amount || ''}
+                                                            onChange={(e) => handleFieldChange('booking_amount', e.target.value)}
                                                             className="w-full pl-8 pr-4 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm"
                                                         />
                                                     </div>
                                                 </label>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Payment Plan
-                                                    <select className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                    <select value={formData.payment_plan || ''} onChange={(e) => handleFieldChange('payment_plan', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
                                                         <option value="">Select payment plan...</option>
                                                         {paymentPlanOptions.map((plan, index) => (
                                                             <option key={index} value={plan}>{plan}</option>
@@ -585,7 +669,7 @@ const LeadDetails = ({ lead }) => {
                                                     </p>
                                                 </div>
                                                 <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300">Reason for Loss
-                                                    <select className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
+                                                    <select value={formData.loss_reason || ''} onChange={(e) => handleFieldChange('loss_reason', e.target.value)} className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none appearance-none cursor-pointer text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm">
                                                         <option value="">Select reason...</option>
                                                         {lossReasonOptions.map((reason, index) => (
                                                             <option key={index} value={reason}>{reason}</option>
@@ -596,6 +680,8 @@ const LeadDetails = ({ lead }) => {
                                                     <textarea
                                                         placeholder="Additional details about why the deal was lost..."
                                                         rows={3}
+                                                        value={formData.loss_notes || ''}
+                                                        onChange={(e) => handleFieldChange('loss_notes', e.target.value)}
                                                         className="w-full px-4 mt-2 py-2.5 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl focus:ring-2 focus:ring-primary-500 outline-none text-sm font-bold text-slate-900 dark:text-slate-100 transition-all shadow-sm resize-none"
                                                     ></textarea>
                                                 </label>
@@ -604,12 +690,24 @@ const LeadDetails = ({ lead }) => {
                                     </div>
                                     <div className="py-4 flex justify-end gap-3">
                                         {selectedDisposition === 'Mature' ? (
-                                            <button className="w-full btn bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center gap-2 rounded-xl py-2.5 font-bold text-sm transition-all shadow-sm" type='submit'>
-                                                <Handshake size={16} /> Move to Negotiation
+                                            <button
+                                                className="w-full btn bg-emerald-600 hover:bg-emerald-700 text-white flex items-center justify-center gap-2 rounded-xl py-2.5 font-bold text-sm transition-all shadow-sm disabled:opacity-70 disabled:cursor-not-allowed"
+                                                type="submit"
+                                                disabled={loading}
+                                                aria-busy={loading}
+                                            >
+                                                {loading ? <Loader2 size={16} className="animate-spin" /> : <Handshake size={16} />}
+                                                {loading ? 'Moving...' : 'Move to Negotiation'}
                                             </button>
                                         ) : (
-                                            <button className="w-full btn btn-primary flex items-center gap-2" type='submit'>
-                                                <Send size={16} /> Update Follow Up
+                                            <button
+                                                className="w-full btn btn-primary flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                                                type="submit"
+                                                disabled={loading}
+                                                aria-busy={loading}
+                                            >
+                                                {loading ? <Loader2 size={16} className="animate-spin" /> : <Send size={16} />}
+                                                {loading ? 'Updating...' : 'Update Follow Up'}
                                             </button>
                                         )}
                                     </div>
